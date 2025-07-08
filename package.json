@@ -4,13 +4,8 @@
   "description": "Build tools for meremetaphor.com",
   "private": true,
   "scripts": {
-    "build": "node scripts/build-v10.js",
-    "build-v3": "node scripts/build-v3.js",
-    "build-v2": "node scripts/build-v2.js",
-    "build-old": "node scripts/build.js",
-    "extract-images": "node scripts/extract-images-pdftoppm.js",
-    "extract-embedded": "node scripts/extract-embedded-images.js",
-    "dev": "node scripts/build-v10.js && npx http-server -p 8080"
+    "build": "node scripts/build.js",
+    "dev": "node scripts/build.js && npx http-server -p 8080"
   },
   "repository": {
     "type": "git",
