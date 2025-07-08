@@ -219,8 +219,8 @@ async function extractText() {
         }
         .cover-page {
             text-align: center;
-            margin: 0;
-            padding: 0;
+            margin: 2em 0;
+            padding: 1em;
             page-break-after: always;
         }
         .cover-page h1 {
@@ -289,10 +289,6 @@ async function extractText() {
         }
         
         @media (min-width: 768px) {
-            .cover-page {
-                margin: 3em 0;
-                padding: 2em;
-            }
             .cover-page h1 {
                 font-size: 3em;
             }
@@ -322,9 +318,6 @@ async function extractText() {
         }
         
         @media (min-width: 1024px) {
-            .cover-page {
-                margin: 4em 0;
-            }
             .cover-image {
                 max-width: 400px;
                 max-height: 400px;
