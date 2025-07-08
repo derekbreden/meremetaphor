@@ -118,6 +118,7 @@ async function extractText() {
             );
             
             if (tocPageIndex !== -1) {
+                htmlContent += '<div class="toc-separator"></div>\n';
                 htmlContent += '<div class="table-of-contents">\n';
                 htmlContent += '<h2>TABLE OF CONTENTS</h2>\n';
                 
@@ -138,7 +139,8 @@ async function extractText() {
                         htmlContent += `<a href="#" onclick="scrollToChapter('${chapterId}'); return false;" class="toc-link">${escapeHtml(cleaned)}</a>\n`;
                     }
                 }
-                htmlContent += '</div>\n\n';
+                htmlContent += '</div>\n';
+                htmlContent += '<div class="toc-separator"></div>\n\n';
             }
             
             const chapters = [
@@ -248,6 +250,13 @@ async function extractText() {
             margin: 4em 0 3em;
             color: #666;
             letter-spacing: 0.5em;
+        }
+        .toc-separator {
+            margin: 2em 0;
+            border-top: 1px solid #ccc;
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
         }
         .chapter-illustration {
             text-align: center;
