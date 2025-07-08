@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mere Metaphor</title>
     <style>
+        /* MOBILE-OPTIMIZED-STYLES */
         body {
             font-family: Georgia, serif;
             line-height: 1.6;
@@ -25,126 +26,65 @@
         .chapter {
             margin-bottom: 4em;
         }
-        .placeholder {
-            background: #f5f5f5;
-            padding: 40px;
-            text-align: center;
-            border-radius: 8px;
-            margin: 40px 0;
-        }
+        
+        /* Mobile-first responsive design with constrained images */
         .cover-page {
             text-align: center;
-            margin: 4em 0;
+            margin: 2em 0;
+            padding: 1em;
             page-break-after: always;
         }
         .cover-page h1 {
-            font-size: 3em;
+            font-size: 2.5em;
             margin-bottom: 1em;
+            line-height: 1.2;
         }
         .cover-illustration {
-            margin: 3em 0;
-            font-style: italic;
-        }
-        .subtitle {
-            font-size: 1.2em;
-            margin: 1em 0;
-        }
-        .author {
-            margin-top: 2em;
-        }
-        .table-of-contents {
-            margin: 3em 0;
-            page-break-after: always;
-        }
-        .table-of-contents h2 {
-            text-align: center;
-            margin-bottom: 2em;
-        }
-        .chapter-header {
-            text-align: center;
-            font-size: 1.5em;
-            margin: 3em 0 2em;
-            page-break-before: always;
-        }
-        @media print {
-            .cover-page, .table-of-contents, .chapter-header {
-                page-break-inside: avoid;
-            }
-        }
-        .cover-page {
-            text-align: center;
-            margin: 4em 0;
-            page-break-after: always;
-        }
-        .cover-page h1 {
-            font-size: 3em;
-            margin-bottom: 1em;
-        }
-        .cover-illustration {
-            margin: 3em 0;
-            font-style: italic;
-        }
-        .subtitle {
-            font-size: 1.2em;
-            margin: 1em 0;
-        }
-        .author {
-            margin-top: 2em;
-        }
-        .table-of-contents {
-            margin: 3em 0;
-            page-break-after: always;
-        }
-        .table-of-contents h2 {
-            text-align: center;
-            margin-bottom: 2em;
-        }
-        .chapter-header {
-            text-align: center;
-            font-size: 1.5em;
-            margin: 3em 0 2em;
-            page-break-before: always;
-        }
-        @media print {
-            .cover-page, .table-of-contents, .chapter-header {
-                page-break-inside: avoid;
-            }
-        }
-        .cover-page {
-            text-align: center;
-            margin: 4em 0;
-            page-break-after: always;
-        }
-        .cover-page h1 {
-            font-size: 3em;
-            margin-bottom: 1em;
-        }
-        .cover-illustration {
-            margin: 3em 0;
+            margin: 2em 0;
+            max-width: 100%;
+            overflow: hidden;
         }
         .cover-image {
-            max-width: 400px;
+            width: 100%;
+            max-width: 300px;
             height: auto;
-            margin: 2em 0;
+            margin: 1em 0;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .chapter-separator {
+            text-align: center;
+            font-size: 1.5em;
+            margin: 4em 0 3em;
+            color: #666;
+            letter-spacing: 0.5em;
         }
         .chapter-illustration {
             text-align: center;
             margin: 2em 0;
+            max-width: 100%;
+            overflow: hidden;
         }
         .chapter-image {
-            max-width: 500px;
+            width: 100%;
+            max-width: 320px;
             height: auto;
             margin: 1em 0;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
         .subtitle {
-            font-size: 1.2em;
+            font-size: 1.1em;
             margin: 1em 0;
+            line-height: 1.4;
         }
         .author {
             margin-top: 2em;
         }
         .table-of-contents {
-            margin: 3em 0;
+            margin: 2em 0;
             page-break-after: always;
         }
         .table-of-contents h2 {
@@ -153,12 +93,60 @@
         }
         .chapter-header {
             text-align: center;
-            font-size: 1.5em;
-            margin: 3em 0 2em;
+            font-size: 1.3em;
+            margin: 2em 0 1em;
             page-break-before: always;
+            font-weight: bold;
         }
+        
+        /* Tablet styles */
+        @media (min-width: 768px) {
+            .cover-page {
+                margin: 3em 0;
+                padding: 2em;
+            }
+            .cover-page h1 {
+                font-size: 3em;
+            }
+            .cover-illustration {
+                margin: 3em 0;
+            }
+            .cover-image {
+                max-width: 400px;
+            }
+            .chapter-image {
+                max-width: 450px;
+            }
+            .subtitle {
+                font-size: 1.2em;
+            }
+            .chapter-header {
+                font-size: 1.5em;
+                margin: 3em 0 2em;
+            }
+            .table-of-contents {
+                margin: 3em 0;
+            }
+        }
+        
+        /* Desktop styles */
+        @media (min-width: 1024px) {
+            .cover-page {
+                margin: 4em 0;
+            }
+            .cover-image {
+                max-width: 400px;
+            }
+            .chapter-image {
+                max-width: 500px;
+            }
+        }
+        
         @media print {
             .cover-page, .table-of-contents, .chapter-header {
+                page-break-inside: avoid;
+            }
+            .chapter-separator {
                 page-break-inside: avoid;
             }
         }
@@ -171,7 +159,7 @@
 <div class="cover-page">
     <h1>Mere Metaphor</h1>
     <div class="cover-illustration">
-        <img src="images/cover.png?v=1751945749678" alt="Tree illustration with profile and 'God is love'" class="cover-image">
+        <img src="images/cover.png?v=1751946143651" alt="Tree illustration with profile and 'God is love'" class="cover-image">
     </div>
     <p class="subtitle">Understanding Religious<br>Language as a Materialist</p>
     <p class="author">by Derek Bredensteiner</p>
@@ -195,7 +183,7 @@
 
 <h2 class="chapter-header">PREFACE</h2>
 <div class="chapter-illustration">
-<img src="images/preface-illustration.png?v=1751945749678" alt="Illustration for PREFACE" class="chapter-image">
+<img src="images/preface-illustration.png?v=1751946143651" alt="Illustration for PREFACE" class="chapter-image">
 </div>
 
 <h3>Preface</h3>
@@ -208,7 +196,7 @@
 <div class="chapter-separator">◆ ◆ ◆</div>
 <h2 class="chapter-header">ABOUT THE AUTHOR</h2>
 <div class="chapter-illustration">
-<img src="images/about-author-illustration.png?v=1751945749678" alt="Illustration for ABOUT THE AUTHOR" class="chapter-image">
+<img src="images/about-author-illustration.png?v=1751946143651" alt="Illustration for ABOUT THE AUTHOR" class="chapter-image">
 </div>
 
 <h3>About the Author</h3>
@@ -230,7 +218,7 @@
 <div class="chapter-separator">◆ ◆ ◆</div>
 <h2 class="chapter-header">INTRODUCTION: METAPHOR</h2>
 <div class="chapter-illustration">
-<img src="images/metaphor-illustration.png?v=1751945749678" alt="Illustration for INTRODUCTION: METAPHOR" class="chapter-image">
+<img src="images/metaphor-illustration.png?v=1751946143651" alt="Illustration for INTRODUCTION: METAPHOR" class="chapter-image">
 </div>
 
 <h3>Introduction: Metaphor</h3>
@@ -245,7 +233,7 @@
 <div class="chapter-separator">◆ ◆ ◆</div>
 <h2 class="chapter-header">GOD: LOVE WITHIN AND BETWEEN US</h2>
 <div class="chapter-illustration">
-<img src="images/god-illustration.png?v=1751945749678" alt="Illustration for GOD: LOVE WITHIN AND BETWEEN US" class="chapter-image">
+<img src="images/god-illustration.png?v=1751946143651" alt="Illustration for GOD: LOVE WITHIN AND BETWEEN US" class="chapter-image">
 </div>
 
 <h3>God: Love Within and Between Us</h3>
@@ -259,7 +247,7 @@
 <div class="chapter-separator">◆ ◆ ◆</div>
 <h2 class="chapter-header">FREE WILL: RECURSING A LIFETIME</h2>
 <div class="chapter-illustration">
-<img src="images/freewill-illustration.png?v=1751945749678" alt="Illustration for FREE WILL: RECURSING A LIFETIME" class="chapter-image">
+<img src="images/freewill-illustration.png?v=1751946143651" alt="Illustration for FREE WILL: RECURSING A LIFETIME" class="chapter-image">
 </div>
 
 <h3>Free Will: Recursing a Lifetime</h3>
@@ -278,7 +266,7 @@
 <div class="chapter-separator">◆ ◆ ◆</div>
 <h2 class="chapter-header">GOOD: A DIRECTION WE CHOOSE</h2>
 <div class="chapter-illustration">
-<img src="images/good-illustration.png?v=1751945749678" alt="Illustration for GOOD: A DIRECTION WE CHOOSE" class="chapter-image">
+<img src="images/good-illustration.png?v=1751946143651" alt="Illustration for GOOD: A DIRECTION WE CHOOSE" class="chapter-image">
 </div>
 
 <h3>Good: A Direction We Choose</h3>
@@ -295,7 +283,7 @@
 <div class="chapter-separator">◆ ◆ ◆</div>
 <h2 class="chapter-header">SIN: ALIGNMENT WITH THAT CHOICE</h2>
 <div class="chapter-illustration">
-<img src="images/sin-illustration.png?v=1751945749678" alt="Illustration for SIN: ALIGNMENT WITH THAT CHOICE" class="chapter-image">
+<img src="images/sin-illustration.png?v=1751946143651" alt="Illustration for SIN: ALIGNMENT WITH THAT CHOICE" class="chapter-image">
 </div>
 
 <h3>Sin: Alignment With That Choice</h3>
@@ -307,7 +295,7 @@
 <div class="chapter-separator">◆ ◆ ◆</div>
 <h2 class="chapter-header">REDEMPTION: MAKING NEW CHOICES</h2>
 <div class="chapter-illustration">
-<img src="images/redemption-illustration.png?v=1751945749678" alt="Illustration for REDEMPTION: MAKING NEW CHOICES" class="chapter-image">
+<img src="images/redemption-illustration.png?v=1751946143651" alt="Illustration for REDEMPTION: MAKING NEW CHOICES" class="chapter-image">
 </div>
 
 <h3>Redemption: Making New Choices</h3>
@@ -320,7 +308,7 @@
 <div class="chapter-separator">◆ ◆ ◆</div>
 <h2 class="chapter-header">HEAVEN: A STATE OF MIND AND BEING</h2>
 <div class="chapter-illustration">
-<img src="images/heaven-illustration.png?v=1751945749678" alt="Illustration for HEAVEN: A STATE OF MIND AND BEING" class="chapter-image">
+<img src="images/heaven-illustration.png?v=1751946143651" alt="Illustration for HEAVEN: A STATE OF MIND AND BEING" class="chapter-image">
 </div>
 
 <h3>Heaven: A State of Mind and Being</h3>
@@ -332,7 +320,7 @@
 <div class="chapter-separator">◆ ◆ ◆</div>
 <h2 class="chapter-header">PRAYER: EFFECTS OF SELF-REFLECTION</h2>
 <div class="chapter-illustration">
-<img src="images/prayer-illustration.png?v=1751945749678" alt="Illustration for PRAYER: EFFECTS OF SELF-REFLECTION" class="chapter-image">
+<img src="images/prayer-illustration.png?v=1751946143651" alt="Illustration for PRAYER: EFFECTS OF SELF-REFLECTION" class="chapter-image">
 </div>
 
 <h3>Prayer: Effects of Self-Re</h3>
@@ -346,7 +334,7 @@
 <div class="chapter-separator">◆ ◆ ◆</div>
 <h2 class="chapter-header">VOICES: WHAT INSPIRES SHAMANS</h2>
 <div class="chapter-illustration">
-<img src="images/voices-illustration.png?v=1751945749678" alt="Illustration for VOICES: WHAT INSPIRES SHAMANS" class="chapter-image">
+<img src="images/voices-illustration.png?v=1751946143651" alt="Illustration for VOICES: WHAT INSPIRES SHAMANS" class="chapter-image">
 </div>
 
 <h3>Voices: What Inspires Shamans</h3>
@@ -360,7 +348,7 @@
 <div class="chapter-separator">◆ ◆ ◆</div>
 <h2 class="chapter-header">AFTERWORD</h2>
 <div class="chapter-illustration">
-<img src="images/afterword-illustration.png?v=1751945749678" alt="Illustration for AFTERWORD" class="chapter-image">
+<img src="images/afterword-illustration.png?v=1751946143651" alt="Illustration for AFTERWORD" class="chapter-image">
 </div>
 
 <h3>Afterword</h3>
@@ -370,7 +358,7 @@
 <div class="chapter-separator">◆ ◆ ◆</div>
 <h2 class="chapter-header">GLOSSARY</h2>
 <div class="chapter-illustration">
-<img src="images/glossary-illustration.png?v=1751945749678" alt="Illustration for GLOSSARY" class="chapter-image">
+<img src="images/glossary-illustration.png?v=1751946143651" alt="Illustration for GLOSSARY" class="chapter-image">
 </div>
 
 <h3>Glossary</h3>
