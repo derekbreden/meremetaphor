@@ -4,8 +4,9 @@
   "description": "Build tools for meremetaphor.com",
   "private": true,
   "scripts": {
-    "build": "node scripts/build.js",
-    "dev": "node scripts/build.js && npx http-server -p 8080"
+    "build": "node scripts/build-v2.js",
+    "build-old": "node scripts/build.js",
+    "dev": "node scripts/build-v2.js && npx http-server -p 8080"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,7 @@
   },
   "homepage": "https://meremetaphor.com",
   "dependencies": {
-    "pdf-parse": "^1.1.1"
+    "pdf-parse": "^1.1.1",
+    "pdf.js-extract": "^0.2.1"
   }
 }
