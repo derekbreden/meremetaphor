@@ -196,7 +196,15 @@ async function extractText() {
                         if (foundChapterTitle && pageIndex === chapterPages[0] && 
                             itemIndex < 10 && text.length < 50 && !text.match(/^[A-Z\s]+$/)) {
                             if (currentParagraph.length > 0) {
-                                htmlContent += `<p>${escapeHtml(currentParagraph.join(' '))}</p>\n`;
+                                const paragraphText = currentParagraph.join(' ');
+                                if (chapter.name === 'GLOSSARY') {
+                                    const words = paragraphText.split(' ');
+                                    const firstWord = words[0];
+                                    const restOfText = words.slice(1).join(' ');
+                                    htmlContent += `<p><strong>${escapeHtml(firstWord)}</strong> ${escapeHtml(restOfText)}</p>\n`;
+                                } else {
+                                    htmlContent += `<p>${escapeHtml(paragraphText)}</p>\n`;
+                                }
                                 currentParagraph = [];
                             }
                             htmlContent += `<h3>${escapeHtml(text)}</h3>\n`;
@@ -207,7 +215,15 @@ async function extractText() {
                         
                         if (lastY !== null && item.y - lastY > 25) {
                             if (currentParagraph.length > 0) {
-                                htmlContent += `<p>${escapeHtml(currentParagraph.join(' '))}</p>\n`;
+                                const paragraphText = currentParagraph.join(' ');
+                                if (chapter.name === 'GLOSSARY') {
+                                    const words = paragraphText.split(' ');
+                                    const firstWord = words[0];
+                                    const restOfText = words.slice(1).join(' ');
+                                    htmlContent += `<p><strong>${escapeHtml(firstWord)}</strong> ${escapeHtml(restOfText)}</p>\n`;
+                                } else {
+                                    htmlContent += `<p>${escapeHtml(paragraphText)}</p>\n`;
+                                }
                                 currentParagraph = [];
                             }
                         }
@@ -217,7 +233,15 @@ async function extractText() {
                     });
                     
                     if (currentParagraph.length > 0) {
-                        htmlContent += `<p>${escapeHtml(currentParagraph.join(' '))}</p>\n`;
+                        const paragraphText = currentParagraph.join(' ');
+                        if (chapter.name === 'GLOSSARY') {
+                            const words = paragraphText.split(' ');
+                            const firstWord = words[0];
+                            const restOfText = words.slice(1).join(' ');
+                            htmlContent += `<p><strong>${escapeHtml(firstWord)}</strong> ${escapeHtml(restOfText)}</p>\n`;
+                        } else {
+                            htmlContent += `<p>${escapeHtml(paragraphText)}</p>\n`;
+                        }
                     }
                 });
                 
