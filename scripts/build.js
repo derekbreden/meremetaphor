@@ -391,6 +391,7 @@ function processChapterPage(page, chapter, chapterPages, pageIndex) {
     let currentParagraph = [];
     let lastY = null;
     let foundChapterTitle = false;
+    let chapterSubtitleSoFar = '';
     
     page.content.forEach((item, itemIndex) => {
         const text = item.str.trim();
@@ -409,8 +410,18 @@ function processChapterPage(page, chapter, chapterPages, pageIndex) {
                 htmlContent += formatParagraph(paragraphText, chapter.name);
                 currentParagraph = [];
             }
-            htmlContent += `<h3>${escapeHtml(text)}</h3>\n`;
-            foundChapterTitle = false;
+
+            // Build up a subtitle that should match the chapter name in length exactly
+            chapterSubtitleSoFar += text
+
+            // If we haven't reached our length yet, then continue without adding html yet
+            if (chapterSubtitleSoFar.length < chapter.name.length) {
+
+            // Otherwise, we have reached our length and so we add the html and continue with paragraphs by saying foundChapterTitle = false
+            } else {
+                htmlContent += `<h3>${escapeHtml(chapterSubtitleSoFar)}</h3>\n`;
+                foundChapterTitle = false;
+            }
             lastY = item.y;
             return;
         }
