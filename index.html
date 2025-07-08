@@ -110,6 +110,58 @@
                 page-break-inside: avoid;
             }
         }
+        .cover-page {
+            text-align: center;
+            margin: 4em 0;
+            page-break-after: always;
+        }
+        .cover-page h1 {
+            font-size: 3em;
+            margin-bottom: 1em;
+        }
+        .cover-illustration {
+            margin: 3em 0;
+        }
+        .cover-image {
+            max-width: 400px;
+            height: auto;
+            margin: 2em 0;
+        }
+        .chapter-illustration {
+            text-align: center;
+            margin: 2em 0;
+        }
+        .chapter-image {
+            max-width: 500px;
+            height: auto;
+            margin: 1em 0;
+        }
+        .subtitle {
+            font-size: 1.2em;
+            margin: 1em 0;
+        }
+        .author {
+            margin-top: 2em;
+        }
+        .table-of-contents {
+            margin: 3em 0;
+            page-break-after: always;
+        }
+        .table-of-contents h2 {
+            text-align: center;
+            margin-bottom: 2em;
+        }
+        .chapter-header {
+            text-align: center;
+            font-size: 1.5em;
+            margin: 3em 0 2em;
+            page-break-before: always;
+        }
+        @media print {
+            .cover-page, .table-of-contents, .chapter-header {
+                page-break-inside: avoid;
+            }
+        }
     </style>
 </head>
 <body>
@@ -119,7 +171,7 @@
 <div class="cover-page">
     <h1>Mere Metaphor</h1>
     <div class="cover-illustration">
-        <p class="god-is-love">God is love</p>
+        <img src="images/cover.png" alt="Cover illustration showing a tree profile with 'God is love'" class="cover-image">
     </div>
     <p class="subtitle">Understanding Religious<br>Language as a Materialist</p>
     <p class="author">by Derek Bredensteiner</p>
@@ -142,6 +194,10 @@
 </div>
 
 <h2 class="chapter-header">PREFACE</h2>
+<div class="chapter-illustration">
+<img src="images/preface-illustration.png" alt="Illustration for PREFACE" class="chapter-image">
+</div>
+
 <h3>Preface</h3>
 <p>If you believe in a supernatural entity or a creator of the universe, that’s not what this book is about. This book is about an entirely naturalistic (non- supernatural), physicalist, determinist, materialist view of religion and the meaning of the metaphors within it from that (natural) perspective.</p>
 <p>I understand each reader has their own journey of faith. I’ve seen a spectrum of experience in my own family, from atheism, to conservative Christianity, to progressive Christianity, and many things in between. My intent isn’t to challenge your path, but simply to share and explain a particular one — my own.</p>
