@@ -3,6 +3,11 @@ const path = require('path');
 const { execSync } = require('child_process');
 const { PDFExtract } = require('pdf.js-extract');
 
+// Constants for text processing
+const PARAGRAPH_SPACING_THRESHOLD = 25; // Y-coordinate difference that indicates new paragraph
+const TITLE_ITEM_INDEX_LIMIT = 10; // Maximum item index to check for chapter titles
+const TITLE_TEXT_LENGTH_LIMIT = 50; // Maximum text length for potential chapter titles
+
 async function buildSite() {
     console.log('Building site from PDF...');
     
@@ -179,70 +184,7 @@ async function extractText() {
                 
                 chapterPages.forEach(pageIndex => {
                     const page = data.pages[pageIndex];
-                    let currentParagraph = [];
-                    let lastY = null;
-                    let foundChapterTitle = false;
-                    
-                    page.content.forEach((item, itemIndex) => {
-                        const text = item.str.trim();
-                        
-                        if (!text || text.match(/^\d+$/)) return;
-                        
-                        if (text === chapter.name) {
-                            foundChapterTitle = true;
-                            return;
-                        }
-                        
-                        if (foundChapterTitle && pageIndex === chapterPages[0] && 
-                            itemIndex < 10 && text.length < 50 && !text.match(/^[A-Z\s]+$/)) {
-                            if (currentParagraph.length > 0) {
-                                const paragraphText = currentParagraph.join(' ');
-                                if (chapter.name === 'GLOSSARY') {
-                                    const words = paragraphText.split(' ');
-                                    const firstWord = words[0];
-                                    const restOfText = words.slice(1).join(' ');
-                                    htmlContent += `<p><strong>${escapeHtml(firstWord)}</strong><br>${escapeHtml(restOfText)}</p>\n`;
-                                } else {
-                                    htmlContent += `<p>${escapeHtml(paragraphText)}</p>\n`;
-                                }
-                                currentParagraph = [];
-                            }
-                            htmlContent += `<h3>${escapeHtml(text)}</h3>\n`;
-                            foundChapterTitle = false;
-                            lastY = item.y;
-                            return;
-                        }
-                        
-                        if (lastY !== null && item.y - lastY > 25) {
-                            if (currentParagraph.length > 0) {
-                                const paragraphText = currentParagraph.join(' ');
-                                if (chapter.name === 'GLOSSARY') {
-                                    const words = paragraphText.split(' ');
-                                    const firstWord = words[0];
-                                    const restOfText = words.slice(1).join(' ');
-                                    htmlContent += `<p><strong>${escapeHtml(firstWord)}</strong><br>${escapeHtml(restOfText)}</p>\n`;
-                                } else {
-                                    htmlContent += `<p>${escapeHtml(paragraphText)}</p>\n`;
-                                }
-                                currentParagraph = [];
-                            }
-                        }
-                        
-                        currentParagraph.push(text);
-                        lastY = item.y;
-                    });
-                    
-                    if (currentParagraph.length > 0) {
-                        const paragraphText = currentParagraph.join(' ');
-                        if (chapter.name === 'GLOSSARY') {
-                            const words = paragraphText.split(' ');
-                            const firstWord = words[0];
-                            const restOfText = words.slice(1).join(' ');
-                            htmlContent += `<p><strong>${escapeHtml(firstWord)}</strong><br>${escapeHtml(restOfText)}</p>\n`;
-                        } else {
-                            htmlContent += `<p>${escapeHtml(paragraphText)}</p>\n`;
-                        }
-                    }
+                    htmlContent += processChapterPage(page, chapter, chapterPages, pageIndex);
                 });
                 
                 htmlContent += '\n';
@@ -440,6 +382,66 @@ ${htmlContent}
             resolve();
         });
     });
+}
+
+function processChapterPage(page, chapter, chapterPages, pageIndex) {
+    let htmlContent = '';
+    let currentParagraph = [];
+    let lastY = null;
+    let foundChapterTitle = false;
+    
+    page.content.forEach((item, itemIndex) => {
+        const text = item.str.trim();
+        
+        if (!text || text.match(/^\d+$/)) return;
+        
+        if (text === chapter.name) {
+            foundChapterTitle = true;
+            return;
+        }
+        
+        if (foundChapterTitle && pageIndex === chapterPages[0] && 
+            itemIndex < TITLE_ITEM_INDEX_LIMIT && text.length < TITLE_TEXT_LENGTH_LIMIT && !text.match(/^[A-Z\s]+$/)) {
+            if (currentParagraph.length > 0) {
+                const paragraphText = currentParagraph.join(' ');
+                htmlContent += formatParagraph(paragraphText, chapter.name);
+                currentParagraph = [];
+            }
+            htmlContent += `<h3>${escapeHtml(text)}</h3>\n`;
+            foundChapterTitle = false;
+            lastY = item.y;
+            return;
+        }
+        
+        if (lastY !== null && item.y - lastY > PARAGRAPH_SPACING_THRESHOLD) {
+            if (currentParagraph.length > 0) {
+                const paragraphText = currentParagraph.join(' ');
+                htmlContent += formatParagraph(paragraphText, chapter.name);
+                currentParagraph = [];
+            }
+        }
+        
+        currentParagraph.push(text);
+        lastY = item.y;
+    });
+    
+    if (currentParagraph.length > 0) {
+        const paragraphText = currentParagraph.join(' ');
+        htmlContent += formatParagraph(paragraphText, chapter.name);
+    }
+    
+    return htmlContent;
+}
+
+function formatParagraph(paragraphText, chapterName) {
+    if (chapterName === 'GLOSSARY') {
+        const words = paragraphText.split(' ');
+        const firstWord = words[0];
+        const restOfText = words.slice(1).join(' ');
+        return `<p><strong>${escapeHtml(firstWord)}</strong><br>${escapeHtml(restOfText)}</p>\n`;
+    } else {
+        return `<p>${escapeHtml(paragraphText)}</p>\n`;
+    }
 }
 
 function escapeHtml(text) {
