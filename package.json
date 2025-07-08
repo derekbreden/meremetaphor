@@ -1,0 +1,24 @@
+{
+  "name": "meremetaphor",
+  "version": "1.0.0",
+  "description": "Build tools for meremetaphor.com",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build.js",
+    "dev": "node scripts/build.js && npx http-server -p 8080"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/derekbreden/meremetaphor.git"
+  },
+  "keywords": [],
+  "author": "Derek Bredensteiner",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/derekbreden/meremetaphor/issues"
+  },
+  "homepage": "https://meremetaphor.com",
+  "dependencies": {
+    "pdf-parse": "^1.1.1"
+  }
+}
