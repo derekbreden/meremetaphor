@@ -238,7 +238,7 @@ async function extractText() {
                             const words = paragraphText.split(' ');
                             const firstWord = words[0];
                             const restOfText = words.slice(1).join(' ');
-                            htmlContent += `<p><strong>${escapeHtml(firstWord)}</strong> ${escapeHtml(restOfText)}</p>\n`;
+                            htmlContent += `<p><strong>${escapeHtml(firstWord)}</strong><br>${escapeHtml(restOfText)}</p>\n`;
                         } else {
                             htmlContent += `<p>${escapeHtml(paragraphText)}</p>\n`;
                         }
