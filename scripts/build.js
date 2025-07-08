@@ -335,9 +335,13 @@ async function extractText() {
             }
             .cover-image {
                 max-width: 400px;
+                max-height: 400px;
+                object-fit: contain;
             }
             .chapter-image {
                 max-width: 450px;
+                max-height: 400px;
+                object-fit: contain;
             }
             .subtitle {
                 font-size: 1.2em;
@@ -357,9 +361,13 @@ async function extractText() {
             }
             .cover-image {
                 max-width: 400px;
+                max-height: 400px;
+                object-fit: contain;
             }
             .chapter-image {
                 max-width: 500px;
+                max-height: 450px;
+                object-fit: contain;
             }
         }
         
