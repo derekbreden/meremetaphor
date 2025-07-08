@@ -11,7 +11,7 @@
             color: #333;
             max-width: 700px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 10px 20px 20px 20px;
         }
         h1, h2, h3 {
             font-weight: normal;
@@ -27,13 +27,13 @@
         }
         .cover-page {
             text-align: center;
-            margin: 2em 0;
-            padding: 1em;
+            margin: 0;
+            padding: 0;
             page-break-after: always;
         }
         .cover-page h1 {
             font-size: 2.5em;
-            margin-bottom: 1em;
+            margin: 0.5em 0 1em 0;
             line-height: 1.2;
         }
         .cover-illustration {
@@ -145,7 +145,29 @@
                 page-break-inside: avoid;
             }
         }
+        
+        .table-of-contents .toc-link {
+            color: #333;
+            text-decoration: none;
+            cursor: pointer;
+            display: block;
+            padding: 0.5em 0;
+            margin: 0.5em 0;
+        }
+        
+        .table-of-contents .toc-link:hover {
+            color: #666;
+            text-decoration: underline;
+        }
     </style>
+    <script>
+        function scrollToChapter(chapterId) {
+            const element = document.getElementById(chapterId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+    </script>
 </head>
 <body>
     <div id="book-content">
@@ -153,31 +175,31 @@
 <div class="cover-page">
     <h1>Mere Metaphor</h1>
     <div class="cover-illustration">
-        <img src="images/cover.png?v=1751946541258" alt="Tree illustration with profile and 'God is love'" class="cover-image">
+        <img src="images/cover.png?v=1751947778102" alt="Tree illustration with profile and 'God is love'" class="cover-image">
     </div>
     <p class="subtitle">Understanding Religious<br>Language as a Materialist</p>
     <p class="author">by Derek Bredensteiner</p>
 </div>
 <div class="table-of-contents">
 <h2>TABLE OF CONTENTS</h2>
-<p>Preface</p>
-<p>About the Author</p>
-<p>Introduction: Metaphor</p>
-<p>God: Love Within and Between Us</p>
-<p>Free Will: Recursing a Lifetime</p>
-<p>Good: A Direction We Choose</p>
-<p>Sin: Alignment With That Choice</p>
-<p>Redemption: Making New Choices</p>
-<p>Heaven: A State of Mind and Being</p>
-<p>Prayer: Effects of Self-Reflection</p>
-<p>Voices: What Inspires Shamans</p>
-<p>Afterword</p>
-<p>Glossary</p>
+<a href="#" onclick="scrollToChapter('preface'); return false;" class="toc-link">Preface</a>
+<a href="#" onclick="scrollToChapter('about-the-author'); return false;" class="toc-link">About the Author</a>
+<a href="#" onclick="scrollToChapter('introduction-metaphor'); return false;" class="toc-link">Introduction: Metaphor</a>
+<a href="#" onclick="scrollToChapter('god-love-within-and-between-us'); return false;" class="toc-link">God: Love Within and Between Us</a>
+<a href="#" onclick="scrollToChapter('free-will-recursing-a-lifetime'); return false;" class="toc-link">Free Will: Recursing a Lifetime</a>
+<a href="#" onclick="scrollToChapter('good-a-direction-we-choose'); return false;" class="toc-link">Good: A Direction We Choose</a>
+<a href="#" onclick="scrollToChapter('sin-alignment-with-that-choice'); return false;" class="toc-link">Sin: Alignment With That Choice</a>
+<a href="#" onclick="scrollToChapter('redemption-making-new-choices'); return false;" class="toc-link">Redemption: Making New Choices</a>
+<a href="#" onclick="scrollToChapter('heaven-a-state-of-mind-and-being'); return false;" class="toc-link">Heaven: A State of Mind and Being</a>
+<a href="#" onclick="scrollToChapter('prayer-effects-of-self-reflection'); return false;" class="toc-link">Prayer: Effects of Self-Reflection</a>
+<a href="#" onclick="scrollToChapter('voices-what-inspires-shamans'); return false;" class="toc-link">Voices: What Inspires Shamans</a>
+<a href="#" onclick="scrollToChapter('afterword'); return false;" class="toc-link">Afterword</a>
+<a href="#" onclick="scrollToChapter('glossary'); return false;" class="toc-link">Glossary</a>
 </div>
 
-<h2 class="chapter-header">PREFACE</h2>
+<h2 class="chapter-header" id="preface">PREFACE</h2>
 <div class="chapter-illustration">
-<img src="images/preface-illustration.png?v=1751946541258" alt="Illustration for PREFACE" class="chapter-image">
+<img src="images/preface-illustration.png?v=1751947778102" alt="Illustration for PREFACE" class="chapter-image">
 </div>
 
 <h3>Preface</h3>
@@ -188,9 +210,9 @@
 <p>I hope to present here an interpretation of Christianity (or at least some part of Christianity) that is compatible with an entirely natural universe.</p>
 
 <div class="chapter-separator">◆ ◆ ◆</div>
-<h2 class="chapter-header">ABOUT THE AUTHOR</h2>
+<h2 class="chapter-header" id="about-the-author">ABOUT THE AUTHOR</h2>
 <div class="chapter-illustration">
-<img src="images/about-author-illustration.png?v=1751946541258" alt="Illustration for ABOUT THE AUTHOR" class="chapter-image">
+<img src="images/about-author-illustration.png?v=1751947778102" alt="Illustration for ABOUT THE AUTHOR" class="chapter-image">
 </div>
 
 <h3>About the Author</h3>
@@ -210,9 +232,9 @@
 <p>There is no need to claim God’s decree for us to make (and continually remake) our choice of orientation for what good and bad are. Just like up and down, good and bad are also relative terms that only make sense with a direction, an aim, a target, a goal — that we choose.</p>
 
 <div class="chapter-separator">◆ ◆ ◆</div>
-<h2 class="chapter-header">INTRODUCTION: METAPHOR</h2>
+<h2 class="chapter-header" id="introduction-metaphor">INTRODUCTION: METAPHOR</h2>
 <div class="chapter-illustration">
-<img src="images/metaphor-illustration.png?v=1751946541258" alt="Illustration for INTRODUCTION: METAPHOR" class="chapter-image">
+<img src="images/metaphor-illustration.png?v=1751947778102" alt="Illustration for INTRODUCTION: METAPHOR" class="chapter-image">
 </div>
 
 <h3>Introduction: Metaphor</h3>
@@ -225,9 +247,9 @@
 <p>What I mean by “metaphor” in this book is this basic transformation operation that is at the heart of every word - an abstraction, an analogy, a map of a thing that allows us to understand and draw connections we would not be able to otherwise.</p>
 
 <div class="chapter-separator">◆ ◆ ◆</div>
-<h2 class="chapter-header">GOD: LOVE WITHIN AND BETWEEN US</h2>
+<h2 class="chapter-header" id="god-love-within-and-between-us">GOD: LOVE WITHIN AND BETWEEN US</h2>
 <div class="chapter-illustration">
-<img src="images/god-illustration.png?v=1751946541258" alt="Illustration for GOD: LOVE WITHIN AND BETWEEN US" class="chapter-image">
+<img src="images/god-illustration.png?v=1751947778102" alt="Illustration for GOD: LOVE WITHIN AND BETWEEN US" class="chapter-image">
 </div>
 
 <h3>God: Love Within and Between Us</h3>
@@ -239,9 +261,9 @@
 <p>Love is something we have and feel within us. Love is something we express toward others through our actions. Love is something we recognize in the words and deeds of those around us. This is the God that exists in our lived experience, not a being separate from us, but the very connection between us.</p>
 
 <div class="chapter-separator">◆ ◆ ◆</div>
-<h2 class="chapter-header">FREE WILL: RECURSING A LIFETIME</h2>
+<h2 class="chapter-header" id="free-will-recursing-a-lifetime">FREE WILL: RECURSING A LIFETIME</h2>
 <div class="chapter-illustration">
-<img src="images/freewill-illustration.png?v=1751946541258" alt="Illustration for FREE WILL: RECURSING A LIFETIME" class="chapter-image">
+<img src="images/freewill-illustration.png?v=1751947778102" alt="Illustration for FREE WILL: RECURSING A LIFETIME" class="chapter-image">
 </div>
 
 <h3>Free Will: Recursing a Lifetime</h3>
@@ -258,9 +280,9 @@
 <p>We are accountable for what we do, even if that is a product of what we are, because what we are is also a product of every thought we have and every choice we make.</p>
 
 <div class="chapter-separator">◆ ◆ ◆</div>
-<h2 class="chapter-header">GOOD: A DIRECTION WE CHOOSE</h2>
+<h2 class="chapter-header" id="good-a-direction-we-choose">GOOD: A DIRECTION WE CHOOSE</h2>
 <div class="chapter-illustration">
-<img src="images/good-illustration.png?v=1751946541258" alt="Illustration for GOOD: A DIRECTION WE CHOOSE" class="chapter-image">
+<img src="images/good-illustration.png?v=1751947778102" alt="Illustration for GOOD: A DIRECTION WE CHOOSE" class="chapter-image">
 </div>
 
 <h3>Good: A Direction We Choose</h3>
@@ -275,9 +297,9 @@
 <p>The only way for us to have a conversation is to first agree that there is a conversation to be had, and a point (a shared goal) in having it. Claims of objective divine decree remove any reason for discussion — they imply there is no point. I would like to know more about your reasons, your fears and hopes, and the consequences you expect. I would like to share mine with you. I would like for us to find common ground.</p>
 
 <div class="chapter-separator">◆ ◆ ◆</div>
-<h2 class="chapter-header">SIN: ALIGNMENT WITH THAT CHOICE</h2>
+<h2 class="chapter-header" id="sin-alignment-with-that-choice">SIN: ALIGNMENT WITH THAT CHOICE</h2>
 <div class="chapter-illustration">
-<img src="images/sin-illustration.png?v=1751946541258" alt="Illustration for SIN: ALIGNMENT WITH THAT CHOICE" class="chapter-image">
+<img src="images/sin-illustration.png?v=1751947778102" alt="Illustration for SIN: ALIGNMENT WITH THAT CHOICE" class="chapter-image">
 </div>
 
 <h3>Sin: Alignment With That Choice</h3>
@@ -287,9 +309,9 @@
 <p>This is why sin feels personal, why it produces guilt. It is not because some external authority is judging us (that would be shame). It is because we are judging ourselves against our own internalized standard. When we recognize that we have acted against our currently chosen direction, there is an internal conflict that can be felt in that moment, an internal conflict that can be carried through to resolution, to redemption.</p>
 
 <div class="chapter-separator">◆ ◆ ◆</div>
-<h2 class="chapter-header">REDEMPTION: MAKING NEW CHOICES</h2>
+<h2 class="chapter-header" id="redemption-making-new-choices">REDEMPTION: MAKING NEW CHOICES</h2>
 <div class="chapter-illustration">
-<img src="images/redemption-illustration.png?v=1751946541258" alt="Illustration for REDEMPTION: MAKING NEW CHOICES" class="chapter-image">
+<img src="images/redemption-illustration.png?v=1751947778102" alt="Illustration for REDEMPTION: MAKING NEW CHOICES" class="chapter-image">
 </div>
 
 <h3>Redemption: Making New Choices</h3>
@@ -300,9 +322,9 @@
 <p>The person you become through this recursive process is determined to make different choices not through force of will, but because they genuinely see the world differently than their former self did.</p>
 
 <div class="chapter-separator">◆ ◆ ◆</div>
-<h2 class="chapter-header">HEAVEN: A STATE OF MIND AND BEING</h2>
+<h2 class="chapter-header" id="heaven-a-state-of-mind-and-being">HEAVEN: A STATE OF MIND AND BEING</h2>
 <div class="chapter-illustration">
-<img src="images/heaven-illustration.png?v=1751946541258" alt="Illustration for HEAVEN: A STATE OF MIND AND BEING" class="chapter-image">
+<img src="images/heaven-illustration.png?v=1751947778102" alt="Illustration for HEAVEN: A STATE OF MIND AND BEING" class="chapter-image">
 </div>
 
 <h3>Heaven: A State of Mind and Being</h3>
@@ -312,9 +334,9 @@
 <p>We always have a choice in the present moment, to affect the people and events around us. We can see heaven and make it so, if we so choose.</p>
 
 <div class="chapter-separator">◆ ◆ ◆</div>
-<h2 class="chapter-header">PRAYER: EFFECTS OF SELF-REFLECTION</h2>
+<h2 class="chapter-header" id="prayer-effects-of-self-reflection">PRAYER: EFFECTS OF SELF-REFLECTION</h2>
 <div class="chapter-illustration">
-<img src="images/prayer-illustration.png?v=1751946541258" alt="Illustration for PRAYER: EFFECTS OF SELF-REFLECTION" class="chapter-image">
+<img src="images/prayer-illustration.png?v=1751947778102" alt="Illustration for PRAYER: EFFECTS OF SELF-REFLECTION" class="chapter-image">
 </div>
 
 <h3>Prayer: Effects of Self-Re</h3>
@@ -326,9 +348,9 @@
 <p>The traditional language of prayer - asking for strength, wisdom, courage, or compassion - makes perfect sense in this materialist framework. We are not receiving these qualities from an external source. We are activating and reinforcing neural pathways associated with these qualities within ourselves.</p>
 
 <div class="chapter-separator">◆ ◆ ◆</div>
-<h2 class="chapter-header">VOICES: WHAT INSPIRES SHAMANS</h2>
+<h2 class="chapter-header" id="voices-what-inspires-shamans">VOICES: WHAT INSPIRES SHAMANS</h2>
 <div class="chapter-illustration">
-<img src="images/voices-illustration.png?v=1751946541258" alt="Illustration for VOICES: WHAT INSPIRES SHAMANS" class="chapter-image">
+<img src="images/voices-illustration.png?v=1751947778102" alt="Illustration for VOICES: WHAT INSPIRES SHAMANS" class="chapter-image">
 </div>
 
 <h3>Voices: What Inspires Shamans</h3>
@@ -340,9 +362,9 @@
 <p>Understanding these voices as natural rather than supernatural does not diminish their potential value. Minds that process information differently can see patterns and connections that we may miss otherwise, and we can all benefit from these experiences being shared and respected.</p>
 
 <div class="chapter-separator">◆ ◆ ◆</div>
-<h2 class="chapter-header">AFTERWORD</h2>
+<h2 class="chapter-header" id="afterword">AFTERWORD</h2>
 <div class="chapter-illustration">
-<img src="images/afterword-illustration.png?v=1751946541258" alt="Illustration for AFTERWORD" class="chapter-image">
+<img src="images/afterword-illustration.png?v=1751947778102" alt="Illustration for AFTERWORD" class="chapter-image">
 </div>
 
 <h3>Afterword</h3>
@@ -350,9 +372,9 @@
 <p>I hope by sharing some of my understanding here, we might find some common ground. There may not always be a middle ground, but I do believe we all have more in common than we typically realize or discuss.</p>
 
 <div class="chapter-separator">◆ ◆ ◆</div>
-<h2 class="chapter-header">GLOSSARY</h2>
+<h2 class="chapter-header" id="glossary">GLOSSARY</h2>
 <div class="chapter-illustration">
-<img src="images/glossary-illustration.png?v=1751946541258" alt="Illustration for GLOSSARY" class="chapter-image">
+<img src="images/glossary-illustration.png?v=1751947778102" alt="Illustration for GLOSSARY" class="chapter-image">
 </div>
 
 <h3>Glossary</h3>

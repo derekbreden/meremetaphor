@@ -129,7 +129,8 @@ async function extractText() {
                     
                     const cleaned = text.replace(/\.+\d*$/, '').trim();
                     if (cleaned && cleaned !== '1') {
-                        htmlContent += `<p>${escapeHtml(cleaned)}</p>\n`;
+                        const chapterId = cleaned.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+                        htmlContent += `<a href="#" onclick="scrollToChapter('${chapterId}'); return false;" class="toc-link">${escapeHtml(cleaned)}</a>\n`;
                     }
                 }
                 htmlContent += '</div>\n\n';
@@ -166,7 +167,8 @@ async function extractText() {
                     htmlContent += '<div class="chapter-separator">◆ ◆ ◆</div>\n';
                 }
                 
-                htmlContent += `<h2 class="chapter-header">${escapeHtml(chapter.name)}</h2>\n`;
+                const chapterId = chapter.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+                htmlContent += `<h2 class="chapter-header" id="${chapterId}">${escapeHtml(chapter.name)}</h2>\n`;
                 
                 const imagePath = path.join(__dirname, '..', 'images', chapter.image);
                 if (fs.existsSync(imagePath)) {
@@ -235,7 +237,7 @@ async function extractText() {
             color: #333;
             max-width: 700px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 10px 20px 20px 20px;
         }
         h1, h2, h3 {
             font-weight: normal;
@@ -251,13 +253,13 @@ async function extractText() {
         }
         .cover-page {
             text-align: center;
-            margin: 2em 0;
-            padding: 1em;
+            margin: 0;
+            padding: 0;
             page-break-after: always;
         }
         .cover-page h1 {
             font-size: 2.5em;
-            margin-bottom: 1em;
+            margin: 0.5em 0 1em 0;
             line-height: 1.2;
         }
         .cover-illustration {
@@ -369,7 +371,29 @@ async function extractText() {
                 page-break-inside: avoid;
             }
         }
+        
+        .table-of-contents .toc-link {
+            color: #333;
+            text-decoration: none;
+            cursor: pointer;
+            display: block;
+            padding: 0.5em 0;
+            margin: 0.5em 0;
+        }
+        
+        .table-of-contents .toc-link:hover {
+            color: #666;
+            text-decoration: underline;
+        }
     </style>
+    <script>
+        function scrollToChapter(chapterId) {
+            const element = document.getElementById(chapterId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+    </script>
 </head>
 <body>
     <div id="book-content">
