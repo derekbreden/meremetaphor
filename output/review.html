@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Review Interface</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .review-chapter {
+            border: 1px solid #ddd;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .review-section {
+            border-left: 3px solid #007bff;
+            margin: 15px 0;
+            padding-left: 15px;
+        }
+        .review-sentence {
+            background: #f8f9fa;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .sentence-text {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .sentence-mapping {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+        .word-mapping {
+            display: inline-block;
+            background: #e9ecef;
+            margin: 2px;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.8em;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Content Review Interface</h1>
+    <p>Review and adjust audio mappings for each section.</p>
+<div class="review-chapter" data-chapter="preface">
+    <h2>Review: Preface</h2>
+    <div class="review-section" data-section="preface-intro">
+        <h3>Section: preface-intro</h3>
+        <div class="review-sentence" data-sentence="preface-s1">
+            <div class="sentence-text">If you believe in a supernatural entity or a creator of the universe, that&#039;s not what this book is about.</div>
+            <div class="sentence-mapping">Transcription: 12-31</div>
+            <div class="sentence-words">
+                <span class="word-mapping" data-index="12">If</span>
+                <span class="word-mapping" data-index="13">you</span>
+                <span class="word-mapping" data-index="14">believe</span>
+                <span class="word-mapping" data-index="15">in</span>
+                <span class="word-mapping" data-index="16">a</span>
+                <span class="word-mapping" data-index="17">supernatural</span>
+                <span class="word-mapping" data-index="18">entity</span>
+                <span class="word-mapping" data-index="19">or</span>
+                <span class="word-mapping" data-index="20">a</span>
+                <span class="word-mapping" data-index="21">creator</span>
+                <span class="word-mapping" data-index="22">of</span>
+                <span class="word-mapping" data-index="23">the</span>
+                <span class="word-mapping" data-index="24">universe</span>
+                <span class="word-mapping" data-index="25">thats</span>
+                <span class="word-mapping" data-index="26">not</span>
+                <span class="word-mapping" data-index="27">what</span>
+                <span class="word-mapping" data-index="28">this</span>
+                <span class="word-mapping" data-index="29">book</span>
+                <span class="word-mapping" data-index="30">is</span>
+                <span class="word-mapping" data-index="31">about</span>
+            </div>
+            <button onclick="adjustMapping('preface-s1')">Adjust Mapping</button>
+        </div>
+        <div class="review-sentence" data-sentence="preface-s2">
+            <div class="sentence-text">This book is about an entirely naturalistic (non- supernatural), physicalist, determinist, materialist view of religion and the meaning of the metaphors within it from that (natural) perspective.</div>
+            <div class="sentence-mapping">Transcription: 32-58</div>
+            <div class="sentence-words">
+                <span class="word-mapping" data-index="32">This</span>
+                <span class="word-mapping" data-index="33">book</span>
+                <span class="word-mapping" data-index="34">is</span>
+                <span class="word-mapping" data-index="35">about</span>
+                <span class="word-mapping" data-index="36">an</span>
+                <span class="word-mapping" data-index="37">entirely</span>
+                <span class="word-mapping" data-index="38">naturalistic</span>
+                <span class="word-mapping" data-index="39">non</span>
+                <span class="word-mapping" data-index="40">supernatural</span>
+                <span class="word-mapping" data-index="41">physicalist</span>
+                <span class="word-mapping" data-index="42">determinist</span>
+                <span class="word-mapping" data-index="43">materialist</span>
+                <span class="word-mapping" data-index="44">view</span>
+                <span class="word-mapping" data-index="45">of</span>
+                <span class="word-mapping" data-index="46">religion</span>
+                <span class="word-mapping" data-index="47">and</span>
+                <span class="word-mapping" data-index="48">the</span>
+                <span class="word-mapping" data-index="49">meaning</span>
+                <span class="word-mapping" data-index="50">of</span>
+                <span class="word-mapping" data-index="51">the</span>
+                <span class="word-mapping" data-index="52">metaphors</span>
+                <span class="word-mapping" data-index="53">within</span>
+                <span class="word-mapping" data-index="54">it</span>
+                <span class="word-mapping" data-index="55">from</span>
+                <span class="word-mapping" data-index="56">that</span>
+                <span class="word-mapping" data-index="57">natural</span>
+                <span class="word-mapping" data-index="58">perspective</span>
+            </div>
+            <button onclick="adjustMapping('preface-s2')">Adjust Mapping</button>
+        </div>
+    </div>
+    <div class="review-section" data-section="preface-journey">
+        <h3>Section: preface-journey</h3>
+        <div class="review-sentence" data-sentence="preface-s3">
+            <div class="sentence-text">I understand each reader has their own journey of faith.</div>
+            <div class="sentence-mapping">Transcription: 59-68</div>
+            <div class="sentence-words">
+                <span class="word-mapping" data-index="59">I</span>
+                <span class="word-mapping" data-index="60">understand</span>
+                <span class="word-mapping" data-index="61">each</span>
+                <span class="word-mapping" data-index="62">reader</span>
+                <span class="word-mapping" data-index="63">has</span>
+                <span class="word-mapping" data-index="64">their</span>
+                <span class="word-mapping" data-index="65">own</span>
+                <span class="word-mapping" data-index="66">journey</span>
+                <span class="word-mapping" data-index="67">of</span>
+                <span class="word-mapping" data-index="68">faith</span>
+            </div>
+            <button onclick="adjustMapping('preface-s3')">Adjust Mapping</button>
+        </div>
+        <div class="review-sentence" data-sentence="preface-s4">
+            <div class="sentence-text">I&#039;ve seen a spectrum of experience in my own family, from atheism, to conservative Christianity, to progressive Christianity, and many things in between.</div>
+            <div class="sentence-mapping">Transcription: 69-91</div>
+            <div class="sentence-words">
+                <span class="word-mapping" data-index="69">Ive</span>
+                <span class="word-mapping" data-index="70">seen</span>
+                <span class="word-mapping" data-index="71">a</span>
+                <span class="word-mapping" data-index="72">spectrum</span>
+                <span class="word-mapping" data-index="73">of</span>
+                <span class="word-mapping" data-index="74">experience</span>
+                <span class="word-mapping" data-index="75">in</span>
+                <span class="word-mapping" data-index="76">my</span>
+                <span class="word-mapping" data-index="77">own</span>
+                <span class="word-mapping" data-index="78">family</span>
+                <span class="word-mapping" data-index="79">from</span>
+                <span class="word-mapping" data-index="80">atheism</span>
+                <span class="word-mapping" data-index="81">to</span>
+                <span class="word-mapping" data-index="82">conservative</span>
+                <span class="word-mapping" data-index="83">Christianity</span>
+                <span class="word-mapping" data-index="84">to</span>
+                <span class="word-mapping" data-index="85">progressive</span>
+                <span class="word-mapping" data-index="86">Christianity</span>
+                <span class="word-mapping" data-index="87">and</span>
+                <span class="word-mapping" data-index="88">many</span>
+                <span class="word-mapping" data-index="89">things</span>
+                <span class="word-mapping" data-index="90">in</span>
+                <span class="word-mapping" data-index="91">between</span>
+            </div>
+            <button onclick="adjustMapping('preface-s4')">Adjust Mapping</button>
+        </div>
+        <div class="review-sentence" data-sentence="preface-s5">
+            <div class="sentence-text">My intent isn&#039;t to challenge your path, but simply to share and explain a particular one — my own.</div>
+            <div class="sentence-mapping">Transcription: 92-109</div>
+            <div class="sentence-words">
+                <span class="word-mapping" data-index="92">My</span>
+                <span class="word-mapping" data-index="93">intent</span>
+                <span class="word-mapping" data-index="94">isnt</span>
+                <span class="word-mapping" data-index="95">to</span>
+                <span class="word-mapping" data-index="96">challenge</span>
+                <span class="word-mapping" data-index="97">your</span>
+                <span class="word-mapping" data-index="98">path</span>
+                <span class="word-mapping" data-index="99">but</span>
+                <span class="word-mapping" data-index="100">simply</span>
+                <span class="word-mapping" data-index="101">to</span>
+                <span class="word-mapping" data-index="102">share</span>
+                <span class="word-mapping" data-index="103">and</span>
+                <span class="word-mapping" data-index="104">explain</span>
+                <span class="word-mapping" data-index="105">a</span>
+                <span class="word-mapping" data-index="106">particular</span>
+                <span class="word-mapping" data-index="107">one</span>
+                <span class="word-mapping" data-index="108">my</span>
+                <span class="word-mapping" data-index="109">own</span>
+            </div>
+            <button onclick="adjustMapping('preface-s5')">Adjust Mapping</button>
+        </div>
+    </div>
+    <div class="review-section" data-section="preface-perspective">
+        <h3>Section: preface-perspective</h3>
+        <div class="review-sentence" data-sentence="preface-s6">
+            <div class="sentence-text">I realize not everyone reading this book will share my perspective, but hopefully what is presented here will not be a challenge, but simply information.</div>
+            <div class="sentence-mapping">Transcription: 110-134</div>
+            <div class="sentence-words">
+                <span class="word-mapping" data-index="110">I</span>
+                <span class="word-mapping" data-index="111">realize</span>
+                <span class="word-mapping" data-index="112">not</span>
+                <span class="word-mapping" data-index="113">everyone</span>
+                <span class="word-mapping" data-index="114">reading</span>
+                <span class="word-mapping" data-index="115">this</span>
+                <span class="word-mapping" data-index="116">book</span>
+                <span class="word-mapping" data-index="117">will</span>
+                <span class="word-mapping" data-index="118">share</span>
+                <span class="word-mapping" data-index="119">my</span>
+                <span class="word-mapping" data-index="120">perspective</span>
+                <span class="word-mapping" data-index="121">but</span>
+                <span class="word-mapping" data-index="122">hopefully</span>
+                <span class="word-mapping" data-index="123">what</span>
+                <span class="word-mapping" data-index="124">is</span>
+                <span class="word-mapping" data-index="125">presented</span>
+                <span class="word-mapping" data-index="126">here</span>
+                <span class="word-mapping" data-index="127">will</span>
+                <span class="word-mapping" data-index="128">not</span>
+                <span class="word-mapping" data-index="129">be</span>
+                <span class="word-mapping" data-index="130">a</span>
+                <span class="word-mapping" data-index="131">challenge</span>
+                <span class="word-mapping" data-index="132">but</span>
+                <span class="word-mapping" data-index="133">simply</span>
+                <span class="word-mapping" data-index="134">information</span>
+            </div>
+            <button onclick="adjustMapping('preface-s6')">Adjust Mapping</button>
+        </div>
+    </div>
+    <div class="review-section" data-section="preface-audience">
+        <h3>Section: preface-audience</h3>
+        <div class="review-sentence" data-sentence="preface-s7">
+            <div class="sentence-text">I see the audience here as Christians who struggle with believability, atheists who struggle with living as a minority in a Christian society, and most importantly — anyone who seeks to understand either of those two groups better.</div>
+            <div class="sentence-mapping">Transcription: 135-171</div>
+            <div class="sentence-words">
+                <span class="word-mapping" data-index="135">I</span>
+                <span class="word-mapping" data-index="136">see</span>
+                <span class="word-mapping" data-index="137">the</span>
+                <span class="word-mapping" data-index="138">audience</span>
+                <span class="word-mapping" data-index="139">here</span>
+                <span class="word-mapping" data-index="140">as</span>
+                <span class="word-mapping" data-index="141">Christians</span>
+                <span class="word-mapping" data-index="142">who</span>
+                <span class="word-mapping" data-index="143">struggle</span>
+                <span class="word-mapping" data-index="144">with</span>
+                <span class="word-mapping" data-index="145">believability</span>
+                <span class="word-mapping" data-index="146">atheists</span>
+                <span class="word-mapping" data-index="147">who</span>
+                <span class="word-mapping" data-index="148">struggle</span>
+                <span class="word-mapping" data-index="149">with</span>
+                <span class="word-mapping" data-index="150">living</span>
+                <span class="word-mapping" data-index="151">as</span>
+                <span class="word-mapping" data-index="152">a</span>
+                <span class="word-mapping" data-index="153">minority</span>
+                <span class="word-mapping" data-index="154">in</span>
+                <span class="word-mapping" data-index="155">a</span>
+                <span class="word-mapping" data-index="156">Christian</span>
+                <span class="word-mapping" data-index="157">society</span>
+                <span class="word-mapping" data-index="158">and</span>
+                <span class="word-mapping" data-index="159">most</span>
+                <span class="word-mapping" data-index="160">importantly</span>
+                <span class="word-mapping" data-index="161">anyone</span>
+                <span class="word-mapping" data-index="162">who</span>
+                <span class="word-mapping" data-index="163">seeks</span>
+                <span class="word-mapping" data-index="164">to</span>
+                <span class="word-mapping" data-index="165">understand</span>
+                <span class="word-mapping" data-index="166">either</span>
+                <span class="word-mapping" data-index="167">of</span>
+                <span class="word-mapping" data-index="168">those</span>
+                <span class="word-mapping" data-index="169">two</span>
+                <span class="word-mapping" data-index="170">groups</span>
+                <span class="word-mapping" data-index="171">better</span>
+            </div>
+            <button onclick="adjustMapping('preface-s7')">Adjust Mapping</button>
+        </div>
+    </div>
+    <div class="review-section" data-section="preface-goal">
+        <h3>Section: preface-goal</h3>
+        <div class="review-sentence" data-sentence="preface-s8">
+            <div class="sentence-text">I hope to present here an interpretation of Christianity (or at least some part of Christianity) that is compatible with an entirely natural universe.</div>
+            <div class="sentence-mapping">Transcription: 172-195</div>
+            <div class="sentence-words">
+                <span class="word-mapping" data-index="172">I</span>
+                <span class="word-mapping" data-index="173">hope</span>
+                <span class="word-mapping" data-index="174">to</span>
+                <span class="word-mapping" data-index="175">present</span>
+                <span class="word-mapping" data-index="176">here</span>
+                <span class="word-mapping" data-index="177">an</span>
+                <span class="word-mapping" data-index="178">interpretation</span>
+                <span class="word-mapping" data-index="179">of</span>
+                <span class="word-mapping" data-index="180">Christianity</span>
+                <span class="word-mapping" data-index="181">or</span>
+                <span class="word-mapping" data-index="182">at</span>
+                <span class="word-mapping" data-index="183">least</span>
+                <span class="word-mapping" data-index="184">some</span>
+                <span class="word-mapping" data-index="185">part</span>
+                <span class="word-mapping" data-index="186">of</span>
+                <span class="word-mapping" data-index="187">Christianity</span>
+                <span class="word-mapping" data-index="188">that</span>
+                <span class="word-mapping" data-index="189">is</span>
+                <span class="word-mapping" data-index="190">compatible</span>
+                <span class="word-mapping" data-index="191">with</span>
+                <span class="word-mapping" data-index="192">an</span>
+                <span class="word-mapping" data-index="193">entirely</span>
+                <span class="word-mapping" data-index="194">natural</span>
+                <span class="word-mapping" data-index="195">universe</span>
+            </div>
+            <button onclick="adjustMapping('preface-s8')">Adjust Mapping</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function adjustMapping(sentenceId) {
+        alert('Adjust mapping for: ' + sentenceId);
+        // TODO: Implement mapping adjustment interface
+    }
+    
+    // Add review functionality here
+    console.log('Review interface loaded');
+</script>
+
+    </div>
+</body>
+</html>
