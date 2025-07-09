@@ -361,6 +361,22 @@ async function extractText() {
             color: #666;
             text-decoration: underline;
         }
+        blockquote {
+            background: #f2f2f2;
+            border-left: 4px solid #ccc;
+            margin: 2em 0;
+            padding: 1.5em 2em;
+            font-style: italic;
+        }
+        blockquote p {
+            margin: 0 0 1em 0;
+        }
+        blockquote cite {
+            display: block;
+            text-align: right;
+            font-style: normal;
+            margin-top: 0.5em;
+        }
     </style>
     <script>
         function scrollToChapter(chapterId) {
@@ -392,6 +408,9 @@ function processChapterPage(page, chapter, chapterPages, pageIndex) {
     let lastY = null;
     let foundChapterTitle = false;
     let chapterSubtitleSoFar = '';
+    let inQuote = false;
+    let quoteContent = [];
+    let quoteAttribution = '';
     
     page.content.forEach((item, itemIndex) => {
         const text = item.str.trim();
@@ -426,18 +445,75 @@ function processChapterPage(page, chapter, chapterPages, pageIndex) {
             return;
         }
         
-        if (lastY !== null && item.y - lastY > PARAGRAPH_SPACING_THRESHOLD) {
-            if (currentParagraph.length > 0) {
-                const paragraphText = currentParagraph.join(' ');
-                htmlContent += formatParagraph(paragraphText, chapter.name);
-                currentParagraph = [];
+        // Check for quote formatting based on x-position (exact match for 63)
+        if (Math.abs(item.x - 63) < 0.1) {
+            // This appears to be indented quote text
+            if (!inQuote) {
+                // Finish any current paragraph
+                if (currentParagraph.length > 0) {
+                    const paragraphText = currentParagraph.join(' ');
+                    htmlContent += formatParagraph(paragraphText, chapter.name);
+                    currentParagraph = [];
+                }
+                inQuote = true;
+                quoteContent = [];
             }
+            quoteContent.push(text);
+        } else if (inQuote && item.x > 180 && text.startsWith('—')) {
+            // This appears to be quote attribution
+            quoteAttribution = text;
+            // Output the complete quote
+            htmlContent += `<blockquote>\n`;
+            htmlContent += `<p>${escapeHtml(quoteContent.join(' '))}</p>\n`;
+            if (quoteAttribution) {
+                htmlContent += `<cite>${escapeHtml(quoteAttribution)}</cite>\n`;
+            }
+            htmlContent += `</blockquote>\n`;
+            // Reset quote state
+            inQuote = false;
+            quoteContent = [];
+            quoteAttribution = '';
+        } else if (inQuote) {
+            // We've left the quote area, output what we have
+            if (quoteContent.length > 0) {
+                htmlContent += `<blockquote>\n`;
+                htmlContent += `<p>${escapeHtml(quoteContent.join(' '))}</p>\n`;
+                htmlContent += `</blockquote>\n`;
+            }
+            inQuote = false;
+            quoteContent = [];
+            // Process the current item as a normal paragraph
+            if (lastY !== null && item.y - lastY > PARAGRAPH_SPACING_THRESHOLD) {
+                if (currentParagraph.length > 0) {
+                    const paragraphText = currentParagraph.join(' ');
+                    htmlContent += formatParagraph(paragraphText, chapter.name);
+                    currentParagraph = [];
+                }
+            }
+            currentParagraph.push(text);
+        } else {
+            // Normal paragraph processing
+            if (lastY !== null && item.y - lastY > PARAGRAPH_SPACING_THRESHOLD) {
+                if (currentParagraph.length > 0) {
+                    const paragraphText = currentParagraph.join(' ');
+                    htmlContent += formatParagraph(paragraphText, chapter.name);
+                    currentParagraph = [];
+                }
+            }
+            currentParagraph.push(text);
         }
         
-        currentParagraph.push(text);
         lastY = item.y;
     });
     
+    // Handle any remaining quote
+    if (inQuote && quoteContent.length > 0) {
+        htmlContent += `<blockquote>\n`;
+        htmlContent += `<p>${escapeHtml(quoteContent.join(' '))}</p>\n`;
+        htmlContent += `</blockquote>\n`;
+    }
+    
+    // Handle any remaining paragraph
     if (currentParagraph.length > 0) {
         const paragraphText = currentParagraph.join(' ');
         htmlContent += formatParagraph(paragraphText, chapter.name);
