@@ -37,10 +37,12 @@ This is a GitHub Pages website for the book "Mere Metaphor" that lives at mereme
 ### Audio File Management
 The project uses separate source files combined into a single file for web delivery:
 
-**Source Files:**
-- `cover_and_preface.mp3` - Cover and preface audio (original)
-- `about_the_author.mp3` - About the author chapter (original)
-- `about_the_author.m4a` - Original m4a recording (kept for reference)
+**Source Files (Originals):**
+- `cover_and_preface.m4a` - Cover and preface audio recording
+- `about_the_author.m4a` - About the author chapter recording
+- *(Additional chapters will be added as .m4a files)*
+
+**Processed Files:**
 - `cover_and_preface_gentle_gate.mp3` - Cover/preface with gentle gate filter applied
 - `about_the_author_gentle_gate.mp3` - About the author with gentle gate filter applied
 
@@ -57,12 +59,12 @@ ffmpeg -i input.m4a -af "agate=threshold=0.05:ratio=1.5:attack=5:release=200" -c
 # ffmpeg -i input.m4a -af "agate=threshold=0.03:ratio=1.2:attack=8:release=300" -codec:a libmp3lame -b:a 128k output_ultra_clean.mp3
 
 # Complete workflow for new chapters:
-# 1. Record chapter as .m4a
-# 2. Apply gentle gate filter and convert to mp3
+# 1. Record chapter as .m4a (voice memo or other recording)
+# 2. Process directly from .m4a to filtered .mp3 (no intermediate conversion)
 ffmpeg -i new_chapter.m4a -af "agate=threshold=0.05:ratio=1.5:attack=5:release=200" -codec:a libmp3lame -b:a 128k new_chapter_gentle_gate.mp3
 
-# 3. Combine all clean audio files 
-ffmpeg -i cover_and_preface_gentle_gate.mp3 -i about_the_author_gentle_gate.mp3 -filter_complex "[0:0][1:0]concat=n=2:v=0:a=1" -c:a libmp3lame -b:a 128k book_audio.mp3
+# 3. Combine all processed audio files 
+ffmpeg -i cover_and_preface_gentle_gate.mp3 -i about_the_author_gentle_gate.mp3 -i new_chapter_gentle_gate.mp3 -filter_complex "[0:0][1:0][2:0]concat=n=3:v=0:a=1" -c:a libmp3lame -b:a 128k book_audio.mp3
 
 # 4. Transcribe combined audio
 node transcribe-audio.js
