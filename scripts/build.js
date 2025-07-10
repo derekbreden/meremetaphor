@@ -277,6 +277,7 @@ async function extractText() {
             color: #333;
             max-width: 700px;
             margin: 0 auto;
+            touch-action: manipulation;
             padding: 10px 20px 20px 20px;
         }
         h1, h2, h3 {
