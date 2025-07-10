@@ -8,73 +8,16 @@ const PARAGRAPH_SPACING_THRESHOLD = 25; // Y-coordinate difference that indicate
 const TITLE_ITEM_INDEX_LIMIT = 10; // Maximum item index to check for chapter titles
 const TITLE_TEXT_LENGTH_LIMIT = 50; // Maximum text length for potential chapter titles
 
-// Audio enhancement variables
-let transcriptionData = null;
-let currentTranscriptionIndex = 0;
-let currentPdfWordIndex = 0;
-let allPdfWords = []; // Store all PDF words for gap analysis
-let gapLog = {
-    matches: [],
-    gaps: [],
-    sequenceCounter: 0
-};
-
 async function buildSite() {
-    console.log('Building site with audio integration...');
+    console.log('Building site from PDF...');
     
     try {
-        // Load transcription data for audio features
-        await loadTranscriptionData();
-
-
-        // Expand words with no times
-        transcriptionData.words.forEach((word, word_index) => {
-            const previous_word = transcriptionData.words[word_index - 1]
-            const current_word_time = word.end - word.start
-            if (
-                previous_word
-                && previous_word.start !== 0
-                && (word.end - word.start) < 0.3
-            ) {
-                const previous_word_time = previous_word.end - previous_word.start
-                const previous_word_length = previous_word.word.length
-                const expected_time = Math.max(0.3, previous_word_length * 0.04)
-                if (previous_word_time > expected_time) {
-                    previous_word.end = previous_word.start + expected_time
-                    word.start = previous_word.end
-                }
-                const next_word = transcriptionData.words[word_index + 1]
-                if (next_word && next_word.start > word.end) {
-                    word.end = next_word.start
-                }
-                // console.warn("Adjusted ", previous_word.word, previous_word_time, "to", expected_time)
-                // console.warn("Adjusted ", word.word, current_word_time, "to", word.end - word.start)
-                // console.warn("-------")
-            }
-        })
-        
         await extractEmbeddedImagesWithMasks();
         await extractText();
-        console.log('Build complete with audio integration!');
-        console.log(`Used ${currentTranscriptionIndex} of ${transcriptionData ? transcriptionData.words.length : 0} transcription words`);
-        
-        // Output gap analysis
-        // if (transcriptionData) {
-        //     outputGapAnalysis();
-        // }
+        console.log('Build complete!');
     } catch (error) {
         console.error('Error building site:', error);
         process.exit(1);
-    }
-}
-
-async function loadTranscriptionData() {
-    const transcriptionPath = path.join(__dirname, '..', 'book_audio_transcription.json');
-    if (fs.existsSync(transcriptionPath)) {
-        transcriptionData = JSON.parse(fs.readFileSync(transcriptionPath, 'utf8'));
-        console.log(`Loaded ${transcriptionData.words.length} transcription words for audio features`);
-    } else {
-        console.log('No transcription data found - audio features disabled');
     }
 }
 
@@ -159,29 +102,14 @@ async function extractText() {
             const cacheBuster = Date.now();
             let htmlContent = '';
             
-            // All cover content that needs audio mapping (matches transcription order)
-            const coverTitleText = "Mere Metaphor";
-            const coverSubtitleText = "Understanding Religious Language as a Materialist";
-            const coverAuthorText = "by Derek Bredensteiner";
-            
-            let coverTitleHtml = coverTitleText;
-            let coverSubtitleHtml = coverSubtitleText;
-            let coverAuthorHtml = coverAuthorText;
-            
-            if (transcriptionData) {
-                coverTitleHtml = formatAnyWordsWithAudio(coverTitleText, 'COVER');
-                coverSubtitleHtml = formatAnyWordsWithAudio(coverSubtitleText, 'COVER');
-                coverAuthorHtml = formatAnyWordsWithAudio(coverAuthorText, 'COVER');
-            }
-            
             htmlContent += `
 <div class="cover-page">
-    <h1>${coverTitleHtml}</h1>
+    <h1>Mere Metaphor</h1>
     <div class="cover-illustration">
         <img src="images/cover.png?v=${cacheBuster}" alt="Tree illustration with profile and 'God is love'" class="cover-image">
     </div>
-    <p class="subtitle">${coverSubtitleHtml}</p>
-    <p class="author">${coverAuthorHtml}</p>
+    <p class="subtitle">Understanding Religious<br>Language as a Materialist</p>
+    <p class="author">by Derek Bredensteiner</p>
 </div>
 `;
             
@@ -247,7 +175,7 @@ async function extractText() {
                 }
                 
                 const chapterId = chapter.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-                htmlContent += `<h2 class="chapter-header" id="${chapterId}">${formatAnyWordsWithAudio(chapter.name, chapter.name)}</h2>\n`;
+                htmlContent += `<h2 class="chapter-header" id="${chapterId}">${escapeHtml(chapter.name)}</h2>\n`;
                 
                 const imagePath = path.join(__dirname, '..', 'images', chapter.image);
                 if (fs.existsSync(imagePath)) {
@@ -449,83 +377,6 @@ async function extractText() {
             font-style: normal;
             margin-top: 0.5em;
         }
-        
-        /* Audio Player Styles */
-        .audio-controls {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #fff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            z-index: 1000;
-            width: 250px;
-        }
-        
-        .audio-player {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        .play-pause-btn {
-            background: #333;
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 32px;
-            height: 32px;
-            cursor: pointer;
-            font-size: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-        
-        .play-pause-btn:hover {
-            background: #555;
-        }
-        
-        .audio-progress {
-            flex: 1;
-            height: 4px;
-            background: #ddd;
-            border-radius: 2px;
-            cursor: pointer;
-            position: relative;
-        }
-        
-        .audio-progress-bar {
-            height: 100%;
-            background: #333;
-            border-radius: 2px;
-            width: 0%;
-            transition: width 0.1s ease;
-        }
-        
-        .audio-time {
-            font-size: 0.75em;
-            color: #666;
-            min-width: 35px;
-        }
-        
-        
-        /* Audio Highlighting Styles */
-        .audio-word {
-            cursor: pointer;
-            border-radius: 2px;
-        }
-        
-        .audio-word:hover {
-            background-color: #f0f0f0;
-        }
-
-        .audio-word.current {
-            background-color: #ffe066;
-        }
     </style>
     <script>
         function scrollToChapter(chapterId) {
@@ -534,200 +385,9 @@ async function extractText() {
                 element.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         }
-        
-        // Audio Player and Highlighting
-        let audio = null;
-        let isPlaying = false;
-        let currentWord = null;
-        let audioWords = [];
-        let syncOffset = 0.3; // Fixed sync offset in seconds to compensate for highlighting delay
-        
-        document.addEventListener('DOMContentLoaded', function() {
-            initializeAudioPlayer();
-            collectAudioWords();
-        });
-        
-        function initializeAudioPlayer() {
-            audio = document.getElementById('audioPlayer');
-            const playBtn = document.getElementById('playBtn');
-            const progressBar = document.getElementById('progressBar');
-            const progress = document.getElementById('progress');
-            const currentTime = document.getElementById('currentTime');
-            const duration = document.getElementById('duration');
-            
-            if (!audio) return;
-            
-            // Play/Pause button
-            playBtn.addEventListener('click', togglePlay);
-            
-            // Progress bar
-            progressBar.addEventListener('click', seek);
-            
-            // Audio events
-            audio.addEventListener('timeupdate', updateProgress);
-            audio.addEventListener('loadedmetadata', updateDuration);
-            audio.addEventListener('ended', onAudioEnded);
-            
-            // Update highlighting during playback
-            audio.addEventListener('timeupdate', updateWordHighlighting);
-        }
-        
-        function collectAudioWords() {
-            audioWords = Array.from(document.querySelectorAll('[data-word]')).map(span => ({
-                element: span,
-                start: parseFloat(span.dataset.start),
-                end: parseFloat(span.dataset.end),
-                index: parseInt(span.dataset.word)
-            })).sort((a, b) => a.index - b.index);
-            
-            // Add click handlers to words for seeking
-            audioWords.forEach(word => {
-                word.element.classList.add('audio-word');
-                word.element.addEventListener('click', () => seekToWord(word));
-            });
-        }
-        
-        function togglePlay() {
-            if (!audio) return;
-            
-            if (isPlaying) {
-                audio.pause();
-                document.getElementById('playBtn').textContent = '▶';
-                isPlaying = false;
-            } else {
-                audio.play();
-                document.getElementById('playBtn').textContent = '⏸';
-                isPlaying = true;
-            }
-        }
-        
-        function seek(e) {
-            if (!audio) return;
-            
-            const progressBar = e.currentTarget;
-            const rect = progressBar.getBoundingClientRect();
-            const percent = (e.clientX - rect.left) / rect.width;
-            audio.currentTime = percent * audio.duration;
-        }
-        
-        function seekToWord(word) {
-            if (!audio) return;
-
-
-            if (currentWord) {
-                currentWord.element.classList.remove('current');
-                currentWord = null;
-            }
-            
-            audio.currentTime = word.start;
-            if (!isPlaying) {
-                togglePlay();
-            }
-        }
-        
-        function updateProgress() {
-            if (!audio) return;
-            
-            const percent = (audio.currentTime / audio.duration) * 100;
-            document.getElementById('progress').style.width = percent + '%';
-            document.getElementById('currentTime').textContent = formatTime(audio.currentTime);
-        }
-        
-        function updateDuration() {
-            if (!audio) return;
-            document.getElementById('duration').textContent = formatTime(audio.duration);
-        }
-        
-        function updateWordHighlighting() {
-            const currentTime = audio.currentTime + syncOffset;
-            
-            // Do we have a current word already?
-            if (currentWord) {
-                // Clear current highlighting if it ended
-                if (currentTime > currentWord.end) {
-                    currentWord.element.classList.remove('current');
-                    currentWord = null;
-
-                // Do nothing if currentWord is still good
-                } else {
-                    return;
-                }
-            }
-            
-            // Find current word and upcoming word for aggressive scrolling
-            for (let i = 0; i < audioWords.length; i++) {
-                const word = audioWords[i];
-                if (word.start > currentTime) {
-                    continue;
-                }
-                if (currentTime >= word.start && currentTime <= word.end) {
-                    word.element.classList.add('current');
-                    currentWord = word;
-                    
-                    // Smart scrolling - only scroll if word is outside viewport
-                    scrollToWordIfNeeded(word.element);
-                    break;
-                } else if (currentTime < word.start) {
-                    break;
-                }
-            }
-        }
-        
-        function onAudioEnded() {
-            document.getElementById('playBtn').textContent = '▶';
-            isPlaying = false;
-            
-            // Clear current highlighting
-            if (currentWord) {
-                currentWord.element.classList.remove('current');
-                currentWord = null;
-            }
-        }
-        
-        function scrollToWordIfNeeded(element) {
-            const rect = element.getBoundingClientRect();
-            const windowHeight = window.innerHeight;
-            const topBuffer = 32; // 2em buffer from top (16px * 2)
-            const bottomBuffer = 32; // Offset from bottom for comfortable viewing
-            
-            // Only scroll if element is actually outside viewport or too close to edges
-            if (rect.top < topBuffer || rect.bottom > windowHeight - bottomBuffer) {
-                // Scroll with custom offset to maintain buffer
-                const elementTop = element.getBoundingClientRect().top + window.pageYOffset;
-                const targetPosition = elementTop - topBuffer;
-                
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        }
-        
-        
-        function formatTime(seconds) {
-            const mins = Math.floor(seconds / 60);
-            const secs = Math.floor(seconds % 60);
-            return mins + ':' + (secs < 10 ? '0' : '') + secs;
-        }
     </script>
 </head>
 <body>
-    <div class="audio-controls">
-        <div class="audio-player">
-            <button id="playBtn" class="play-pause-btn">▶</button>
-            <div id="progressBar" class="audio-progress">
-                <div id="progress" class="audio-progress-bar"></div>
-            </div>
-            <span id="currentTime" class="audio-time">0:00</span>
-            <span>/</span>
-            <span id="duration" class="audio-time">0:00</span>
-        </div>
-        <audio id="audioPlayer" preload="metadata">
-            <source src="book_audio.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-    </div>
-    
     <div id="book-content">
 ${htmlContent}
     </div>
@@ -778,7 +438,7 @@ function processChapterPage(page, chapter, chapterPages, pageIndex) {
 
             // Otherwise, we have reached our length and so we add the html and continue with paragraphs by saying foundChapterTitle = false
             } else {
-                htmlContent += `<h3>${chapterSubtitleSoFar}</h3>\n`;
+                htmlContent += `<h3>${escapeHtml(chapterSubtitleSoFar)}</h3>\n`;
                 foundChapterTitle = false;
             }
             lastY = item.y;
@@ -804,9 +464,9 @@ function processChapterPage(page, chapter, chapterPages, pageIndex) {
             quoteAttribution = text;
             // Output the complete quote
             htmlContent += `<blockquote>\n`;
-            htmlContent += `<p>${formatAnyWordsWithAudio(quoteContent.join(' '), chapter.name)}</p>\n`;
+            htmlContent += `<p>${escapeHtml(quoteContent.join(' '))}</p>\n`;
             if (quoteAttribution) {
-                htmlContent += `<cite>${formatAnyWordsWithAudio(quoteAttribution, chapter.name)}</cite>\n`;
+                htmlContent += `<cite>${escapeHtml(quoteAttribution)}</cite>\n`;
             }
             htmlContent += `</blockquote>\n`;
             // Reset quote state
@@ -817,7 +477,7 @@ function processChapterPage(page, chapter, chapterPages, pageIndex) {
             // We've left the quote area, output what we have
             if (quoteContent.length > 0) {
                 htmlContent += `<blockquote>\n`;
-                htmlContent += `<p>${formatAnyWordsWithAudio(quoteContent.join(' '), chapter.name)}</p>\n`;
+                htmlContent += `<p>${escapeHtml(quoteContent.join(' '))}</p>\n`;
                 htmlContent += `</blockquote>\n`;
             }
             inQuote = false;
@@ -849,7 +509,7 @@ function processChapterPage(page, chapter, chapterPages, pageIndex) {
     // Handle any remaining quote
     if (inQuote && quoteContent.length > 0) {
         htmlContent += `<blockquote>\n`;
-        htmlContent += `<p>${formatAnyWordsWithAudio(quoteContent, chapter.name)}</p>\n`;
+        htmlContent += `<p>${escapeHtml(quoteContent.join(' '))}</p>\n`;
         htmlContent += `</blockquote>\n`;
     }
     
@@ -868,176 +528,9 @@ function formatParagraph(paragraphText, chapterName) {
         const firstWord = words[0];
         const restOfText = words.slice(1).join(' ');
         return `<p><strong>${escapeHtml(firstWord)}</strong><br>${escapeHtml(restOfText)}</p>\n`;
-    } else if (transcriptionData && shouldApplyAudioMapping(chapterName)) {
-        // Apply audio spans to mapped chapters (skip TOC)
-        return formatParagraphWithAudio(paragraphText, chapterName);
     } else {
         return `<p>${escapeHtml(paragraphText)}</p>\n`;
     }
-}
-
-function shouldApplyAudioMapping(chapterName) {
-    // Skip TOC - transcription flows directly from cover to preface
-    // Apply to cover content (processed as paragraphs) and all chapters except TOC
-    return chapterName !== 'TABLE OF CONTENTS';
-}
-
-function formatAnyWordsWithAudio(wordText, chapterName) {
-    const words = wordText.split(/\s+/).filter(w => w.length > 0);
-    const audioWords = [];
-    
-    // Add PDF words to global tracking
-    const paragraphStartIndex = currentPdfWordIndex;
-    words.forEach(word => {
-        allPdfWords.push({
-            word: word,
-            index: currentPdfWordIndex,
-            chapter: chapterName,
-            clean: normalizeWord(word)
-        });
-        currentPdfWordIndex++;
-    });
-    
-    // Process each PDF word in this paragraph
-    for (let i = 0; i < words.length; i++) {
-        const pdfWord = words[i];
-        const pdfWordGlobalIndex = paragraphStartIndex + i;
-        
-        const match = attemptWordMatch(pdfWord, pdfWordGlobalIndex);
-        
-        if (match.found) {
-            // Perfect match - wrap with audio span
-            audioWords.push(`<span data-word="${match.transcriptionIndex}" data-start="${match.timing.start}" data-end="${match.timing.end}">${escapeHtml(pdfWord)}</span>`);
-            
-            // Record the match
-            const matchRecord = {
-                pdfIndex: pdfWordGlobalIndex,
-                transcriptionIndex: match.transcriptionIndex,
-                word: pdfWord,
-                timing: match.timing
-            };
-            gapLog.matches.push(matchRecord);
-            
-            // Update the afterMatch reference for the most recent gap
-            if (gapLog.gaps.length > 0 && !gapLog.gaps[gapLog.gaps.length - 1].afterMatch) {
-                gapLog.gaps[gapLog.gaps.length - 1].afterMatch = matchRecord;
-            }
-            
-            currentTranscriptionIndex = match.transcriptionIndex + 1;
-        } else {
-            // No match found - add without audio span
-            audioWords.push(escapeHtml(pdfWord));
-        }
-    }
-
-    return audioWords.join(' ');
-
-}
-
-function formatParagraphWithAudio(paragraphText, chapterName) {
-    return `<p>${formatAnyWordsWithAudio(paragraphText, chapterName)}</p>\n`;
-}
-
-function attemptWordMatch(pdfWord, pdfWordIndex) {
-    const cleanPdfWord = normalizeWord(pdfWord);
-    const lookAheadWindow = 10;
-    
-    // Try to find exact match in next 1-10 transcription words
-    for (let offset = 0; offset < lookAheadWindow && (currentTranscriptionIndex + offset) < transcriptionData.words.length; offset++) {
-        const transcriptionIndex = currentTranscriptionIndex + offset;
-        const transcriptionWord = transcriptionData.words[transcriptionIndex];
-        const cleanTranscriptionWord = normalizeWord(transcriptionWord.word);
-        
-        if (cleanPdfWord === cleanTranscriptionWord) {
-            // Found match! Record any gaps that occurred
-            if (offset > 0) {
-                // There were transcription words we skipped - record as gap
-                recordGap('transcription_missing', currentTranscriptionIndex, transcriptionIndex, pdfWordIndex);
-            }
-            
-            return {
-                found: true,
-                transcriptionIndex: transcriptionIndex,
-                timing: {
-                    start: transcriptionWord.start,
-                    end: transcriptionWord.end
-                }
-            };
-        }
-    }
-    
-    // No match found in transcription window - this is a PDF gap
-    recordGap('pdf_missing', currentTranscriptionIndex, currentTranscriptionIndex, pdfWordIndex);
-    
-    return { found: false };
-}
-
-function normalizeWord(word) {
-    let new_word = word.toLowerCase().replace(/[^a-z]/ig, '');
-
-    // Any additional fuzziness we want to induce on both sides?
-    if (new_word.includes("steiner")) {
-        new_word = "bredensteiner"
-    }
-
-    return new_word;
-}
-
-function recordGap(type, transcriptionStart, transcriptionEnd, pdfIndex) {
-    const sequenceId = `gap_${String(gapLog.sequenceCounter++).padStart(3, '0')}`;
-    
-    const lastMatch = gapLog.matches.length > 0 ? gapLog.matches[gapLog.matches.length - 1] : null;
-    
-    let gapWords, gapIndices;
-    
-    if (type === 'transcription_missing') {
-        // Words in transcription that don't appear in PDF
-        gapWords = [];
-        gapIndices = [];
-        for (let i = transcriptionStart; i < transcriptionEnd; i++) {
-            gapWords.push(transcriptionData.words[i].word);
-            gapIndices.push(i);
-        }
-    } else {
-        // PDF words that don't appear in transcription
-        gapWords = [allPdfWords[pdfIndex].word];
-        gapIndices = [pdfIndex];
-    }
-    
-    gapLog.gaps.push({
-        type: type,
-        beforeMatch: lastMatch,
-        afterMatch: null, // Will be filled by next match
-        gapWords: gapWords,
-        gapIndices: gapIndices,
-        sequenceId: sequenceId
-    });
-}
-
-function outputGapAnalysis() {
-    console.log('\n=== GAP ANALYSIS ===');
-    console.log(`Total matches: ${gapLog.matches.length}`);
-    console.log(`Total gaps: ${gapLog.gaps.length}`);
-    
-    if (gapLog.gaps.length > 0) {
-        console.log('\nDetailed gap log:');
-        gapLog.gaps.forEach(gap => {
-            console.log(`\n${gap.sequenceId} (${gap.type}):`);
-            console.log(`  Gap words: ${gap.gapWords.join(', ')}`);
-            console.log(`  Gap indices: ${gap.gapIndices.join(', ')}`);
-            if (gap.beforeMatch) {
-                console.log(`  Before: "${gap.beforeMatch.word}" (PDF:${gap.beforeMatch.pdfIndex}, Trans:${gap.beforeMatch.transcriptionIndex})`);
-            }
-            if (gap.afterMatch) {
-                console.log(`  After: "${gap.afterMatch.word}" (PDF:${gap.afterMatch.pdfIndex}, Trans:${gap.afterMatch.transcriptionIndex})`);
-            }
-        });
-    }
-    
-    // Save detailed gap log to file
-    const gapLogPath = path.join(__dirname, 'gap_analysis.json');
-    fs.writeFileSync(gapLogPath, JSON.stringify(gapLog, null, 2));
-    console.log(`\nDetailed gap analysis saved to: ${gapLogPath}`);
 }
 
 function escapeHtml(text) {

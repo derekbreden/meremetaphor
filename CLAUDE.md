@@ -10,11 +10,12 @@ This is a GitHub Pages website for the book "Mere Metaphor" that lives at mereme
 
 ### Core Files
 - `meremetaphor.pdf` - The source PDF of the book (exported from Apple Pages)
-- `index.html` - The main website page that displays the book content (non-audio version)
-- `audio-book.html` - Audio-enhanced version with word-by-word highlighting
-- `scripts/build.js` - Node.js script that parses the PDF and generates index.html
-- `cover_and_preface.mp3` - Audio recording for the audio-enhanced version
-- `transcription_with_timestamps.json` - OpenAI Whisper transcription with word-level timestamps
+- `index.html` - The main website page with audio-enhanced reading experience
+- `scripts/build.js` - Node.js script that parses the PDF and generates audio-enhanced HTML
+- `scripts/build-original.js` - Archived original build script (non-audio version)
+- `scripts/transcribe-audio.js` - OpenAI Whisper transcription script
+- `book_audio.mp3` - Combined audio file used by the website
+- `book_audio_transcription.json` - Transcription with word-level timestamps
 
 ### Supporting Files
 - `.nojekyll` - Disables Jekyll processing on GitHub Pages
@@ -24,15 +25,9 @@ This is a GitHub Pages website for the book "Mere Metaphor" that lives at mereme
 
 ## Development Commands
 
-### Main Build (Non-Audio Version)
-- `npm install` - Install dependencies (currently just pdf-parse)
-- `npm run build` - Parse the PDF and update index.html with the book content
+- `npm install` - Install dependencies (pdf-parse and openai)
+- `npm run build` - Parse the PDF and generate audio-enhanced HTML with word-by-word highlighting
 - `npm run dev` - Build the site and start a local server at http://localhost:8080
-
-### Audio-Enhanced Build (Experiment 4)
-- `cd experiments/experiment-4-sequential-generation`
-- `node build.js` - Generate audio-book.html with word-by-word highlighting
-- The output is written to the root directory as `audio-book.html`
 
 ### Audio File Management
 The project uses separate source files combined into a single file for web delivery:
@@ -72,17 +67,19 @@ node transcribe-audio.js
 
 ## Architecture
 
-The build process is intentionally minimal:
+The build process creates an audio-enhanced reading experience:
 1. `pdf-parse` library extracts text from the PDF
-2. Basic heuristics convert text to HTML (short lines become headings, longer text becomes paragraphs)
-3. The HTML is injected directly into index.html
+2. OpenAI Whisper transcription provides word-level timestamps
+3. Basic heuristics convert text to HTML with audio synchronization
+4. Sequential word mapping applies transcription during HTML generation
+5. The audio-enhanced HTML is generated as index.html
 
 ## Development Philosophy
 
-- Minimal dependencies (only pdf-parse for PDF extraction)
+- Minimal dependencies (pdf-parse for PDF extraction, openai for transcription)
 - No static site generators or complex build tools
-- Direct PDF to HTML conversion
-- Clean, simple HTML output focused on readability
+- Direct PDF to HTML conversion with audio enhancement
+- Clean, simple HTML output focused on readability and audio synchronization
 
 ## Audio Enhancement Project
 
@@ -92,22 +89,23 @@ This repository is actively developing automated audio highlighting capabilities
 Create a single command that generates HTML from PDF + audio recording with precise word-by-word highlighting synchronized to audio playback.
 
 ### Current Status
-- ✅ Audio transcription complete (OpenAI Whisper, 196 words with timestamps for cover + preface)
+- ✅ Audio transcription complete (OpenAI Whisper, 817 words with timestamps for cover + preface + about the author)
 - ✅ Word-by-word highlighting working smoothly with timestamp expansion fix
 - ✅ Audio player with seeking, smooth scrolling, and visual feedback
-- ✅ Sequential word mapping achieving 97%+ match rate
-- 🚧 Need to record audio for remaining chapters before promoting to main build
+- ✅ Sequential word mapping achieving 100% match rate
+- ✅ Audio-enhanced build promoted to main website (index.html)
 
 ### Recent Improvements (January 2025)
 - **Fixed "same timestamp" issue** - Implemented intelligent timestamp expansion based on word length
 - **Enhanced audio player UX** - Removed transition animations, improved scrolling, better seeking behavior
 - **Cleaned repository** - Removed experiments 1-3 and other obsolete files
+- **Promoted audio build to main** - Audio-enhanced version is now the default build
 
-### Current Approach (Experiment 4)
-- `experiments/experiment-4-sequential-generation/` - Generate audio-ready HTML from PDF directly
+### Build Process
+- Audio-ready HTML generation from PDF with sequential word placement
 - Key innovation: Sequential word placement during HTML generation rather than retrofitting
 - Handles timestamp issues through intelligent expansion algorithm
-- Produces `audio-book.html` with full audio synchronization
+- Produces index.html with full audio synchronization
 
 ### Development Philosophy for Audio
 - **Generate audio-ready HTML from start** - don't retrofit existing HTML
@@ -125,16 +123,15 @@ Create a single command that generates HTML from PDF + audio recording with prec
 ## Next Steps
 
 ### Immediate Tasks
-1. Record audio for remaining chapters
+1. Record audio for remaining chapters  
 2. Update transcription file with complete timestamps
 3. Test audio synchronization across all chapters
-4. Promote experiment 4 to main build process once all audio is ready
 
 ### Future Improvements to Consider
-- Integrate audio and non-audio builds into single configurable script
 - Add chapter navigation in audio player
 - Implement playback speed controls
 - Better chapter/section detection from PDF structure  
 - Typography and styling improvements
 - Automatic build on PDF update
 - Support for multiple audio files (one per chapter)
+- Optional non-audio build mode for compatibility
