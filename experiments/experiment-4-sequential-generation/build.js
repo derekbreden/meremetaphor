@@ -485,6 +485,7 @@ async function extractText() {
             min-width: 35px;
         }
         
+        
         /* Audio Highlighting Styles */
         .audio-word {
             transition: background-color 0.1s ease;
@@ -513,6 +514,7 @@ async function extractText() {
         let isPlaying = false;
         let currentWord = null;
         let audioWords = [];
+        let syncOffset = 0.7; // Fixed sync offset in seconds to compensate for highlighting delay
         
         document.addEventListener('DOMContentLoaded', function() {
             initializeAudioPlayer();
@@ -607,7 +609,7 @@ async function extractText() {
         function updateWordHighlighting() {
             if (!audio || audioWords.length === 0) return;
             
-            const currentTime = audio.currentTime;
+            const currentTime = audio.currentTime + syncOffset;
             
             // Clear current highlighting
             if (currentWord) {
@@ -615,13 +617,27 @@ async function extractText() {
                 currentWord = null;
             }
             
-            // Find current word
-            for (let word of audioWords) {
+            // Find current word and upcoming word for aggressive scrolling
+            let nextWord = null;
+            for (let i = 0; i < audioWords.length; i++) {
+                const word = audioWords[i];
                 if (currentTime >= word.start && currentTime <= word.end) {
                     word.element.classList.add('current');
                     currentWord = word;
+                    
+                    // Smart scrolling - only scroll if word is outside viewport
+                    scrollToWordIfNeeded(word.element);
+                    break;
+                } else if (currentTime < word.start) {
+                    // This is the next word that will be highlighted
+                    nextWord = word;
                     break;
                 }
+            }
+            
+            // Aggressive scrolling: if we're very close to the next word starting, scroll to it
+            if (nextWord && currentTime >= (nextWord.start - 0.2)) {
+                scrollToWordIfNeeded(nextWord.element);
             }
         }
         
@@ -635,6 +651,26 @@ async function extractText() {
                 currentWord = null;
             }
         }
+        
+        function scrollToWordIfNeeded(element) {
+            const rect = element.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+            const topBuffer = 32; // 2em buffer from top (16px * 2)
+            const bottomBuffer = 100; // Offset from bottom for comfortable viewing
+            
+            // Only scroll if element is actually outside viewport or too close to edges
+            if (rect.top < topBuffer || rect.bottom > windowHeight - bottomBuffer) {
+                // Scroll with custom offset to maintain buffer
+                const elementTop = element.getBoundingClientRect().top + window.pageYOffset;
+                const targetPosition = elementTop - topBuffer;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }
+        
         
         function formatTime(seconds) {
             const mins = Math.floor(seconds / 60);
