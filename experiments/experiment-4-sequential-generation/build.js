@@ -514,7 +514,7 @@ async function extractText() {
         let isPlaying = false;
         let currentWord = null;
         let audioWords = [];
-        let syncOffset = 0.7; // Fixed sync offset in seconds to compensate for highlighting delay
+        let syncOffset = 0.35; // Fixed sync offset in seconds to compensate for highlighting delay
         
         document.addEventListener('DOMContentLoaded', function() {
             initializeAudioPlayer();
@@ -656,7 +656,7 @@ async function extractText() {
             const rect = element.getBoundingClientRect();
             const windowHeight = window.innerHeight;
             const topBuffer = 32; // 2em buffer from top (16px * 2)
-            const bottomBuffer = 100; // Offset from bottom for comfortable viewing
+            const bottomBuffer = 10; // Offset from bottom for comfortable viewing
             
             // Only scroll if element is actually outside viewport or too close to edges
             if (rect.top < topBuffer || rect.bottom > windowHeight - bottomBuffer) {
