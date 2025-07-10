@@ -1,0 +1,32 @@
+{
+  "manualBaseline": {
+    "totalMappedWords": 155,
+    "coverage": 1
+  },
+  "automatedResults": {
+    "conservative": {
+      "totalMatches": 184,
+      "coverage": 1,
+      "comparisonWithManual": {
+        "wordCountRatio": 1.1870967741935483,
+        "coverageComparison": 1
+      }
+    },
+    "balanced": {
+      "totalMatches": 184,
+      "coverage": 1,
+      "comparisonWithManual": {
+        "wordCountRatio": 1.1870967741935483,
+        "coverageComparison": 1
+      }
+    },
+    "aggressive": {
+      "totalMatches": 184,
+      "coverage": 1,
+      "comparisonWithManual": {
+        "wordCountRatio": 1.1870967741935483,
+        "coverageComparison": 1
+      }
+    }
+  }
+}
