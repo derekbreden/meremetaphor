@@ -46,17 +46,25 @@ Create a single command that generates HTML from PDF + audio recording with prec
 - ✅ Complex automation (finds 184/196 words, 94% coverage) 
 - ⚠️ Integration gap between word finding and HTML generation
 
-### Script Organization
-- `scripts/automation/` - Simple data-driven approach
-- `scripts/testing/` - Complex automation with validation
-- `scripts/manual-fixes/` - **Diagnostic tools only** - help identify automation gaps
-- `scripts/archive/` - Historical experiments
+### Experiment Organization
+- `experiments/experiment-1-simple-automation/` - Manual structured data approach (taught us sequential numbering works)
+- `experiments/experiment-2-complex-automation/` - Fuzzy matching algorithms (taught us mapping is redundant)  
+- `experiments/experiment-3-integration-attempts/` - HTML retrofitting attempts (taught us retrofitting fails)
+- `experiments/experiment-4-sequential-generation/` - **CURRENT APPROACH** - Generate audio-ready HTML from PDF directly
+- `scripts/archive/` - Historical iterations
 
 ### Development Philosophy for Audio
-- **Full automation is the goal** - manual scripts are research tools only
-- Manual enhancement identifies what automation needs to learn
-- Test automation quality by comparing to manual reference implementations
-- End goal: `npm run build-audio` that works as reliably as `npm run build`
+- **Generate audio-ready HTML from start** - don't retrofit existing HTML
+- **Use sequential word placement** - apply transcription words in order during HTML generation  
+- **Leverage our control over build process** - we decide when to make paragraphs and structure
+- **Gap filling by sequence** - use anchor words to fill missing words automatically
+- **Only manual intervention**: exclude table of contents from audio processing
+
+### Development Best Practices
+- **Commit frequently** - After any significant changes, file reorganization, or working features
+- **Use descriptive commit messages** - Explain what experiment or feature was added/modified
+- **Test before committing** - Ensure scripts run and produce expected output
+- **Document in commits** - Reference which experiment and what problem it solves
 
 ## Future Improvements to Consider
 

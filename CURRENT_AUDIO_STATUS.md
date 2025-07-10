@@ -2,7 +2,7 @@
 
 ## Executive Summary
 
-After path fixes and reorganization, we have **three different audio approaches** that are all now functional. The infrastructure is solid and the approaches are complementary. The goal is to create a single command that generates HTML from PDF + audio with word-by-word highlighting.
+After testing multiple approaches, we've learned that **retrofitting audio spans onto existing HTML is fundamentally flawed**. The solution is **generating audio-ready HTML directly from PDF** during the build process using sequential word placement.
 
 ## What We Have Built
 
@@ -148,20 +148,16 @@ pipeline-test-output/ # Complex automation results
 
 ## Recommended Next Steps
 
-### Immediate (High Priority)
-1. **Browser test `output/audio.html`** - Verify if simple automation actually works end-to-end
-2. **Combine approaches** - Use complex automation's 184 word mappings with simple automation's HTML generation
-3. **Create hybrid script** - Bridge the gap between the two systems
+### Current Approach: Experiment 4 - Sequential Generation
+1. **Create audio-enabled build process** - Fork build.js to generate audio-ready HTML
+2. **Implement sequential word placement** - Apply transcription words in order during generation
+3. **Use gap filling by sequence** - Trust word order between anchor points
+4. **Test with complete book** - Ensure 67-page output with audio in preface only
 
-### Medium Priority  
-1. **Single command script** - User goal of `node generate-audio-html.js`
-2. **Fix remaining word gaps** - Address the 12 words even complex automation missed
-3. **Full book scaling** - Test approaches beyond preface
-
-### Documentation Priority
-1. **Verify this document accuracy** - Test browser functionality
-2. **Create usage instructions** - How to run each approach
-3. **Document known limitations** - What each approach can/cannot do
+### Key Insights
+- **Sequential numbering works** (Experiment 1 taught us this)
+- **Retrofitting fails** (Experiments 2-3 confirmed this)
+- **We control HTML generation** - Use this advantage instead of fighting it
 
 ## Key Insights
 
