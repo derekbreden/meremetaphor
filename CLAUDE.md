@@ -57,10 +57,10 @@ ffmpeg -i input.m4a -af "agate=threshold=0.05:ratio=1.5:attack=5:release=200" -c
 # Complete workflow for new chapters:
 # 1. Record chapter as .m4a
 # 2. Apply gentle gate filter and convert to mp3
-ffmpeg -i new_chapter.m4a -af "agate=threshold=0.05:ratio=1.5:attack=5:release=200" -codec:a libmp3lame -b:a 128k new_chapter.mp3
+ffmpeg -i new_chapter.m4a -af "agate=threshold=0.05:ratio=1.5:attack=5:release=200" -codec:a libmp3lame -b:a 128k new_chapter_gentle_gate.mp3
 
 # 3. Combine all clean audio files 
-ffmpeg -i cover_and_preface_gentle.mp3 -i about_the_author_gentle.mp3 -filter_complex "[0:0][1:0]concat=n=2:v=0:a=1" -c:a libmp3lame -b:a 128k book_audio.mp3
+ffmpeg -i cover_and_preface_gentle_gate.mp3 -i about_the_author_gentle_gate.mp3 -filter_complex "[0:0][1:0]concat=n=2:v=0:a=1" -c:a libmp3lame -b:a 128k book_audio.mp3
 
 # 4. Transcribe combined audio
 node transcribe-audio.js
