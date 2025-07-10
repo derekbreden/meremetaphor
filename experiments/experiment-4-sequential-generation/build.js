@@ -11,6 +11,13 @@ const TITLE_TEXT_LENGTH_LIMIT = 50; // Maximum text length for potential chapter
 // Audio enhancement variables
 let transcriptionData = null;
 let currentTranscriptionIndex = 0;
+let currentPdfWordIndex = 0;
+let allPdfWords = []; // Store all PDF words for gap analysis
+let gapLog = {
+    matches: [],
+    gaps: [],
+    sequenceCounter: 0
+};
 
 async function buildSite() {
     console.log('Building site with audio integration...');
@@ -23,6 +30,11 @@ async function buildSite() {
         await extractText();
         console.log('Build complete with audio integration!');
         console.log(`Used ${currentTranscriptionIndex} of ${transcriptionData ? transcriptionData.words.length : 0} transcription words`);
+        
+        // Output gap analysis
+        if (transcriptionData) {
+            outputGapAnalysis();
+        }
     } catch (error) {
         console.error('Error building site:', error);
         process.exit(1);
@@ -42,7 +54,7 @@ async function loadTranscriptionData() {
 async function extractEmbeddedImagesWithMasks() {
     console.log('Extracting embedded images with transparency masks...');
     
-    const imagesDir = path.join(__dirname, '..', 'images');
+    const imagesDir = path.join(__dirname, '..', '..', 'images');
     if (!fs.existsSync(imagesDir)) {
         fs.mkdirSync(imagesDir);
     }
@@ -55,7 +67,7 @@ async function extractEmbeddedImagesWithMasks() {
     
     try {
         execSync(`pdfimages -png "meremetaphor.pdf" "${path.join(tempDir, 'img')}"`, {
-            cwd: path.join(__dirname, '..'),
+            cwd: path.join(__dirname, '..', '..'),
             stdio: 'pipe'
         });
         
@@ -108,7 +120,7 @@ async function extractText() {
     console.log('Extracting text...');
     
     const pdfExtract = new PDFExtract();
-    const pdfPath = path.join(__dirname, '..', 'meremetaphor.pdf');
+    const pdfPath = path.join(__dirname, '..', '..', 'meremetaphor.pdf');
     
     return new Promise((resolve, reject) => {
         pdfExtract.extract(pdfPath, {}, (err, data) => {
@@ -120,14 +132,29 @@ async function extractText() {
             const cacheBuster = Date.now();
             let htmlContent = '';
             
+            // All cover content that needs audio mapping (matches transcription order)
+            const coverTitleText = "Mere Metaphor";
+            const coverSubtitleText = "Understanding Religious Language as a Materialist";
+            const coverAuthorText = "by Derek Bredensteiner";
+            
+            let coverTitleHtml = coverTitleText;
+            let coverSubtitleHtml = coverSubtitleText;
+            let coverAuthorHtml = coverAuthorText;
+            
+            if (transcriptionData) {
+                coverTitleHtml = formatParagraphWithAudio(coverTitleText, 'COVER').replace('<p>', '').replace('</p>\n', '');
+                coverSubtitleHtml = formatParagraphWithAudio(coverSubtitleText, 'COVER').replace('<p>', '').replace('</p>\n', '');
+                coverAuthorHtml = formatParagraphWithAudio(coverAuthorText, 'COVER').replace('<p>', '').replace('</p>\n', '');
+            }
+            
             htmlContent += `
 <div class="cover-page">
-    <h1>Mere Metaphor</h1>
+    <h1>${coverTitleHtml}</h1>
     <div class="cover-illustration">
         <img src="images/cover.png?v=${cacheBuster}" alt="Tree illustration with profile and 'God is love'" class="cover-image">
     </div>
-    <p class="subtitle">Understanding Religious<br>Language as a Materialist</p>
-    <p class="author">by Derek Bredensteiner</p>
+    <p class="subtitle">${coverSubtitleHtml}</p>
+    <p class="author">${coverAuthorHtml}</p>
 </div>
 `;
             
@@ -195,7 +222,7 @@ async function extractText() {
                 const chapterId = chapter.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
                 htmlContent += `<h2 class="chapter-header" id="${chapterId}">${escapeHtml(chapter.name)}</h2>\n`;
                 
-                const imagePath = path.join(__dirname, '..', 'images', chapter.image);
+                const imagePath = path.join(__dirname, '..', '..', 'images', chapter.image);
                 if (fs.existsSync(imagePath)) {
                     htmlContent += `<div class="chapter-illustration">\n`;
                     htmlContent += `<img src="images/${chapter.image}?v=${cacheBuster}" alt="Illustration for ${chapter.name}" class="chapter-image">\n`;
@@ -412,7 +439,7 @@ ${htmlContent}
 </body>
 </html>`;
             
-            fs.writeFileSync(path.join(__dirname, '..', 'index.html'), html);
+            fs.writeFileSync(path.join(__dirname, '..', '..', 'index.html'), html);
             
             console.log(`Processed ${data.pages.length} pages`);
             resolve();
@@ -546,59 +573,164 @@ function formatParagraph(paragraphText, chapterName) {
         const firstWord = words[0];
         const restOfText = words.slice(1).join(' ');
         return `<p><strong>${escapeHtml(firstWord)}</strong><br>${escapeHtml(restOfText)}</p>\n`;
-    } else if (chapterName === 'PREFACE' && transcriptionData) {
-        // Apply audio spans to preface paragraphs
-        return formatParagraphWithAudio(paragraphText);
+    } else if (transcriptionData && shouldApplyAudioMapping(chapterName)) {
+        // Apply audio spans to mapped chapters (skip TOC)
+        return formatParagraphWithAudio(paragraphText, chapterName);
     } else {
         return `<p>${escapeHtml(paragraphText)}</p>\n`;
     }
 }
 
-function formatParagraphWithAudio(paragraphText) {
+function shouldApplyAudioMapping(chapterName) {
+    // Skip TOC - transcription flows directly from cover to preface
+    // Apply to cover content (processed as paragraphs) and all chapters except TOC
+    return chapterName !== 'TABLE OF CONTENTS';
+}
+
+function formatParagraphWithAudio(paragraphText, chapterName) {
     const words = paragraphText.split(/\s+/).filter(w => w.length > 0);
     const audioWords = [];
     
-    for (const word of words) {
-        if (currentTranscriptionIndex < transcriptionData.words.length) {
-            const transcriptionWord = transcriptionData.words[currentTranscriptionIndex];
-            const cleanWord = word.replace(/[.,!?;:"'()[\]{}]/g, '');
-            const cleanTranscription = transcriptionWord.word.replace(/[.,!?;:"'()[\]{}]/g, '');
+    // Add PDF words to global tracking
+    const paragraphStartIndex = currentPdfWordIndex;
+    words.forEach(word => {
+        allPdfWords.push({
+            word: word,
+            index: currentPdfWordIndex,
+            chapter: chapterName,
+            clean: normalizeWord(word)
+        });
+        currentPdfWordIndex++;
+    });
+    
+    // Process each PDF word in this paragraph
+    for (let i = 0; i < words.length; i++) {
+        const pdfWord = words[i];
+        const pdfWordGlobalIndex = paragraphStartIndex + i;
+        
+        const match = attemptWordMatch(pdfWord, pdfWordGlobalIndex);
+        
+        if (match.found) {
+            // Perfect match - wrap with audio span
+            audioWords.push(`<span data-word="${match.transcriptionIndex}" data-start="${match.timing.start}" data-end="${match.timing.end}">${escapeHtml(pdfWord)}</span>`);
             
-            // Check if words match (case insensitive)
-            if (cleanWord.toLowerCase() === cleanTranscription.toLowerCase()) {
-                // Perfect match - wrap with audio span
-                audioWords.push(`<span data-word="${currentTranscriptionIndex}" data-start="${transcriptionWord.start}" data-end="${transcriptionWord.end}">${escapeHtml(word)}</span>`);
-                currentTranscriptionIndex++;
-            } else {
-                // No match - check if we should skip transcription word or text word
-                const nextFewTranscriptionWords = transcriptionData.words.slice(currentTranscriptionIndex, currentTranscriptionIndex + 3);
-                const wordFoundInNext = nextFewTranscriptionWords.find(tw => 
-                    cleanWord.toLowerCase() === tw.word.replace(/[.,!?;:"'()[\]{}]/g, '').toLowerCase()
-                );
-                
-                if (wordFoundInNext) {
-                    // Found word in next few transcription words - skip transcription words until we find it
-                    while (currentTranscriptionIndex < transcriptionData.words.length) {
-                        const tw = transcriptionData.words[currentTranscriptionIndex];
-                        if (cleanWord.toLowerCase() === tw.word.replace(/[.,!?;:"'()[\]{}]/g, '').toLowerCase()) {
-                            audioWords.push(`<span data-word="${currentTranscriptionIndex}" data-start="${tw.start}" data-end="${tw.end}">${escapeHtml(word)}</span>`);
-                            currentTranscriptionIndex++;
-                            break;
-                        }
-                        currentTranscriptionIndex++;
-                    }
-                } else {
-                    // Word not found in transcription - add without audio span
-                    audioWords.push(escapeHtml(word));
-                }
+            // Record the match
+            const matchRecord = {
+                pdfIndex: pdfWordGlobalIndex,
+                transcriptionIndex: match.transcriptionIndex,
+                word: pdfWord,
+                timing: match.timing
+            };
+            gapLog.matches.push(matchRecord);
+            
+            // Update the afterMatch reference for the most recent gap
+            if (gapLog.gaps.length > 0 && !gapLog.gaps[gapLog.gaps.length - 1].afterMatch) {
+                gapLog.gaps[gapLog.gaps.length - 1].afterMatch = matchRecord;
             }
+            
+            currentTranscriptionIndex = match.transcriptionIndex + 1;
         } else {
-            // No more transcription words - add without audio span
-            audioWords.push(escapeHtml(word));
+            // No match found - add without audio span
+            audioWords.push(escapeHtml(pdfWord));
         }
     }
     
     return `<p>${audioWords.join(' ')}</p>\n`;
+}
+
+function attemptWordMatch(pdfWord, pdfWordIndex) {
+    const cleanPdfWord = normalizeWord(pdfWord);
+    const lookAheadWindow = 10;
+    
+    // Try to find exact match in next 1-10 transcription words
+    for (let offset = 0; offset < lookAheadWindow && (currentTranscriptionIndex + offset) < transcriptionData.words.length; offset++) {
+        const transcriptionIndex = currentTranscriptionIndex + offset;
+        const transcriptionWord = transcriptionData.words[transcriptionIndex];
+        const cleanTranscriptionWord = normalizeWord(transcriptionWord.word);
+        
+        if (cleanPdfWord === cleanTranscriptionWord) {
+            // Found match! Record any gaps that occurred
+            if (offset > 0) {
+                // There were transcription words we skipped - record as gap
+                recordGap('transcription_missing', currentTranscriptionIndex, transcriptionIndex, pdfWordIndex);
+            }
+            
+            return {
+                found: true,
+                transcriptionIndex: transcriptionIndex,
+                timing: {
+                    start: transcriptionWord.start,
+                    end: transcriptionWord.end
+                }
+            };
+        }
+    }
+    
+    // No match found in transcription window - this is a PDF gap
+    recordGap('pdf_missing', currentTranscriptionIndex, currentTranscriptionIndex, pdfWordIndex);
+    
+    return { found: false };
+}
+
+function normalizeWord(word) {
+    return word.toLowerCase().replace(/[.,!?;:"'()[\]{}`]/g, '');
+}
+
+function recordGap(type, transcriptionStart, transcriptionEnd, pdfIndex) {
+    const sequenceId = `gap_${String(gapLog.sequenceCounter++).padStart(3, '0')}`;
+    
+    const lastMatch = gapLog.matches.length > 0 ? gapLog.matches[gapLog.matches.length - 1] : null;
+    
+    let gapWords, gapIndices;
+    
+    if (type === 'transcription_missing') {
+        // Words in transcription that don't appear in PDF
+        gapWords = [];
+        gapIndices = [];
+        for (let i = transcriptionStart; i < transcriptionEnd; i++) {
+            gapWords.push(transcriptionData.words[i].word);
+            gapIndices.push(i);
+        }
+    } else {
+        // PDF words that don't appear in transcription
+        gapWords = [allPdfWords[pdfIndex].word];
+        gapIndices = [pdfIndex];
+    }
+    
+    gapLog.gaps.push({
+        type: type,
+        beforeMatch: lastMatch,
+        afterMatch: null, // Will be filled by next match
+        gapWords: gapWords,
+        gapIndices: gapIndices,
+        sequenceId: sequenceId
+    });
+}
+
+function outputGapAnalysis() {
+    console.log('\n=== GAP ANALYSIS ===');
+    console.log(`Total matches: ${gapLog.matches.length}`);
+    console.log(`Total gaps: ${gapLog.gaps.length}`);
+    
+    if (gapLog.gaps.length > 0) {
+        console.log('\nDetailed gap log:');
+        gapLog.gaps.forEach(gap => {
+            console.log(`\n${gap.sequenceId} (${gap.type}):`);
+            console.log(`  Gap words: ${gap.gapWords.join(', ')}`);
+            console.log(`  Gap indices: ${gap.gapIndices.join(', ')}`);
+            if (gap.beforeMatch) {
+                console.log(`  Before: "${gap.beforeMatch.word}" (PDF:${gap.beforeMatch.pdfIndex}, Trans:${gap.beforeMatch.transcriptionIndex})`);
+            }
+            if (gap.afterMatch) {
+                console.log(`  After: "${gap.afterMatch.word}" (PDF:${gap.afterMatch.pdfIndex}, Trans:${gap.afterMatch.transcriptionIndex})`);
+            }
+        });
+    }
+    
+    // Save detailed gap log to file
+    const gapLogPath = path.join(__dirname, 'gap_analysis.json');
+    fs.writeFileSync(gapLogPath, JSON.stringify(gapLog, null, 2));
+    console.log(`\nDetailed gap analysis saved to: ${gapLogPath}`);
 }
 
 function escapeHtml(text) {
