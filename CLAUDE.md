@@ -38,9 +38,11 @@ This is a GitHub Pages website for the book "Mere Metaphor" that lives at mereme
 The project uses separate source files combined into a single file for web delivery:
 
 **Source Files:**
-- `cover_and_preface.mp3` - Cover and preface audio
-- `about_the_author.mp3` - About the author chapter
+- `cover_and_preface.mp3` - Cover and preface audio (original)
+- `about_the_author.mp3` - About the author chapter (original)
 - `about_the_author.m4a` - Original m4a recording (kept for reference)
+- `cover_and_preface_gentle_gate.mp3` - Cover/preface with gentle gate filter applied
+- `about_the_author_gentle_gate.mp3` - About the author with gentle gate filter applied
 
 **Web Delivery:**
 - `book_audio.mp3` - Combined audio file used by the website
