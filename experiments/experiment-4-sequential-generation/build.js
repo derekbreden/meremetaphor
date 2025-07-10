@@ -25,6 +25,33 @@ async function buildSite() {
     try {
         // Load transcription data for audio features
         await loadTranscriptionData();
+
+
+        // Expand words with no times
+        transcriptionData.words.forEach((word, word_index) => {
+            const previous_word = transcriptionData.words[word_index - 1]
+            const current_word_time = word.end - word.start
+            if (
+                previous_word
+                && previous_word.start !== 0
+                && (word.end - word.start) < 0.3
+            ) {
+                const previous_word_time = previous_word.end - previous_word.start
+                const previous_word_length = previous_word.word.length
+                const expected_time = Math.max(0.3, previous_word_length * 0.04)
+                if (previous_word_time > expected_time) {
+                    previous_word.end = previous_word.start + expected_time
+                    word.start = previous_word.end
+                }
+                const next_word = transcriptionData.words[word_index + 1]
+                if (next_word && next_word.start > word.end) {
+                    word.end = next_word.start
+                }
+                // console.warn("Adjusted ", previous_word.word, previous_word_time, "to", expected_time)
+                // console.warn("Adjusted ", word.word, current_word_time, "to", word.end - word.start)
+                // console.warn("-------")
+            }
+        })
         
         await extractEmbeddedImagesWithMasks();
         await extractText();
@@ -32,9 +59,9 @@ async function buildSite() {
         console.log(`Used ${currentTranscriptionIndex} of ${transcriptionData ? transcriptionData.words.length : 0} transcription words`);
         
         // Output gap analysis
-        if (transcriptionData) {
-            outputGapAnalysis();
-        }
+        // if (transcriptionData) {
+        //     outputGapAnalysis();
+        // }
     } catch (error) {
         console.error('Error building site:', error);
         process.exit(1);
@@ -142,9 +169,9 @@ async function extractText() {
             let coverAuthorHtml = coverAuthorText;
             
             if (transcriptionData) {
-                coverTitleHtml = formatParagraphWithAudio(coverTitleText, 'COVER').replace('<p>', '').replace('</p>\n', '');
-                coverSubtitleHtml = formatParagraphWithAudio(coverSubtitleText, 'COVER').replace('<p>', '').replace('</p>\n', '');
-                coverAuthorHtml = formatParagraphWithAudio(coverAuthorText, 'COVER').replace('<p>', '').replace('</p>\n', '');
+                coverTitleHtml = formatAnyWordsWithAudio(coverTitleText, 'COVER');
+                coverSubtitleHtml = formatAnyWordsWithAudio(coverSubtitleText, 'COVER');
+                coverAuthorHtml = formatAnyWordsWithAudio(coverAuthorText, 'COVER');
             }
             
             htmlContent += `
@@ -487,6 +514,7 @@ async function extractText() {
         
         
         /* Audio Highlighting Styles */
+        /*
         .audio-word {
             transition: background-color 0.1s ease;
             cursor: pointer;
@@ -495,7 +523,8 @@ async function extractText() {
         .audio-word:hover {
             background-color: #f0f0f0;
         }
-        
+        */
+
         .audio-word.current {
             background-color: #ffe066;
             border-radius: 2px;
@@ -514,7 +543,7 @@ async function extractText() {
         let isPlaying = false;
         let currentWord = null;
         let audioWords = [];
-        let syncOffset = 0.35; // Fixed sync offset in seconds to compensate for highlighting delay
+        let syncOffset = 0.3; // Fixed sync offset in seconds to compensate for highlighting delay
         
         document.addEventListener('DOMContentLoaded', function() {
             initializeAudioPlayer();
@@ -557,7 +586,7 @@ async function extractText() {
             // Add click handlers to words for seeking
             audioWords.forEach(word => {
                 word.element.classList.add('audio-word');
-                word.element.addEventListener('click', () => seekToWord(word.start));
+                word.element.addEventListener('click', () => seekToWord(word));
             });
         }
         
@@ -584,10 +613,16 @@ async function extractText() {
             audio.currentTime = percent * audio.duration;
         }
         
-        function seekToWord(startTime) {
+        function seekToWord(word) {
             if (!audio) return;
+
+
+            if (currentWord) {
+                currentWord.element.classList.remove('current');
+                currentWord = null;
+            }
             
-            audio.currentTime = startTime;
+            audio.currentTime = word.start;
             if (!isPlaying) {
                 togglePlay();
             }
@@ -607,20 +642,27 @@ async function extractText() {
         }
         
         function updateWordHighlighting() {
-            if (!audio || audioWords.length === 0) return;
-            
             const currentTime = audio.currentTime + syncOffset;
             
-            // Clear current highlighting
+            // Do we have a current word already?
             if (currentWord) {
-                currentWord.element.classList.remove('current');
-                currentWord = null;
+                // Clear current highlighting if it ended
+                if (currentTime > currentWord.end) {
+                    currentWord.element.classList.remove('current');
+                    currentWord = null;
+
+                // Do nothing if currentWord is still good
+                } else {
+                    return;
+                }
             }
             
             // Find current word and upcoming word for aggressive scrolling
-            let nextWord = null;
             for (let i = 0; i < audioWords.length; i++) {
                 const word = audioWords[i];
+                if (word.start > currentTime) {
+                    continue;
+                }
                 if (currentTime >= word.start && currentTime <= word.end) {
                     word.element.classList.add('current');
                     currentWord = word;
@@ -629,15 +671,8 @@ async function extractText() {
                     scrollToWordIfNeeded(word.element);
                     break;
                 } else if (currentTime < word.start) {
-                    // This is the next word that will be highlighted
-                    nextWord = word;
                     break;
                 }
-            }
-            
-            // Aggressive scrolling: if we're very close to the next word starting, scroll to it
-            if (nextWord && currentTime >= (nextWord.start - 0.2)) {
-                scrollToWordIfNeeded(nextWord.element);
             }
         }
         
@@ -747,7 +782,7 @@ function processChapterPage(page, chapter, chapterPages, pageIndex) {
 
             // Otherwise, we have reached our length and so we add the html and continue with paragraphs by saying foundChapterTitle = false
             } else {
-                htmlContent += `<h3>${escapeHtml(chapterSubtitleSoFar)}</h3>\n`;
+                htmlContent += `<h3>${formatAnyWordsWithAudio(chapterSubtitleSoFar, chapter.name)}</h3>\n`;
                 foundChapterTitle = false;
             }
             lastY = item.y;
@@ -818,7 +853,7 @@ function processChapterPage(page, chapter, chapterPages, pageIndex) {
     // Handle any remaining quote
     if (inQuote && quoteContent.length > 0) {
         htmlContent += `<blockquote>\n`;
-        htmlContent += `<p>${escapeHtml(quoteContent.join(' '))}</p>\n`;
+        htmlContent += `<p>${formatAnyWordsWithAudio(quoteContent, chapter.name)}</p>\n`;
         htmlContent += `</blockquote>\n`;
     }
     
@@ -851,8 +886,8 @@ function shouldApplyAudioMapping(chapterName) {
     return chapterName !== 'TABLE OF CONTENTS';
 }
 
-function formatParagraphWithAudio(paragraphText, chapterName) {
-    const words = paragraphText.split(/\s+/).filter(w => w.length > 0);
+function formatAnyWordsWithAudio(wordText, chapterName) {
+    const words = wordText.split(/\s+/).filter(w => w.length > 0);
     const audioWords = [];
     
     // Add PDF words to global tracking
@@ -898,8 +933,13 @@ function formatParagraphWithAudio(paragraphText, chapterName) {
             audioWords.push(escapeHtml(pdfWord));
         }
     }
-    
-    return `<p>${audioWords.join(' ')}</p>\n`;
+
+    return audioWords.join(' ');
+
+}
+
+function formatParagraphWithAudio(paragraphText, chapterName) {
+    return `<p>${formatAnyWordsWithAudio(paragraphText, chapterName)}</p>\n`;
 }
 
 function attemptWordMatch(pdfWord, pdfWordIndex) {
@@ -937,7 +977,14 @@ function attemptWordMatch(pdfWord, pdfWordIndex) {
 }
 
 function normalizeWord(word) {
-    return word.toLowerCase().replace(/[.,!?;:"'()[\]{}`]/g, '');
+    let new_word = word.toLowerCase().replace(/[^a-z]/ig, '');
+
+    // Any additional fuzziness we want to induce on both sides?
+    if (new_word.includes("steiner")) {
+        new_word = "bredensteiner"
+    }
+
+    return new_word;
 }
 
 function recordGap(type, transcriptionStart, transcriptionEnd, pdfIndex) {
