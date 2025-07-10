@@ -1,0 +1,4107 @@
+{
+  "task": "transcribe",
+  "language": "english",
+  "duration": 414.17999267578125,
+  "text": "Mere Metaphor, Understanding Religious Language as a Materialist, by Derek Brettensteiner Preface. If you believe in a supernatural entity or a creator of the universe, that's not what this book is about. This book is about an entirely naturalistic, non-supernatural, physicalist, determinist, materialist view of religion and the meaning of the metaphors within it from that natural perspective. I understand each reader has their own journey of faith. I've seen a spectrum of experience in my own family from atheism to conservative Christianity to progressive Christianity and many things in between. My intent isn't to challenge your path, but simply to share and explain a particular one, my own. I realize not everyone reading this book will share my perspective, but hopefully what is presented here will not be a challenge, but simply information. I see the audience here as Christians who struggle with believability, atheists who struggle with living as a minority in a Christian society, and most importantly, anyone who seeks to understand either of those two groups better. I hope to present here an interpretation of Christianity or at least some part of Christianity that is compatible with an entirely natural universe. About the Author To give some background about myself, I was raised in a Christian tradition. At age 12, when I was at Bible camp during some free time, I had climbed a tall tree where I could see nothing but nature. At this time, I heard the voice of God speak to me, saying that He was, an idea invented by man, changed over thousands of years. It was easy to identify this voice as being a creation of my own mind, a creation based on what I understood about Christianity and the Christian God, based on what I heard from family and friends and church leadership. This was a moment of my conscious awareness discovering what my subconscious already deeply believed. Throughout my life, I have found some value in Christian metaphors, some utility in asking myself, what would Jesus do? But it would also be accurate to describe me both as a materialist and as a determinist. When I say materialist, I am not referring to placing value or importance on material things, but instead a philosophical stance that views the universe and everything within it as describable by physical laws, including anything one may think of as a self. I see my self as my physical body, everything within that body, and I see that self as a small part of a much larger context that I am interdependent with. When I say determinist, I am referring to a view of the world where everything that happens, including our thoughts and choices, follows naturally from the state of affairs that preceded it, like billiard balls colliding on a pool table. This is not to say that fate controls us, or that destiny is out of our hands, but very much the opposite, that our thoughts and choices, which are recursively shaped throughout our lives, compounding upon themselves, are the key link in the chain that determines what happens next. Regarding religion and metaphors, I would like to share a quote from Joseph Campbell. Half the people in the world think that the metaphors of their religious traditions, for example, are facts, and the other half contends that they are not facts at all. As a result, we have people who consider themselves believers because they accept metaphors as facts, and we have others who classify themselves as atheists because they think religious metaphors are lies. Joseph Campbell I like to think there is a third category that does not see metaphors either as facts nor as lies. There are, of course, many Christians that see their faith as compatible with science, but very few of those take a completely materialistic or deterministic view, always leaving some supernatural element remaining. I do not see any need for this hedge to reconcile things. God is love, hell is suffering, heaven is a state of mind, a state of being, available to all of us here and now, through embracing and expressing love for all through our actions in the real world, during our short lives. There is nothing supernatural about love. There is no need to contradict our observation of a deterministic reality with a supernatural free will, in order to see the obvious complexity present in a piece of software, us, that recursively iterates itself on a lifetime of sensory experience, in order for that piece of software to take responsibility and suffer consequences for its choices. There is no need to claim God's decree for us to make, and continually remake, our choice of orientation for what good and bad are. Just like up and down, good and bad are also relative terms that only make sense with a description, an aim, a target, a goal, that we choose.",
+  "words": [
+    {
+      "word": "Mere",
+      "start": 0,
+      "end": 1.559999942779541
+    },
+    {
+      "word": "Metaphor",
+      "start": 1.559999942779541,
+      "end": 2.119999885559082
+    },
+    {
+      "word": "Understanding",
+      "start": 3.240000009536743,
+      "end": 3.680000066757202
+    },
+    {
+      "word": "Religious",
+      "start": 3.680000066757202,
+      "end": 4.28000020980835
+    },
+    {
+      "word": "Language",
+      "start": 4.28000020980835,
+      "end": 4.78000020980835
+    },
+    {
+      "word": "as",
+      "start": 4.78000020980835,
+      "end": 5.179999828338623
+    },
+    {
+      "word": "a",
+      "start": 5.179999828338623,
+      "end": 5.400000095367432
+    },
+    {
+      "word": "Materialist",
+      "start": 5.400000095367432,
+      "end": 6.159999847412109
+    },
+    {
+      "word": "by",
+      "start": 6.440000057220459,
+      "end": 7.28000020980835
+    },
+    {
+      "word": "Derek",
+      "start": 7.28000020980835,
+      "end": 7.480000019073486
+    },
+    {
+      "word": "Brettensteiner",
+      "start": 7.480000019073486,
+      "end": 8.460000038146973
+    },
+    {
+      "word": "Preface",
+      "start": 9.359999656677246,
+      "end": 10.239999771118164
+    },
+    {
+      "word": "If",
+      "start": 11.680000305175781,
+      "end": 11.699999809265137
+    },
+    {
+      "word": "you",
+      "start": 11.699999809265137,
+      "end": 11.960000038146973
+    },
+    {
+      "word": "believe",
+      "start": 11.960000038146973,
+      "end": 12.300000190734863
+    },
+    {
+      "word": "in",
+      "start": 12.300000190734863,
+      "end": 12.5600004196167
+    },
+    {
+      "word": "a",
+      "start": 12.5600004196167,
+      "end": 12.84000015258789
+    },
+    {
+      "word": "supernatural",
+      "start": 12.84000015258789,
+      "end": 13.34000015258789
+    },
+    {
+      "word": "entity",
+      "start": 13.34000015258789,
+      "end": 13.880000114440918
+    },
+    {
+      "word": "or",
+      "start": 13.880000114440918,
+      "end": 14.34000015258789
+    },
+    {
+      "word": "a",
+      "start": 14.34000015258789,
+      "end": 14.680000305175781
+    },
+    {
+      "word": "creator",
+      "start": 14.680000305175781,
+      "end": 14.920000076293945
+    },
+    {
+      "word": "of",
+      "start": 14.920000076293945,
+      "end": 15.15999984741211
+    },
+    {
+      "word": "the",
+      "start": 15.15999984741211,
+      "end": 15.739999771118164
+    },
+    {
+      "word": "universe",
+      "start": 15.739999771118164,
+      "end": 15.739999771118164
+    },
+    {
+      "word": "that's",
+      "start": 15.979999542236328,
+      "end": 16.600000381469727
+    },
+    {
+      "word": "not",
+      "start": 16.600000381469727,
+      "end": 16.799999237060547
+    },
+    {
+      "word": "what",
+      "start": 16.799999237060547,
+      "end": 17
+    },
+    {
+      "word": "this",
+      "start": 17,
+      "end": 17.219999313354492
+    },
+    {
+      "word": "book",
+      "start": 17.219999313354492,
+      "end": 17.3799991607666
+    },
+    {
+      "word": "is",
+      "start": 17.3799991607666,
+      "end": 17.6200008392334
+    },
+    {
+      "word": "about",
+      "start": 17.6200008392334,
+      "end": 17.959999084472656
+    },
+    {
+      "word": "This",
+      "start": 18.540000915527344,
+      "end": 19.100000381469727
+    },
+    {
+      "word": "book",
+      "start": 19.100000381469727,
+      "end": 19.34000015258789
+    },
+    {
+      "word": "is",
+      "start": 19.34000015258789,
+      "end": 19.520000457763672
+    },
+    {
+      "word": "about",
+      "start": 19.520000457763672,
+      "end": 19.959999084472656
+    },
+    {
+      "word": "an",
+      "start": 19.959999084472656,
+      "end": 20.280000686645508
+    },
+    {
+      "word": "entirely",
+      "start": 20.280000686645508,
+      "end": 20.920000076293945
+    },
+    {
+      "word": "naturalistic",
+      "start": 20.920000076293945,
+      "end": 21.860000610351562
+    },
+    {
+      "word": "non",
+      "start": 22.200000762939453,
+      "end": 22.520000457763672
+    },
+    {
+      "word": "supernatural",
+      "start": 22.520000457763672,
+      "end": 23.219999313354492
+    },
+    {
+      "word": "physicalist",
+      "start": 24.200000762939453,
+      "end": 24.8799991607666
+    },
+    {
+      "word": "determinist",
+      "start": 25.100000381469727,
+      "end": 25.719999313354492
+    },
+    {
+      "word": "materialist",
+      "start": 26.440000534057617,
+      "end": 26.84000015258789
+    },
+    {
+      "word": "view",
+      "start": 26.84000015258789,
+      "end": 27.079999923706055
+    },
+    {
+      "word": "of",
+      "start": 27.079999923706055,
+      "end": 27.68000030517578
+    },
+    {
+      "word": "religion",
+      "start": 27.68000030517578,
+      "end": 27.68000030517578
+    },
+    {
+      "word": "and",
+      "start": 27.68000030517578,
+      "end": 28.5
+    },
+    {
+      "word": "the",
+      "start": 28.5,
+      "end": 28.719999313354492
+    },
+    {
+      "word": "meaning",
+      "start": 28.719999313354492,
+      "end": 28.940000534057617
+    },
+    {
+      "word": "of",
+      "start": 28.940000534057617,
+      "end": 29.200000762939453
+    },
+    {
+      "word": "the",
+      "start": 29.200000762939453,
+      "end": 29.81999969482422
+    },
+    {
+      "word": "metaphors",
+      "start": 29.81999969482422,
+      "end": 29.84000015258789
+    },
+    {
+      "word": "within",
+      "start": 29.84000015258789,
+      "end": 30.139999389648438
+    },
+    {
+      "word": "it",
+      "start": 30.139999389648438,
+      "end": 30.420000076293945
+    },
+    {
+      "word": "from",
+      "start": 30.420000076293945,
+      "end": 30.579999923706055
+    },
+    {
+      "word": "that",
+      "start": 30.579999923706055,
+      "end": 30.920000076293945
+    },
+    {
+      "word": "natural",
+      "start": 30.920000076293945,
+      "end": 31.579999923706055
+    },
+    {
+      "word": "perspective",
+      "start": 31.579999923706055,
+      "end": 32.040000915527344
+    },
+    {
+      "word": "I",
+      "start": 32.86000061035156,
+      "end": 33.599998474121094
+    },
+    {
+      "word": "understand",
+      "start": 33.599998474121094,
+      "end": 34
+    },
+    {
+      "word": "each",
+      "start": 34,
+      "end": 34.380001068115234
+    },
+    {
+      "word": "reader",
+      "start": 34.380001068115234,
+      "end": 34.63999938964844
+    },
+    {
+      "word": "has",
+      "start": 34.63999938964844,
+      "end": 34.939998626708984
+    },
+    {
+      "word": "their",
+      "start": 34.939998626708984,
+      "end": 35.13999938964844
+    },
+    {
+      "word": "own",
+      "start": 35.13999938964844,
+      "end": 35.599998474121094
+    },
+    {
+      "word": "journey",
+      "start": 35.599998474121094,
+      "end": 35.65999984741211
+    },
+    {
+      "word": "of",
+      "start": 35.65999984741211,
+      "end": 36.2400016784668
+    },
+    {
+      "word": "faith",
+      "start": 36.2400016784668,
+      "end": 36.2400016784668
+    },
+    {
+      "word": "I've",
+      "start": 36.880001068115234,
+      "end": 37.31999969482422
+    },
+    {
+      "word": "seen",
+      "start": 37.31999969482422,
+      "end": 37.34000015258789
+    },
+    {
+      "word": "a",
+      "start": 37.34000015258789,
+      "end": 37.900001525878906
+    },
+    {
+      "word": "spectrum",
+      "start": 37.900001525878906,
+      "end": 37.900001525878906
+    },
+    {
+      "word": "of",
+      "start": 37.900001525878906,
+      "end": 38.29999923706055
+    },
+    {
+      "word": "experience",
+      "start": 38.29999923706055,
+      "end": 38.70000076293945
+    },
+    {
+      "word": "in",
+      "start": 38.70000076293945,
+      "end": 38.959999084472656
+    },
+    {
+      "word": "my",
+      "start": 38.959999084472656,
+      "end": 39.15999984741211
+    },
+    {
+      "word": "own",
+      "start": 39.15999984741211,
+      "end": 39.41999816894531
+    },
+    {
+      "word": "family",
+      "start": 39.41999816894531,
+      "end": 39.7599983215332
+    },
+    {
+      "word": "from",
+      "start": 39.7599983215332,
+      "end": 40.20000076293945
+    },
+    {
+      "word": "atheism",
+      "start": 40.20000076293945,
+      "end": 40.779998779296875
+    },
+    {
+      "word": "to",
+      "start": 40.779998779296875,
+      "end": 41.619998931884766
+    },
+    {
+      "word": "conservative",
+      "start": 41.619998931884766,
+      "end": 42.2599983215332
+    },
+    {
+      "word": "Christianity",
+      "start": 42.2599983215332,
+      "end": 43.02000045776367
+    },
+    {
+      "word": "to",
+      "start": 43.599998474121094,
+      "end": 44
+    },
+    {
+      "word": "progressive",
+      "start": 44,
+      "end": 44.47999954223633
+    },
+    {
+      "word": "Christianity",
+      "start": 44.47999954223633,
+      "end": 45.20000076293945
+    },
+    {
+      "word": "and",
+      "start": 45.20000076293945,
+      "end": 46.13999938964844
+    },
+    {
+      "word": "many",
+      "start": 46.13999938964844,
+      "end": 46.439998626708984
+    },
+    {
+      "word": "things",
+      "start": 46.439998626708984,
+      "end": 46.779998779296875
+    },
+    {
+      "word": "in",
+      "start": 46.779998779296875,
+      "end": 47.36000061035156
+    },
+    {
+      "word": "between",
+      "start": 47.36000061035156,
+      "end": 47.36000061035156
+    },
+    {
+      "word": "My",
+      "start": 48,
+      "end": 48.540000915527344
+    },
+    {
+      "word": "intent",
+      "start": 48.540000915527344,
+      "end": 48.86000061035156
+    },
+    {
+      "word": "isn't",
+      "start": 48.86000061035156,
+      "end": 49.15999984741211
+    },
+    {
+      "word": "to",
+      "start": 49.15999984741211,
+      "end": 49.7599983215332
+    },
+    {
+      "word": "challenge",
+      "start": 49.7599983215332,
+      "end": 49.7599983215332
+    },
+    {
+      "word": "your",
+      "start": 49.7599983215332,
+      "end": 50.29999923706055
+    },
+    {
+      "word": "path",
+      "start": 50.29999923706055,
+      "end": 50.36000061035156
+    },
+    {
+      "word": "but",
+      "start": 50.540000915527344,
+      "end": 51.08000183105469
+    },
+    {
+      "word": "simply",
+      "start": 51.08000183105469,
+      "end": 51.36000061035156
+    },
+    {
+      "word": "to",
+      "start": 51.36000061035156,
+      "end": 51.70000076293945
+    },
+    {
+      "word": "share",
+      "start": 51.70000076293945,
+      "end": 52.02000045776367
+    },
+    {
+      "word": "and",
+      "start": 52.02000045776367,
+      "end": 52.5
+    },
+    {
+      "word": "explain",
+      "start": 52.5,
+      "end": 52.81999969482422
+    },
+    {
+      "word": "a",
+      "start": 52.81999969482422,
+      "end": 53.20000076293945
+    },
+    {
+      "word": "particular",
+      "start": 53.20000076293945,
+      "end": 53.52000045776367
+    },
+    {
+      "word": "one",
+      "start": 53.52000045776367,
+      "end": 53.91999816894531
+    },
+    {
+      "word": "my",
+      "start": 54.31999969482422,
+      "end": 54.68000030517578
+    },
+    {
+      "word": "own",
+      "start": 54.68000030517578,
+      "end": 54.900001525878906
+    },
+    {
+      "word": "I",
+      "start": 56.08000183105469,
+      "end": 56.29999923706055
+    },
+    {
+      "word": "realize",
+      "start": 56.29999923706055,
+      "end": 56.58000183105469
+    },
+    {
+      "word": "not",
+      "start": 56.58000183105469,
+      "end": 56.880001068115234
+    },
+    {
+      "word": "everyone",
+      "start": 56.880001068115234,
+      "end": 57.29999923706055
+    },
+    {
+      "word": "reading",
+      "start": 57.29999923706055,
+      "end": 57.599998474121094
+    },
+    {
+      "word": "this",
+      "start": 57.599998474121094,
+      "end": 57.900001525878906
+    },
+    {
+      "word": "book",
+      "start": 57.900001525878906,
+      "end": 58.119998931884766
+    },
+    {
+      "word": "will",
+      "start": 58.119998931884766,
+      "end": 58.400001525878906
+    },
+    {
+      "word": "share",
+      "start": 58.400001525878906,
+      "end": 58.560001373291016
+    },
+    {
+      "word": "my",
+      "start": 58.560001373291016,
+      "end": 58.880001068115234
+    },
+    {
+      "word": "perspective",
+      "start": 58.880001068115234,
+      "end": 59.31999969482422
+    },
+    {
+      "word": "but",
+      "start": 59.65999984741211,
+      "end": 60.2400016784668
+    },
+    {
+      "word": "hopefully",
+      "start": 60.2400016784668,
+      "end": 60.599998474121094
+    },
+    {
+      "word": "what",
+      "start": 60.599998474121094,
+      "end": 60.900001525878906
+    },
+    {
+      "word": "is",
+      "start": 60.900001525878906,
+      "end": 61.380001068115234
+    },
+    {
+      "word": "presented",
+      "start": 61.380001068115234,
+      "end": 61.380001068115234
+    },
+    {
+      "word": "here",
+      "start": 61.380001068115234,
+      "end": 61.70000076293945
+    },
+    {
+      "word": "will",
+      "start": 61.70000076293945,
+      "end": 61.880001068115234
+    },
+    {
+      "word": "not",
+      "start": 61.880001068115234,
+      "end": 62.099998474121094
+    },
+    {
+      "word": "be",
+      "start": 62.099998474121094,
+      "end": 62.279998779296875
+    },
+    {
+      "word": "a",
+      "start": 62.279998779296875,
+      "end": 62.86000061035156
+    },
+    {
+      "word": "challenge",
+      "start": 62.86000061035156,
+      "end": 62.86000061035156
+    },
+    {
+      "word": "but",
+      "start": 63.15999984741211,
+      "end": 63.720001220703125
+    },
+    {
+      "word": "simply",
+      "start": 63.720001220703125,
+      "end": 64.18000030517578
+    },
+    {
+      "word": "information",
+      "start": 64.18000030517578,
+      "end": 64.94000244140625
+    },
+    {
+      "word": "I",
+      "start": 65.58000183105469,
+      "end": 66.30000305175781
+    },
+    {
+      "word": "see",
+      "start": 66.30000305175781,
+      "end": 66.45999908447266
+    },
+    {
+      "word": "the",
+      "start": 66.45999908447266,
+      "end": 66.81999969482422
+    },
+    {
+      "word": "audience",
+      "start": 66.81999969482422,
+      "end": 67.04000091552734
+    },
+    {
+      "word": "here",
+      "start": 67.04000091552734,
+      "end": 67.4000015258789
+    },
+    {
+      "word": "as",
+      "start": 67.4000015258789,
+      "end": 67.72000122070312
+    },
+    {
+      "word": "Christians",
+      "start": 67.72000122070312,
+      "end": 68.05999755859375
+    },
+    {
+      "word": "who",
+      "start": 68.05999755859375,
+      "end": 68.5
+    },
+    {
+      "word": "struggle",
+      "start": 68.5,
+      "end": 68.72000122070312
+    },
+    {
+      "word": "with",
+      "start": 68.72000122070312,
+      "end": 69.0999984741211
+    },
+    {
+      "word": "believability",
+      "start": 69.0999984741211,
+      "end": 69.9000015258789
+    },
+    {
+      "word": "atheists",
+      "start": 71.27999877929688,
+      "end": 71.27999877929688
+    },
+    {
+      "word": "who",
+      "start": 71.27999877929688,
+      "end": 71.87999725341797
+    },
+    {
+      "word": "struggle",
+      "start": 71.87999725341797,
+      "end": 71.87999725341797
+    },
+    {
+      "word": "with",
+      "start": 71.87999725341797,
+      "end": 72.22000122070312
+    },
+    {
+      "word": "living",
+      "start": 72.22000122070312,
+      "end": 72.37999725341797
+    },
+    {
+      "word": "as",
+      "start": 72.37999725341797,
+      "end": 72.73999786376953
+    },
+    {
+      "word": "a",
+      "start": 72.73999786376953,
+      "end": 72.9800033569336
+    },
+    {
+      "word": "minority",
+      "start": 72.9800033569336,
+      "end": 73.37999725341797
+    },
+    {
+      "word": "in",
+      "start": 73.37999725341797,
+      "end": 73.81999969482422
+    },
+    {
+      "word": "a",
+      "start": 73.81999969482422,
+      "end": 74.37999725341797
+    },
+    {
+      "word": "Christian",
+      "start": 74.37999725341797,
+      "end": 74.37999725341797
+    },
+    {
+      "word": "society",
+      "start": 74.37999725341797,
+      "end": 74.94000244140625
+    },
+    {
+      "word": "and",
+      "start": 74.94000244140625,
+      "end": 75.9800033569336
+    },
+    {
+      "word": "most",
+      "start": 75.9800033569336,
+      "end": 76.23999786376953
+    },
+    {
+      "word": "importantly",
+      "start": 76.23999786376953,
+      "end": 76.81999969482422
+    },
+    {
+      "word": "anyone",
+      "start": 77.45999908447266,
+      "end": 77.81999969482422
+    },
+    {
+      "word": "who",
+      "start": 77.81999969482422,
+      "end": 78.4000015258789
+    },
+    {
+      "word": "seeks",
+      "start": 78.4000015258789,
+      "end": 78.4000015258789
+    },
+    {
+      "word": "to",
+      "start": 78.4000015258789,
+      "end": 79.22000122070312
+    },
+    {
+      "word": "understand",
+      "start": 79.22000122070312,
+      "end": 79.22000122070312
+    },
+    {
+      "word": "either",
+      "start": 79.22000122070312,
+      "end": 79.5999984741211
+    },
+    {
+      "word": "of",
+      "start": 79.5999984741211,
+      "end": 80.04000091552734
+    },
+    {
+      "word": "those",
+      "start": 80.04000091552734,
+      "end": 80.04000091552734
+    },
+    {
+      "word": "two",
+      "start": 80.04000091552734,
+      "end": 80.5999984741211
+    },
+    {
+      "word": "groups",
+      "start": 80.5999984741211,
+      "end": 80.5999984741211
+    },
+    {
+      "word": "better",
+      "start": 80.5999984741211,
+      "end": 80.9800033569336
+    },
+    {
+      "word": "I",
+      "start": 81.5999984741211,
+      "end": 81.9800033569336
+    },
+    {
+      "word": "hope",
+      "start": 81.9800033569336,
+      "end": 82.23999786376953
+    },
+    {
+      "word": "to",
+      "start": 82.23999786376953,
+      "end": 82.76000213623047
+    },
+    {
+      "word": "present",
+      "start": 82.76000213623047,
+      "end": 82.76000213623047
+    },
+    {
+      "word": "here",
+      "start": 82.76000213623047,
+      "end": 83.05999755859375
+    },
+    {
+      "word": "an",
+      "start": 83.05999755859375,
+      "end": 83.44000244140625
+    },
+    {
+      "word": "interpretation",
+      "start": 83.44000244140625,
+      "end": 83.81999969482422
+    },
+    {
+      "word": "of",
+      "start": 83.81999969482422,
+      "end": 84.58000183105469
+    },
+    {
+      "word": "Christianity",
+      "start": 84.58000183105469,
+      "end": 85.04000091552734
+    },
+    {
+      "word": "or",
+      "start": 85.04000091552734,
+      "end": 85.87999725341797
+    },
+    {
+      "word": "at",
+      "start": 85.87999725341797,
+      "end": 86.16000366210938
+    },
+    {
+      "word": "least",
+      "start": 86.16000366210938,
+      "end": 86.23999786376953
+    },
+    {
+      "word": "some",
+      "start": 86.23999786376953,
+      "end": 86.73999786376953
+    },
+    {
+      "word": "part",
+      "start": 86.73999786376953,
+      "end": 87.08000183105469
+    },
+    {
+      "word": "of",
+      "start": 87.08000183105469,
+      "end": 87.55999755859375
+    },
+    {
+      "word": "Christianity",
+      "start": 87.55999755859375,
+      "end": 87.95999908447266
+    },
+    {
+      "word": "that",
+      "start": 88.4800033569336,
+      "end": 88.86000061035156
+    },
+    {
+      "word": "is",
+      "start": 88.86000061035156,
+      "end": 89.12000274658203
+    },
+    {
+      "word": "compatible",
+      "start": 89.12000274658203,
+      "end": 89.55999755859375
+    },
+    {
+      "word": "with",
+      "start": 89.55999755859375,
+      "end": 89.87999725341797
+    },
+    {
+      "word": "an",
+      "start": 89.87999725341797,
+      "end": 90.63999938964844
+    },
+    {
+      "word": "entirely",
+      "start": 90.63999938964844,
+      "end": 90.63999938964844
+    },
+    {
+      "word": "natural",
+      "start": 90.63999938964844,
+      "end": 91.26000213623047
+    },
+    {
+      "word": "universe",
+      "start": 91.26000213623047,
+      "end": 92.12000274658203
+    },
+    {
+      "word": "About",
+      "start": 94.41999816894531,
+      "end": 94.5
+    },
+    {
+      "word": "the",
+      "start": 94.5,
+      "end": 94.94000244140625
+    },
+    {
+      "word": "Author",
+      "start": 94.94000244140625,
+      "end": 95.26000213623047
+    },
+    {
+      "word": "To",
+      "start": 96.05999755859375,
+      "end": 96.44000244140625
+    },
+    {
+      "word": "give",
+      "start": 96.44000244140625,
+      "end": 96.63999938964844
+    },
+    {
+      "word": "some",
+      "start": 96.63999938964844,
+      "end": 97.19999694824219
+    },
+    {
+      "word": "background",
+      "start": 97.19999694824219,
+      "end": 97.33999633789062
+    },
+    {
+      "word": "about",
+      "start": 97.33999633789062,
+      "end": 97.9000015258789
+    },
+    {
+      "word": "myself",
+      "start": 97.9000015258789,
+      "end": 98.4000015258789
+    },
+    {
+      "word": "I",
+      "start": 99,
+      "end": 99.45999908447266
+    },
+    {
+      "word": "was",
+      "start": 99.45999908447266,
+      "end": 99.73999786376953
+    },
+    {
+      "word": "raised",
+      "start": 99.73999786376953,
+      "end": 100.0999984741211
+    },
+    {
+      "word": "in",
+      "start": 100.0999984741211,
+      "end": 100.41999816894531
+    },
+    {
+      "word": "a",
+      "start": 100.41999816894531,
+      "end": 101.0199966430664
+    },
+    {
+      "word": "Christian",
+      "start": 101.0199966430664,
+      "end": 101.0199966430664
+    },
+    {
+      "word": "tradition",
+      "start": 101.0199966430664,
+      "end": 101.5199966430664
+    },
+    {
+      "word": "At",
+      "start": 102.62000274658203,
+      "end": 102.66000366210938
+    },
+    {
+      "word": "age",
+      "start": 102.66000366210938,
+      "end": 103.0199966430664
+    },
+    {
+      "word": "12",
+      "start": 103.0199966430664,
+      "end": 103.44000244140625
+    },
+    {
+      "word": "when",
+      "start": 103.5999984741211,
+      "end": 103.95999908447266
+    },
+    {
+      "word": "I",
+      "start": 103.95999908447266,
+      "end": 104.0999984741211
+    },
+    {
+      "word": "was",
+      "start": 104.0999984741211,
+      "end": 104.27999877929688
+    },
+    {
+      "word": "at",
+      "start": 104.27999877929688,
+      "end": 104.55999755859375
+    },
+    {
+      "word": "Bible",
+      "start": 104.55999755859375,
+      "end": 104.80000305175781
+    },
+    {
+      "word": "camp",
+      "start": 104.80000305175781,
+      "end": 105.12000274658203
+    },
+    {
+      "word": "during",
+      "start": 105.12000274658203,
+      "end": 105.55999755859375
+    },
+    {
+      "word": "some",
+      "start": 105.55999755859375,
+      "end": 105.94000244140625
+    },
+    {
+      "word": "free",
+      "start": 105.94000244140625,
+      "end": 106.18000030517578
+    },
+    {
+      "word": "time",
+      "start": 106.18000030517578,
+      "end": 106.4800033569336
+    },
+    {
+      "word": "I",
+      "start": 106.62000274658203,
+      "end": 107.4000015258789
+    },
+    {
+      "word": "had",
+      "start": 107.4000015258789,
+      "end": 107.9000015258789
+    },
+    {
+      "word": "climbed",
+      "start": 107.9000015258789,
+      "end": 107.9000015258789
+    },
+    {
+      "word": "a",
+      "start": 107.9000015258789,
+      "end": 108.19999694824219
+    },
+    {
+      "word": "tall",
+      "start": 108.19999694824219,
+      "end": 108.54000091552734
+    },
+    {
+      "word": "tree",
+      "start": 108.54000091552734,
+      "end": 108.80000305175781
+    },
+    {
+      "word": "where",
+      "start": 108.80000305175781,
+      "end": 109.08000183105469
+    },
+    {
+      "word": "I",
+      "start": 109.08000183105469,
+      "end": 109.23999786376953
+    },
+    {
+      "word": "could",
+      "start": 109.23999786376953,
+      "end": 109.45999908447266
+    },
+    {
+      "word": "see",
+      "start": 109.45999908447266,
+      "end": 109.76000213623047
+    },
+    {
+      "word": "nothing",
+      "start": 109.76000213623047,
+      "end": 110.19999694824219
+    },
+    {
+      "word": "but",
+      "start": 110.19999694824219,
+      "end": 110.68000030517578
+    },
+    {
+      "word": "nature",
+      "start": 110.68000030517578,
+      "end": 111.05999755859375
+    },
+    {
+      "word": "At",
+      "start": 112.31999969482422,
+      "end": 112.41999816894531
+    },
+    {
+      "word": "this",
+      "start": 112.41999816894531,
+      "end": 112.69999694824219
+    },
+    {
+      "word": "time",
+      "start": 112.69999694824219,
+      "end": 113.0999984741211
+    },
+    {
+      "word": "I",
+      "start": 113.58000183105469,
+      "end": 113.58000183105469
+    },
+    {
+      "word": "heard",
+      "start": 113.58000183105469,
+      "end": 113.72000122070312
+    },
+    {
+      "word": "the",
+      "start": 113.72000122070312,
+      "end": 113.94000244140625
+    },
+    {
+      "word": "voice",
+      "start": 113.94000244140625,
+      "end": 114.19999694824219
+    },
+    {
+      "word": "of",
+      "start": 114.19999694824219,
+      "end": 114.69999694824219
+    },
+    {
+      "word": "God",
+      "start": 114.69999694824219,
+      "end": 114.69999694824219
+    },
+    {
+      "word": "speak",
+      "start": 114.69999694824219,
+      "end": 115.0999984741211
+    },
+    {
+      "word": "to",
+      "start": 115.0999984741211,
+      "end": 115.27999877929688
+    },
+    {
+      "word": "me",
+      "start": 115.27999877929688,
+      "end": 115.9800033569336
+    },
+    {
+      "word": "saying",
+      "start": 116.0999984741211,
+      "end": 116.30000305175781
+    },
+    {
+      "word": "that",
+      "start": 116.30000305175781,
+      "end": 116.58000183105469
+    },
+    {
+      "word": "He",
+      "start": 116.58000183105469,
+      "end": 116.76000213623047
+    },
+    {
+      "word": "was",
+      "start": 116.76000213623047,
+      "end": 117.23999786376953
+    },
+    {
+      "word": "an",
+      "start": 118.22000122070312,
+      "end": 118.5
+    },
+    {
+      "word": "idea",
+      "start": 118.5,
+      "end": 119.04000091552734
+    },
+    {
+      "word": "invented",
+      "start": 119.04000091552734,
+      "end": 119.91999816894531
+    },
+    {
+      "word": "by",
+      "start": 119.91999816894531,
+      "end": 120.27999877929688
+    },
+    {
+      "word": "man",
+      "start": 120.27999877929688,
+      "end": 120.69999694824219
+    },
+    {
+      "word": "changed",
+      "start": 121.83999633789062,
+      "end": 121.83999633789062
+    },
+    {
+      "word": "over",
+      "start": 121.83999633789062,
+      "end": 122.30000305175781
+    },
+    {
+      "word": "thousands",
+      "start": 122.30000305175781,
+      "end": 122.73999786376953
+    },
+    {
+      "word": "of",
+      "start": 122.73999786376953,
+      "end": 123.41999816894531
+    },
+    {
+      "word": "years",
+      "start": 123.41999816894531,
+      "end": 123.41999816894531
+    },
+    {
+      "word": "It",
+      "start": 124.4800033569336,
+      "end": 124.83999633789062
+    },
+    {
+      "word": "was",
+      "start": 124.83999633789062,
+      "end": 125.08000183105469
+    },
+    {
+      "word": "easy",
+      "start": 125.08000183105469,
+      "end": 125.4000015258789
+    },
+    {
+      "word": "to",
+      "start": 125.4000015258789,
+      "end": 126.27999877929688
+    },
+    {
+      "word": "identify",
+      "start": 126.27999877929688,
+      "end": 126.27999877929688
+    },
+    {
+      "word": "this",
+      "start": 126.27999877929688,
+      "end": 126.69999694824219
+    },
+    {
+      "word": "voice",
+      "start": 126.69999694824219,
+      "end": 127.05999755859375
+    },
+    {
+      "word": "as",
+      "start": 127.05999755859375,
+      "end": 127.44000244140625
+    },
+    {
+      "word": "being",
+      "start": 127.44000244140625,
+      "end": 127.73999786376953
+    },
+    {
+      "word": "a",
+      "start": 127.73999786376953,
+      "end": 127.95999908447266
+    },
+    {
+      "word": "creation",
+      "start": 127.95999908447266,
+      "end": 128.32000732421875
+    },
+    {
+      "word": "of",
+      "start": 128.32000732421875,
+      "end": 128.63999938964844
+    },
+    {
+      "word": "my",
+      "start": 128.63999938964844,
+      "end": 128.86000061035156
+    },
+    {
+      "word": "own",
+      "start": 128.86000061035156,
+      "end": 129.1999969482422
+    },
+    {
+      "word": "mind",
+      "start": 129.1999969482422,
+      "end": 129.55999755859375
+    },
+    {
+      "word": "a",
+      "start": 130.55999755859375,
+      "end": 130.6999969482422
+    },
+    {
+      "word": "creation",
+      "start": 130.6999969482422,
+      "end": 131.10000610351562
+    },
+    {
+      "word": "based",
+      "start": 131.10000610351562,
+      "end": 131.47999572753906
+    },
+    {
+      "word": "on",
+      "start": 131.47999572753906,
+      "end": 131.72000122070312
+    },
+    {
+      "word": "what",
+      "start": 131.72000122070312,
+      "end": 131.8800048828125
+    },
+    {
+      "word": "I",
+      "start": 131.8800048828125,
+      "end": 132.16000366210938
+    },
+    {
+      "word": "understood",
+      "start": 132.16000366210938,
+      "end": 132.5399932861328
+    },
+    {
+      "word": "about",
+      "start": 132.5399932861328,
+      "end": 133.25999450683594
+    },
+    {
+      "word": "Christianity",
+      "start": 133.25999450683594,
+      "end": 134.02000427246094
+    },
+    {
+      "word": "and",
+      "start": 134.02000427246094,
+      "end": 135.0399932861328
+    },
+    {
+      "word": "the",
+      "start": 135.0399932861328,
+      "end": 135.24000549316406
+    },
+    {
+      "word": "Christian",
+      "start": 135.24000549316406,
+      "end": 135.63999938964844
+    },
+    {
+      "word": "God",
+      "start": 135.63999938964844,
+      "end": 136.0399932861328
+    },
+    {
+      "word": "based",
+      "start": 136.9199981689453,
+      "end": 137.25999450683594
+    },
+    {
+      "word": "on",
+      "start": 137.25999450683594,
+      "end": 137.5
+    },
+    {
+      "word": "what",
+      "start": 137.5,
+      "end": 137.6199951171875
+    },
+    {
+      "word": "I",
+      "start": 137.6199951171875,
+      "end": 138.05999755859375
+    },
+    {
+      "word": "heard",
+      "start": 138.05999755859375,
+      "end": 138.05999755859375
+    },
+    {
+      "word": "from",
+      "start": 138.05999755859375,
+      "end": 138.33999633789062
+    },
+    {
+      "word": "family",
+      "start": 138.33999633789062,
+      "end": 138.89999389648438
+    },
+    {
+      "word": "and",
+      "start": 138.89999389648438,
+      "end": 139.66000366210938
+    },
+    {
+      "word": "friends",
+      "start": 139.66000366210938,
+      "end": 140.24000549316406
+    },
+    {
+      "word": "and",
+      "start": 140.24000549316406,
+      "end": 141.05999755859375
+    },
+    {
+      "word": "church",
+      "start": 141.05999755859375,
+      "end": 141.5800018310547
+    },
+    {
+      "word": "leadership",
+      "start": 141.5800018310547,
+      "end": 142.1199951171875
+    },
+    {
+      "word": "This",
+      "start": 143.4600067138672,
+      "end": 143.67999267578125
+    },
+    {
+      "word": "was",
+      "start": 143.67999267578125,
+      "end": 143.89999389648438
+    },
+    {
+      "word": "a",
+      "start": 143.89999389648438,
+      "end": 144.17999267578125
+    },
+    {
+      "word": "moment",
+      "start": 144.17999267578125,
+      "end": 144.36000061035156
+    },
+    {
+      "word": "of",
+      "start": 144.36000061035156,
+      "end": 144.66000366210938
+    },
+    {
+      "word": "my",
+      "start": 144.66000366210938,
+      "end": 145.0800018310547
+    },
+    {
+      "word": "conscious",
+      "start": 145.0800018310547,
+      "end": 145.72000122070312
+    },
+    {
+      "word": "awareness",
+      "start": 145.72000122070312,
+      "end": 146.39999389648438
+    },
+    {
+      "word": "discovering",
+      "start": 146.39999389648438,
+      "end": 147.02000427246094
+    },
+    {
+      "word": "what",
+      "start": 147.02000427246094,
+      "end": 147.25999450683594
+    },
+    {
+      "word": "my",
+      "start": 147.25999450683594,
+      "end": 147.55999755859375
+    },
+    {
+      "word": "subconscious",
+      "start": 147.55999755859375,
+      "end": 148.1199951171875
+    },
+    {
+      "word": "already",
+      "start": 148.1199951171875,
+      "end": 149.36000061035156
+    },
+    {
+      "word": "deeply",
+      "start": 149.36000061035156,
+      "end": 150.0399932861328
+    },
+    {
+      "word": "believed",
+      "start": 150.0399932861328,
+      "end": 150.44000244140625
+    },
+    {
+      "word": "Throughout",
+      "start": 151.8800048828125,
+      "end": 152.05999755859375
+    },
+    {
+      "word": "my",
+      "start": 152.05999755859375,
+      "end": 152.33999633789062
+    },
+    {
+      "word": "life",
+      "start": 152.33999633789062,
+      "end": 152.67999267578125
+    },
+    {
+      "word": "I",
+      "start": 153.02000427246094,
+      "end": 153.02000427246094
+    },
+    {
+      "word": "have",
+      "start": 153.02000427246094,
+      "end": 153.4199981689453
+    },
+    {
+      "word": "found",
+      "start": 153.4199981689453,
+      "end": 153.4199981689453
+    },
+    {
+      "word": "some",
+      "start": 153.4199981689453,
+      "end": 153.9600067138672
+    },
+    {
+      "word": "value",
+      "start": 153.9600067138672,
+      "end": 154.32000732421875
+    },
+    {
+      "word": "in",
+      "start": 154.32000732421875,
+      "end": 154.8000030517578
+    },
+    {
+      "word": "Christian",
+      "start": 154.8000030517578,
+      "end": 155.22000122070312
+    },
+    {
+      "word": "metaphors",
+      "start": 155.22000122070312,
+      "end": 155.89999389648438
+    },
+    {
+      "word": "some",
+      "start": 156.82000732421875,
+      "end": 157.10000610351562
+    },
+    {
+      "word": "utility",
+      "start": 157.10000610351562,
+      "end": 157.5800018310547
+    },
+    {
+      "word": "in",
+      "start": 157.5800018310547,
+      "end": 158.5399932861328
+    },
+    {
+      "word": "asking",
+      "start": 158.5399932861328,
+      "end": 158.5399932861328
+    },
+    {
+      "word": "myself",
+      "start": 158.5399932861328,
+      "end": 159.24000549316406
+    },
+    {
+      "word": "what",
+      "start": 159.94000244140625,
+      "end": 160.10000610351562
+    },
+    {
+      "word": "would",
+      "start": 160.10000610351562,
+      "end": 160.44000244140625
+    },
+    {
+      "word": "Jesus",
+      "start": 160.44000244140625,
+      "end": 160.8000030517578
+    },
+    {
+      "word": "do",
+      "start": 160.8000030517578,
+      "end": 161.3000030517578
+    },
+    {
+      "word": "But",
+      "start": 162.0399932861328,
+      "end": 162.52000427246094
+    },
+    {
+      "word": "it",
+      "start": 162.52000427246094,
+      "end": 162.66000366210938
+    },
+    {
+      "word": "would",
+      "start": 162.66000366210938,
+      "end": 162.82000732421875
+    },
+    {
+      "word": "also",
+      "start": 162.82000732421875,
+      "end": 163.3000030517578
+    },
+    {
+      "word": "be",
+      "start": 163.3000030517578,
+      "end": 163.60000610351562
+    },
+    {
+      "word": "accurate",
+      "start": 163.60000610351562,
+      "end": 164.0399932861328
+    },
+    {
+      "word": "to",
+      "start": 164.0399932861328,
+      "end": 164.47999572753906
+    },
+    {
+      "word": "describe",
+      "start": 164.47999572753906,
+      "end": 164.89999389648438
+    },
+    {
+      "word": "me",
+      "start": 164.89999389648438,
+      "end": 165.17999267578125
+    },
+    {
+      "word": "both",
+      "start": 165.17999267578125,
+      "end": 165.5399932861328
+    },
+    {
+      "word": "as",
+      "start": 165.5399932861328,
+      "end": 165.9600067138672
+    },
+    {
+      "word": "a",
+      "start": 165.9600067138672,
+      "end": 166.1999969482422
+    },
+    {
+      "word": "materialist",
+      "start": 166.1999969482422,
+      "end": 166.94000244140625
+    },
+    {
+      "word": "and",
+      "start": 166.94000244140625,
+      "end": 167.9600067138672
+    },
+    {
+      "word": "as",
+      "start": 167.9600067138672,
+      "end": 168.47999572753906
+    },
+    {
+      "word": "a",
+      "start": 168.47999572753906,
+      "end": 168.60000610351562
+    },
+    {
+      "word": "determinist",
+      "start": 168.60000610351562,
+      "end": 169.3000030517578
+    },
+    {
+      "word": "When",
+      "start": 170.05999755859375,
+      "end": 170.5399932861328
+    },
+    {
+      "word": "I",
+      "start": 170.5399932861328,
+      "end": 170.82000732421875
+    },
+    {
+      "word": "say",
+      "start": 170.82000732421875,
+      "end": 171.1999969482422
+    },
+    {
+      "word": "materialist",
+      "start": 171.1999969482422,
+      "end": 172.3800048828125
+    },
+    {
+      "word": "I",
+      "start": 172.77999877929688,
+      "end": 173.25999450683594
+    },
+    {
+      "word": "am",
+      "start": 173.25999450683594,
+      "end": 173.4600067138672
+    },
+    {
+      "word": "not",
+      "start": 173.4600067138672,
+      "end": 173.75999450683594
+    },
+    {
+      "word": "referring",
+      "start": 173.75999450683594,
+      "end": 174.1199951171875
+    },
+    {
+      "word": "to",
+      "start": 174.1199951171875,
+      "end": 174.9199981689453
+    },
+    {
+      "word": "placing",
+      "start": 174.9199981689453,
+      "end": 174.9199981689453
+    },
+    {
+      "word": "value",
+      "start": 174.9199981689453,
+      "end": 175.5399932861328
+    },
+    {
+      "word": "or",
+      "start": 175.5399932861328,
+      "end": 176.0399932861328
+    },
+    {
+      "word": "importance",
+      "start": 176.0399932861328,
+      "end": 176.60000610351562
+    },
+    {
+      "word": "on",
+      "start": 176.60000610351562,
+      "end": 177.1199951171875
+    },
+    {
+      "word": "material",
+      "start": 177.1199951171875,
+      "end": 177.55999755859375
+    },
+    {
+      "word": "things",
+      "start": 177.55999755859375,
+      "end": 178.10000610351562
+    },
+    {
+      "word": "but",
+      "start": 179.0399932861328,
+      "end": 179.1999969482422
+    },
+    {
+      "word": "instead",
+      "start": 179.1999969482422,
+      "end": 179.75999450683594
+    },
+    {
+      "word": "a",
+      "start": 179.75999450683594,
+      "end": 180.3000030517578
+    },
+    {
+      "word": "philosophical",
+      "start": 180.3000030517578,
+      "end": 181.10000610351562
+    },
+    {
+      "word": "stance",
+      "start": 181.10000610351562,
+      "end": 181.6999969482422
+    },
+    {
+      "word": "that",
+      "start": 181.6999969482422,
+      "end": 182.25999450683594
+    },
+    {
+      "word": "views",
+      "start": 182.25999450683594,
+      "end": 182.5800018310547
+    },
+    {
+      "word": "the",
+      "start": 182.5800018310547,
+      "end": 183
+    },
+    {
+      "word": "universe",
+      "start": 183,
+      "end": 183.44000244140625
+    },
+    {
+      "word": "and",
+      "start": 183.44000244140625,
+      "end": 184.25999450683594
+    },
+    {
+      "word": "everything",
+      "start": 184.25999450683594,
+      "end": 184.83999633789062
+    },
+    {
+      "word": "within",
+      "start": 184.83999633789062,
+      "end": 185.22000122070312
+    },
+    {
+      "word": "it",
+      "start": 185.22000122070312,
+      "end": 185.52000427246094
+    },
+    {
+      "word": "as",
+      "start": 185.52000427246094,
+      "end": 185.89999389648438
+    },
+    {
+      "word": "describable",
+      "start": 185.89999389648438,
+      "end": 186.63999938964844
+    },
+    {
+      "word": "by",
+      "start": 186.63999938964844,
+      "end": 187.3800048828125
+    },
+    {
+      "word": "physical",
+      "start": 187.3800048828125,
+      "end": 187.9199981689453
+    },
+    {
+      "word": "laws",
+      "start": 187.9199981689453,
+      "end": 188.4600067138672
+    },
+    {
+      "word": "including",
+      "start": 189.47999572753906,
+      "end": 189.9600067138672
+    },
+    {
+      "word": "anything",
+      "start": 189.9600067138672,
+      "end": 190.60000610351562
+    },
+    {
+      "word": "one",
+      "start": 190.60000610351562,
+      "end": 191
+    },
+    {
+      "word": "may",
+      "start": 191,
+      "end": 191.32000732421875
+    },
+    {
+      "word": "think",
+      "start": 191.32000732421875,
+      "end": 191.60000610351562
+    },
+    {
+      "word": "of",
+      "start": 191.60000610351562,
+      "end": 192
+    },
+    {
+      "word": "as",
+      "start": 192,
+      "end": 192.66000366210938
+    },
+    {
+      "word": "a",
+      "start": 192.66000366210938,
+      "end": 193.16000366210938
+    },
+    {
+      "word": "self",
+      "start": 193.16000366210938,
+      "end": 194.0800018310547
+    },
+    {
+      "word": "I",
+      "start": 195.47999572753906,
+      "end": 195.82000732421875
+    },
+    {
+      "word": "see",
+      "start": 195.82000732421875,
+      "end": 196.25999450683594
+    },
+    {
+      "word": "my",
+      "start": 196.25999450683594,
+      "end": 196.6999969482422
+    },
+    {
+      "word": "self",
+      "start": 196.6999969482422,
+      "end": 197.5399932861328
+    },
+    {
+      "word": "as",
+      "start": 197.5399932861328,
+      "end": 198.39999389648438
+    },
+    {
+      "word": "my",
+      "start": 198.39999389648438,
+      "end": 198.67999267578125
+    },
+    {
+      "word": "physical",
+      "start": 198.67999267578125,
+      "end": 199.17999267578125
+    },
+    {
+      "word": "body",
+      "start": 199.17999267578125,
+      "end": 199.60000610351562
+    },
+    {
+      "word": "everything",
+      "start": 200.5399932861328,
+      "end": 200.89999389648438
+    },
+    {
+      "word": "within",
+      "start": 200.89999389648438,
+      "end": 201.3000030517578
+    },
+    {
+      "word": "that",
+      "start": 201.3000030517578,
+      "end": 201.60000610351562
+    },
+    {
+      "word": "body",
+      "start": 201.60000610351562,
+      "end": 201.9199981689453
+    },
+    {
+      "word": "and",
+      "start": 202.52000427246094,
+      "end": 202.94000244140625
+    },
+    {
+      "word": "I",
+      "start": 202.94000244140625,
+      "end": 203.32000732421875
+    },
+    {
+      "word": "see",
+      "start": 203.32000732421875,
+      "end": 203.3800048828125
+    },
+    {
+      "word": "that",
+      "start": 203.3800048828125,
+      "end": 203.77999877929688
+    },
+    {
+      "word": "self",
+      "start": 203.77999877929688,
+      "end": 204.13999938964844
+    },
+    {
+      "word": "as",
+      "start": 204.13999938964844,
+      "end": 204.5
+    },
+    {
+      "word": "a",
+      "start": 204.5,
+      "end": 204.72000122070312
+    },
+    {
+      "word": "small",
+      "start": 204.72000122070312,
+      "end": 205
+    },
+    {
+      "word": "part",
+      "start": 205,
+      "end": 205.44000244140625
+    },
+    {
+      "word": "of",
+      "start": 205.44000244140625,
+      "end": 205.82000732421875
+    },
+    {
+      "word": "a",
+      "start": 205.82000732421875,
+      "end": 205.97999572753906
+    },
+    {
+      "word": "much",
+      "start": 205.97999572753906,
+      "end": 206.5
+    },
+    {
+      "word": "larger",
+      "start": 206.5,
+      "end": 206.9199981689453
+    },
+    {
+      "word": "context",
+      "start": 206.9199981689453,
+      "end": 207.60000610351562
+    },
+    {
+      "word": "that",
+      "start": 207.60000610351562,
+      "end": 207.97999572753906
+    },
+    {
+      "word": "I",
+      "start": 207.97999572753906,
+      "end": 208.16000366210938
+    },
+    {
+      "word": "am",
+      "start": 208.16000366210938,
+      "end": 208.39999389648438
+    },
+    {
+      "word": "interdependent",
+      "start": 208.39999389648438,
+      "end": 209.24000549316406
+    },
+    {
+      "word": "with",
+      "start": 209.24000549316406,
+      "end": 209.60000610351562
+    },
+    {
+      "word": "When",
+      "start": 209.60000610351562,
+      "end": 210.52000427246094
+    },
+    {
+      "word": "I",
+      "start": 210.52000427246094,
+      "end": 211.39999389648438
+    },
+    {
+      "word": "say",
+      "start": 211.39999389648438,
+      "end": 211.75999450683594
+    },
+    {
+      "word": "determinist",
+      "start": 211.75999450683594,
+      "end": 212.8800048828125
+    },
+    {
+      "word": "I",
+      "start": 213.82000732421875,
+      "end": 213.83999633789062
+    },
+    {
+      "word": "am",
+      "start": 213.83999633789062,
+      "end": 214.16000366210938
+    },
+    {
+      "word": "referring",
+      "start": 214.16000366210938,
+      "end": 214.4199981689453
+    },
+    {
+      "word": "to",
+      "start": 214.4199981689453,
+      "end": 214.83999633789062
+    },
+    {
+      "word": "a",
+      "start": 214.83999633789062,
+      "end": 215.05999755859375
+    },
+    {
+      "word": "view",
+      "start": 215.05999755859375,
+      "end": 215.24000549316406
+    },
+    {
+      "word": "of",
+      "start": 215.24000549316406,
+      "end": 215.44000244140625
+    },
+    {
+      "word": "the",
+      "start": 215.44000244140625,
+      "end": 215.6199951171875
+    },
+    {
+      "word": "world",
+      "start": 215.6199951171875,
+      "end": 215.8800048828125
+    },
+    {
+      "word": "where",
+      "start": 215.8800048828125,
+      "end": 216.24000549316406
+    },
+    {
+      "word": "everything",
+      "start": 216.24000549316406,
+      "end": 216.6999969482422
+    },
+    {
+      "word": "that",
+      "start": 216.6999969482422,
+      "end": 217.10000610351562
+    },
+    {
+      "word": "happens",
+      "start": 217.55999755859375,
+      "end": 217.55999755859375
+    },
+    {
+      "word": "including",
+      "start": 218.5,
+      "end": 218.8800048828125
+    },
+    {
+      "word": "our",
+      "start": 218.8800048828125,
+      "end": 219.5
+    },
+    {
+      "word": "thoughts",
+      "start": 219.5,
+      "end": 219.77999877929688
+    },
+    {
+      "word": "and",
+      "start": 219.77999877929688,
+      "end": 220.82000732421875
+    },
+    {
+      "word": "choices",
+      "start": 220.82000732421875,
+      "end": 220.82000732421875
+    },
+    {
+      "word": "follows",
+      "start": 222.16000366210938,
+      "end": 222.16000366210938
+    },
+    {
+      "word": "naturally",
+      "start": 222.16000366210938,
+      "end": 222.86000061035156
+    },
+    {
+      "word": "from",
+      "start": 222.86000061035156,
+      "end": 223.25999450683594
+    },
+    {
+      "word": "the",
+      "start": 223.25999450683594,
+      "end": 223.6199951171875
+    },
+    {
+      "word": "state",
+      "start": 223.6199951171875,
+      "end": 223.72000122070312
+    },
+    {
+      "word": "of",
+      "start": 223.72000122070312,
+      "end": 224.33999633789062
+    },
+    {
+      "word": "affairs",
+      "start": 224.33999633789062,
+      "end": 224.33999633789062
+    },
+    {
+      "word": "that",
+      "start": 224.33999633789062,
+      "end": 224.66000366210938
+    },
+    {
+      "word": "preceded",
+      "start": 224.66000366210938,
+      "end": 225.17999267578125
+    },
+    {
+      "word": "it",
+      "start": 225.17999267578125,
+      "end": 225.4600067138672
+    },
+    {
+      "word": "like",
+      "start": 226.24000549316406,
+      "end": 226.5
+    },
+    {
+      "word": "billiard",
+      "start": 226.5,
+      "end": 226.97999572753906
+    },
+    {
+      "word": "balls",
+      "start": 226.97999572753906,
+      "end": 227.3800048828125
+    },
+    {
+      "word": "colliding",
+      "start": 227.3800048828125,
+      "end": 227.97999572753906
+    },
+    {
+      "word": "on",
+      "start": 227.97999572753906,
+      "end": 228.4199981689453
+    },
+    {
+      "word": "a",
+      "start": 228.4199981689453,
+      "end": 228.6999969482422
+    },
+    {
+      "word": "pool",
+      "start": 228.6999969482422,
+      "end": 228.86000061035156
+    },
+    {
+      "word": "table",
+      "start": 228.86000061035156,
+      "end": 229.22000122070312
+    },
+    {
+      "word": "This",
+      "start": 230.47999572753906,
+      "end": 230.8800048828125
+    },
+    {
+      "word": "is",
+      "start": 230.8800048828125,
+      "end": 231.13999938964844
+    },
+    {
+      "word": "not",
+      "start": 231.13999938964844,
+      "end": 231.36000061035156
+    },
+    {
+      "word": "to",
+      "start": 231.36000061035156,
+      "end": 231.86000061035156
+    },
+    {
+      "word": "say",
+      "start": 231.86000061035156,
+      "end": 231.86000061035156
+    },
+    {
+      "word": "that",
+      "start": 231.86000061035156,
+      "end": 232.5399932861328
+    },
+    {
+      "word": "fate",
+      "start": 232.5399932861328,
+      "end": 232.5399932861328
+    },
+    {
+      "word": "controls",
+      "start": 232.5399932861328,
+      "end": 233.17999267578125
+    },
+    {
+      "word": "us",
+      "start": 233.17999267578125,
+      "end": 233.74000549316406
+    },
+    {
+      "word": "or",
+      "start": 234.13999938964844,
+      "end": 234.5399932861328
+    },
+    {
+      "word": "that",
+      "start": 234.5399932861328,
+      "end": 235.0800018310547
+    },
+    {
+      "word": "destiny",
+      "start": 235.0800018310547,
+      "end": 235.3000030517578
+    },
+    {
+      "word": "is",
+      "start": 235.3000030517578,
+      "end": 235.67999267578125
+    },
+    {
+      "word": "out",
+      "start": 235.67999267578125,
+      "end": 235.86000061035156
+    },
+    {
+      "word": "of",
+      "start": 235.86000061035156,
+      "end": 236
+    },
+    {
+      "word": "our",
+      "start": 236,
+      "end": 236.36000061035156
+    },
+    {
+      "word": "hands",
+      "start": 236.36000061035156,
+      "end": 236.67999267578125
+    },
+    {
+      "word": "but",
+      "start": 237.36000061035156,
+      "end": 237.6199951171875
+    },
+    {
+      "word": "very",
+      "start": 237.6199951171875,
+      "end": 238.02000427246094
+    },
+    {
+      "word": "much",
+      "start": 238.02000427246094,
+      "end": 238.17999267578125
+    },
+    {
+      "word": "the",
+      "start": 238.17999267578125,
+      "end": 238.4199981689453
+    },
+    {
+      "word": "opposite",
+      "start": 238.4199981689453,
+      "end": 238.9600067138672
+    },
+    {
+      "word": "that",
+      "start": 239.72000122070312,
+      "end": 239.89999389648438
+    },
+    {
+      "word": "our",
+      "start": 239.89999389648438,
+      "end": 240.13999938964844
+    },
+    {
+      "word": "thoughts",
+      "start": 240.13999938964844,
+      "end": 240.5
+    },
+    {
+      "word": "and",
+      "start": 240.5,
+      "end": 240.83999633789062
+    },
+    {
+      "word": "choices",
+      "start": 240.83999633789062,
+      "end": 241.33999633789062
+    },
+    {
+      "word": "which",
+      "start": 242.13999938964844,
+      "end": 242.39999389648438
+    },
+    {
+      "word": "are",
+      "start": 242.39999389648438,
+      "end": 242.77999877929688
+    },
+    {
+      "word": "recursively",
+      "start": 242.77999877929688,
+      "end": 243.33999633789062
+    },
+    {
+      "word": "shaped",
+      "start": 243.33999633789062,
+      "end": 243.8000030517578
+    },
+    {
+      "word": "throughout",
+      "start": 243.8000030517578,
+      "end": 244.4199981689453
+    },
+    {
+      "word": "our",
+      "start": 244.4199981689453,
+      "end": 244.6999969482422
+    },
+    {
+      "word": "lives",
+      "start": 244.6999969482422,
+      "end": 245.24000549316406
+    },
+    {
+      "word": "compounding",
+      "start": 245.9600067138672,
+      "end": 246.5800018310547
+    },
+    {
+      "word": "upon",
+      "start": 246.5800018310547,
+      "end": 246.8800048828125
+    },
+    {
+      "word": "themselves",
+      "start": 246.8800048828125,
+      "end": 247.5800018310547
+    },
+    {
+      "word": "are",
+      "start": 248.74000549316406,
+      "end": 249
+    },
+    {
+      "word": "the",
+      "start": 249,
+      "end": 249.25999450683594
+    },
+    {
+      "word": "key",
+      "start": 249.25999450683594,
+      "end": 249.6999969482422
+    },
+    {
+      "word": "link",
+      "start": 249.6999969482422,
+      "end": 250.0800018310547
+    },
+    {
+      "word": "in",
+      "start": 250.0800018310547,
+      "end": 250.39999389648438
+    },
+    {
+      "word": "the",
+      "start": 250.39999389648438,
+      "end": 250.77999877929688
+    },
+    {
+      "word": "chain",
+      "start": 250.77999877929688,
+      "end": 251
+    },
+    {
+      "word": "that",
+      "start": 251,
+      "end": 252
+    },
+    {
+      "word": "determines",
+      "start": 252,
+      "end": 252
+    },
+    {
+      "word": "what",
+      "start": 252,
+      "end": 252.33999633789062
+    },
+    {
+      "word": "happens",
+      "start": 252.33999633789062,
+      "end": 252.6999969482422
+    },
+    {
+      "word": "next",
+      "start": 252.6999969482422,
+      "end": 253.3800048828125
+    },
+    {
+      "word": "Regarding",
+      "start": 255.52000427246094,
+      "end": 256.4800109863281
+    },
+    {
+      "word": "religion",
+      "start": 256.4800109863281,
+      "end": 257.17999267578125
+    },
+    {
+      "word": "and",
+      "start": 257.17999267578125,
+      "end": 257.67999267578125
+    },
+    {
+      "word": "metaphors",
+      "start": 257.67999267578125,
+      "end": 258.260009765625
+    },
+    {
+      "word": "I",
+      "start": 258.79998779296875,
+      "end": 259.05999755859375
+    },
+    {
+      "word": "would",
+      "start": 259.05999755859375,
+      "end": 259.2799987792969
+    },
+    {
+      "word": "like",
+      "start": 259.2799987792969,
+      "end": 259.5199890136719
+    },
+    {
+      "word": "to",
+      "start": 259.5199890136719,
+      "end": 260.05999755859375
+    },
+    {
+      "word": "share",
+      "start": 260.05999755859375,
+      "end": 260.05999755859375
+    },
+    {
+      "word": "a",
+      "start": 260.05999755859375,
+      "end": 260.6000061035156
+    },
+    {
+      "word": "quote",
+      "start": 260.6000061035156,
+      "end": 260.6000061035156
+    },
+    {
+      "word": "from",
+      "start": 260.6000061035156,
+      "end": 261.1199951171875
+    },
+    {
+      "word": "Joseph",
+      "start": 261.1199951171875,
+      "end": 261.70001220703125
+    },
+    {
+      "word": "Campbell",
+      "start": 261.70001220703125,
+      "end": 262.0799865722656
+    },
+    {
+      "word": "Half",
+      "start": 263.3599853515625,
+      "end": 264.1600036621094
+    },
+    {
+      "word": "the",
+      "start": 264.1600036621094,
+      "end": 264.44000244140625
+    },
+    {
+      "word": "people",
+      "start": 264.44000244140625,
+      "end": 264.8599853515625
+    },
+    {
+      "word": "in",
+      "start": 264.8599853515625,
+      "end": 265.1600036621094
+    },
+    {
+      "word": "the",
+      "start": 265.1600036621094,
+      "end": 265.3399963378906
+    },
+    {
+      "word": "world",
+      "start": 265.3399963378906,
+      "end": 265.70001220703125
+    },
+    {
+      "word": "think",
+      "start": 265.70001220703125,
+      "end": 266.2799987792969
+    },
+    {
+      "word": "that",
+      "start": 266.2799987792969,
+      "end": 266.6000061035156
+    },
+    {
+      "word": "the",
+      "start": 266.6000061035156,
+      "end": 267.05999755859375
+    },
+    {
+      "word": "metaphors",
+      "start": 267.05999755859375,
+      "end": 267.32000732421875
+    },
+    {
+      "word": "of",
+      "start": 267.32000732421875,
+      "end": 267.7799987792969
+    },
+    {
+      "word": "their",
+      "start": 267.7799987792969,
+      "end": 268.05999755859375
+    },
+    {
+      "word": "religious",
+      "start": 268.05999755859375,
+      "end": 268.5
+    },
+    {
+      "word": "traditions",
+      "start": 268.5,
+      "end": 269.0199890136719
+    },
+    {
+      "word": "for",
+      "start": 269.3599853515625,
+      "end": 269.9200134277344
+    },
+    {
+      "word": "example",
+      "start": 270.55999755859375,
+      "end": 270.55999755859375
+    },
+    {
+      "word": "are",
+      "start": 270.9800109863281,
+      "end": 271.239990234375
+    },
+    {
+      "word": "facts",
+      "start": 271.239990234375,
+      "end": 271.739990234375
+    },
+    {
+      "word": "and",
+      "start": 272.20001220703125,
+      "end": 272.739990234375
+    },
+    {
+      "word": "the",
+      "start": 272.739990234375,
+      "end": 272.9599914550781
+    },
+    {
+      "word": "other",
+      "start": 272.9599914550781,
+      "end": 273.20001220703125
+    },
+    {
+      "word": "half",
+      "start": 273.20001220703125,
+      "end": 273.6000061035156
+    },
+    {
+      "word": "contends",
+      "start": 273.6000061035156,
+      "end": 274.0799865722656
+    },
+    {
+      "word": "that",
+      "start": 274.0799865722656,
+      "end": 274.4800109863281
+    },
+    {
+      "word": "they",
+      "start": 274.4800109863281,
+      "end": 274.6000061035156
+    },
+    {
+      "word": "are",
+      "start": 274.6000061035156,
+      "end": 274.8599853515625
+    },
+    {
+      "word": "not",
+      "start": 274.8599853515625,
+      "end": 275.260009765625
+    },
+    {
+      "word": "facts",
+      "start": 275.260009765625,
+      "end": 275.6600036621094
+    },
+    {
+      "word": "at",
+      "start": 275.6600036621094,
+      "end": 276
+    },
+    {
+      "word": "all",
+      "start": 276,
+      "end": 276.3599853515625
+    },
+    {
+      "word": "As",
+      "start": 277.0799865722656,
+      "end": 277.3999938964844
+    },
+    {
+      "word": "a",
+      "start": 277.3999938964844,
+      "end": 277.7200012207031
+    },
+    {
+      "word": "result",
+      "start": 277.7200012207031,
+      "end": 277.9800109863281
+    },
+    {
+      "word": "we",
+      "start": 278.29998779296875,
+      "end": 278.44000244140625
+    },
+    {
+      "word": "have",
+      "start": 278.44000244140625,
+      "end": 278.7200012207031
+    },
+    {
+      "word": "people",
+      "start": 278.7200012207031,
+      "end": 279.1199951171875
+    },
+    {
+      "word": "who",
+      "start": 279.1199951171875,
+      "end": 279.44000244140625
+    },
+    {
+      "word": "consider",
+      "start": 279.44000244140625,
+      "end": 279.8999938964844
+    },
+    {
+      "word": "themselves",
+      "start": 279.8999938964844,
+      "end": 280.6000061035156
+    },
+    {
+      "word": "believers",
+      "start": 280.6000061035156,
+      "end": 281.1000061035156
+    },
+    {
+      "word": "because",
+      "start": 281.1000061035156,
+      "end": 281.82000732421875
+    },
+    {
+      "word": "they",
+      "start": 281.82000732421875,
+      "end": 282.20001220703125
+    },
+    {
+      "word": "accept",
+      "start": 282.20001220703125,
+      "end": 282.67999267578125
+    },
+    {
+      "word": "metaphors",
+      "start": 282.67999267578125,
+      "end": 283.739990234375
+    },
+    {
+      "word": "as",
+      "start": 283.739990234375,
+      "end": 284.239990234375
+    },
+    {
+      "word": "facts",
+      "start": 284.239990234375,
+      "end": 284.9200134277344
+    },
+    {
+      "word": "and",
+      "start": 285.1000061035156,
+      "end": 285.8999938964844
+    },
+    {
+      "word": "we",
+      "start": 285.8999938964844,
+      "end": 286.05999755859375
+    },
+    {
+      "word": "have",
+      "start": 286.05999755859375,
+      "end": 286.32000732421875
+    },
+    {
+      "word": "others",
+      "start": 286.32000732421875,
+      "end": 286.7799987792969
+    },
+    {
+      "word": "who",
+      "start": 286.7799987792969,
+      "end": 287.6400146484375
+    },
+    {
+      "word": "classify",
+      "start": 287.6400146484375,
+      "end": 287.6400146484375
+    },
+    {
+      "word": "themselves",
+      "start": 287.6400146484375,
+      "end": 288.2799987792969
+    },
+    {
+      "word": "as",
+      "start": 288.2799987792969,
+      "end": 288.9200134277344
+    },
+    {
+      "word": "atheists",
+      "start": 288.9200134277344,
+      "end": 289.3800048828125
+    },
+    {
+      "word": "because",
+      "start": 289.3800048828125,
+      "end": 290.3800048828125
+    },
+    {
+      "word": "they",
+      "start": 290.3800048828125,
+      "end": 290.7200012207031
+    },
+    {
+      "word": "think",
+      "start": 290.7200012207031,
+      "end": 291.1600036621094
+    },
+    {
+      "word": "religious",
+      "start": 291.1600036621094,
+      "end": 291.9200134277344
+    },
+    {
+      "word": "metaphors",
+      "start": 291.9200134277344,
+      "end": 292.6400146484375
+    },
+    {
+      "word": "are",
+      "start": 292.6400146484375,
+      "end": 293.32000732421875
+    },
+    {
+      "word": "lies",
+      "start": 293.32000732421875,
+      "end": 293.7799987792969
+    },
+    {
+      "word": "Joseph",
+      "start": 294.8599853515625,
+      "end": 295.8599853515625
+    },
+    {
+      "word": "Campbell",
+      "start": 295.8599853515625,
+      "end": 296.4200134277344
+    },
+    {
+      "word": "I",
+      "start": 297.94000244140625,
+      "end": 298.44000244140625
+    },
+    {
+      "word": "like",
+      "start": 298.44000244140625,
+      "end": 298.67999267578125
+    },
+    {
+      "word": "to",
+      "start": 298.67999267578125,
+      "end": 299.0799865722656
+    },
+    {
+      "word": "think",
+      "start": 299.0799865722656,
+      "end": 299.3399963378906
+    },
+    {
+      "word": "there",
+      "start": 299.3399963378906,
+      "end": 299.70001220703125
+    },
+    {
+      "word": "is",
+      "start": 299.70001220703125,
+      "end": 299.8599853515625
+    },
+    {
+      "word": "a",
+      "start": 299.8599853515625,
+      "end": 300.2200012207031
+    },
+    {
+      "word": "third",
+      "start": 300.2200012207031,
+      "end": 300.4800109863281
+    },
+    {
+      "word": "category",
+      "start": 300.4800109863281,
+      "end": 301.0799865722656
+    },
+    {
+      "word": "that",
+      "start": 301.0799865722656,
+      "end": 301.5799865722656
+    },
+    {
+      "word": "does",
+      "start": 301.5799865722656,
+      "end": 301.7799987792969
+    },
+    {
+      "word": "not",
+      "start": 301.7799987792969,
+      "end": 302.1000061035156
+    },
+    {
+      "word": "see",
+      "start": 302.1000061035156,
+      "end": 302.3599853515625
+    },
+    {
+      "word": "metaphors",
+      "start": 302.3599853515625,
+      "end": 302.8999938964844
+    },
+    {
+      "word": "either",
+      "start": 302.8999938964844,
+      "end": 303.3999938964844
+    },
+    {
+      "word": "as",
+      "start": 303.3999938964844,
+      "end": 304.2799987792969
+    },
+    {
+      "word": "facts",
+      "start": 304.2799987792969,
+      "end": 304.2799987792969
+    },
+    {
+      "word": "nor",
+      "start": 304.82000732421875,
+      "end": 305.32000732421875
+    },
+    {
+      "word": "as",
+      "start": 305.32000732421875,
+      "end": 306.239990234375
+    },
+    {
+      "word": "lies",
+      "start": 306.239990234375,
+      "end": 306.239990234375
+    },
+    {
+      "word": "There",
+      "start": 306.79998779296875,
+      "end": 307.8599853515625
+    },
+    {
+      "word": "are",
+      "start": 307.8599853515625,
+      "end": 308.1199951171875
+    },
+    {
+      "word": "of",
+      "start": 308.70001220703125,
+      "end": 308.70001220703125
+    },
+    {
+      "word": "course",
+      "start": 308.70001220703125,
+      "end": 308.70001220703125
+    },
+    {
+      "word": "many",
+      "start": 308.82000732421875,
+      "end": 309.239990234375
+    },
+    {
+      "word": "Christians",
+      "start": 309.239990234375,
+      "end": 309.6199951171875
+    },
+    {
+      "word": "that",
+      "start": 309.6199951171875,
+      "end": 310.0799865722656
+    },
+    {
+      "word": "see",
+      "start": 310.0799865722656,
+      "end": 310.32000732421875
+    },
+    {
+      "word": "their",
+      "start": 310.32000732421875,
+      "end": 310.67999267578125
+    },
+    {
+      "word": "faith",
+      "start": 310.67999267578125,
+      "end": 311.0199890136719
+    },
+    {
+      "word": "as",
+      "start": 311.0199890136719,
+      "end": 311.5
+    },
+    {
+      "word": "compatible",
+      "start": 311.5,
+      "end": 312.0199890136719
+    },
+    {
+      "word": "with",
+      "start": 312.0199890136719,
+      "end": 312.5199890136719
+    },
+    {
+      "word": "science",
+      "start": 312.5199890136719,
+      "end": 313
+    },
+    {
+      "word": "but",
+      "start": 313.82000732421875,
+      "end": 314.260009765625
+    },
+    {
+      "word": "very",
+      "start": 314.260009765625,
+      "end": 314.6400146484375
+    },
+    {
+      "word": "few",
+      "start": 314.6400146484375,
+      "end": 314.9599914550781
+    },
+    {
+      "word": "of",
+      "start": 314.9599914550781,
+      "end": 315.239990234375
+    },
+    {
+      "word": "those",
+      "start": 315.239990234375,
+      "end": 315.5400085449219
+    },
+    {
+      "word": "take",
+      "start": 315.5400085449219,
+      "end": 315.8599853515625
+    },
+    {
+      "word": "a",
+      "start": 315.8599853515625,
+      "end": 316.05999755859375
+    },
+    {
+      "word": "completely",
+      "start": 316.05999755859375,
+      "end": 316.6600036621094
+    },
+    {
+      "word": "materialistic",
+      "start": 316.6600036621094,
+      "end": 317.7200012207031
+    },
+    {
+      "word": "or",
+      "start": 317.7200012207031,
+      "end": 318.44000244140625
+    },
+    {
+      "word": "deterministic",
+      "start": 318.44000244140625,
+      "end": 319.3999938964844
+    },
+    {
+      "word": "view",
+      "start": 319.3999938964844,
+      "end": 319.8999938964844
+    },
+    {
+      "word": "always",
+      "start": 320.94000244140625,
+      "end": 321.3800048828125
+    },
+    {
+      "word": "leaving",
+      "start": 321.3800048828125,
+      "end": 321.70001220703125
+    },
+    {
+      "word": "some",
+      "start": 321.70001220703125,
+      "end": 322.32000732421875
+    },
+    {
+      "word": "supernatural",
+      "start": 322.32000732421875,
+      "end": 323.1400146484375
+    },
+    {
+      "word": "element",
+      "start": 323.1400146484375,
+      "end": 323.7799987792969
+    },
+    {
+      "word": "remaining",
+      "start": 323.7799987792969,
+      "end": 324.3999938964844
+    },
+    {
+      "word": "I",
+      "start": 325.5899963378906,
+      "end": 326.0400085449219
+    },
+    {
+      "word": "do",
+      "start": 326.0400085449219,
+      "end": 326.260009765625
+    },
+    {
+      "word": "not",
+      "start": 326.260009765625,
+      "end": 326.55999755859375
+    },
+    {
+      "word": "see",
+      "start": 326.55999755859375,
+      "end": 326.79998779296875
+    },
+    {
+      "word": "any",
+      "start": 326.79998779296875,
+      "end": 327.20001220703125
+    },
+    {
+      "word": "need",
+      "start": 327.20001220703125,
+      "end": 327.4599914550781
+    },
+    {
+      "word": "for",
+      "start": 327.4599914550781,
+      "end": 327.79998779296875
+    },
+    {
+      "word": "this",
+      "start": 327.79998779296875,
+      "end": 328.1600036621094
+    },
+    {
+      "word": "hedge",
+      "start": 328.1600036621094,
+      "end": 328.4800109863281
+    },
+    {
+      "word": "to",
+      "start": 328.4800109863281,
+      "end": 328.94000244140625
+    },
+    {
+      "word": "reconcile",
+      "start": 328.94000244140625,
+      "end": 329.5
+    },
+    {
+      "word": "things",
+      "start": 329.5,
+      "end": 330.17999267578125
+    },
+    {
+      "word": "God",
+      "start": 331.17999267578125,
+      "end": 331.5799865722656
+    },
+    {
+      "word": "is",
+      "start": 331.5799865722656,
+      "end": 331.8599853515625
+    },
+    {
+      "word": "love",
+      "start": 331.8599853515625,
+      "end": 332.29998779296875
+    },
+    {
+      "word": "hell",
+      "start": 333.2200012207031,
+      "end": 333.2200012207031
+    },
+    {
+      "word": "is",
+      "start": 333.2200012207031,
+      "end": 333.79998779296875
+    },
+    {
+      "word": "suffering",
+      "start": 333.79998779296875,
+      "end": 334.260009765625
+    },
+    {
+      "word": "heaven",
+      "start": 335.1400146484375,
+      "end": 335.1600036621094
+    },
+    {
+      "word": "is",
+      "start": 335.1600036621094,
+      "end": 335.70001220703125
+    },
+    {
+      "word": "a",
+      "start": 335.70001220703125,
+      "end": 335.8599853515625
+    },
+    {
+      "word": "state",
+      "start": 335.8599853515625,
+      "end": 336.05999755859375
+    },
+    {
+      "word": "of",
+      "start": 336.05999755859375,
+      "end": 336.29998779296875
+    },
+    {
+      "word": "mind",
+      "start": 336.29998779296875,
+      "end": 336.760009765625
+    },
+    {
+      "word": "a",
+      "start": 337.260009765625,
+      "end": 337.55999755859375
+    },
+    {
+      "word": "state",
+      "start": 337.55999755859375,
+      "end": 337.5799865722656
+    },
+    {
+      "word": "of",
+      "start": 337.5799865722656,
+      "end": 337.9800109863281
+    },
+    {
+      "word": "being",
+      "start": 337.9800109863281,
+      "end": 338.20001220703125
+    },
+    {
+      "word": "available",
+      "start": 339.2799987792969,
+      "end": 339.2799987792969
+    },
+    {
+      "word": "to",
+      "start": 339.2799987792969,
+      "end": 339.67999267578125
+    },
+    {
+      "word": "all",
+      "start": 339.67999267578125,
+      "end": 339.9800109863281
+    },
+    {
+      "word": "of",
+      "start": 339.9800109863281,
+      "end": 340.29998779296875
+    },
+    {
+      "word": "us",
+      "start": 340.29998779296875,
+      "end": 340.5
+    },
+    {
+      "word": "here",
+      "start": 340.5,
+      "end": 340.8599853515625
+    },
+    {
+      "word": "and",
+      "start": 340.8599853515625,
+      "end": 341.260009765625
+    },
+    {
+      "word": "now",
+      "start": 341.260009765625,
+      "end": 341.67999267578125
+    },
+    {
+      "word": "through",
+      "start": 342.4599914550781,
+      "end": 342.6600036621094
+    },
+    {
+      "word": "embracing",
+      "start": 342.6600036621094,
+      "end": 343.29998779296875
+    },
+    {
+      "word": "and",
+      "start": 343.29998779296875,
+      "end": 344.44000244140625
+    },
+    {
+      "word": "expressing",
+      "start": 344.44000244140625,
+      "end": 344.44000244140625
+    },
+    {
+      "word": "love",
+      "start": 344.44000244140625,
+      "end": 344.7200012207031
+    },
+    {
+      "word": "for",
+      "start": 344.7200012207031,
+      "end": 345.1199951171875
+    },
+    {
+      "word": "all",
+      "start": 345.1199951171875,
+      "end": 345.44000244140625
+    },
+    {
+      "word": "through",
+      "start": 345.44000244140625,
+      "end": 346.1199951171875
+    },
+    {
+      "word": "our",
+      "start": 346.1199951171875,
+      "end": 346.4800109863281
+    },
+    {
+      "word": "actions",
+      "start": 346.4800109863281,
+      "end": 346.94000244140625
+    },
+    {
+      "word": "in",
+      "start": 346.94000244140625,
+      "end": 347.17999267578125
+    },
+    {
+      "word": "the",
+      "start": 347.17999267578125,
+      "end": 347.3599853515625
+    },
+    {
+      "word": "real",
+      "start": 347.3599853515625,
+      "end": 347.7200012207031
+    },
+    {
+      "word": "world",
+      "start": 347.7200012207031,
+      "end": 348.0799865722656
+    },
+    {
+      "word": "during",
+      "start": 348.6400146484375,
+      "end": 349
+    },
+    {
+      "word": "our",
+      "start": 349,
+      "end": 349.3999938964844
+    },
+    {
+      "word": "short",
+      "start": 349.3999938964844,
+      "end": 349.79998779296875
+    },
+    {
+      "word": "lives",
+      "start": 349.79998779296875,
+      "end": 350.2799987792969
+    },
+    {
+      "word": "There",
+      "start": 351.05999755859375,
+      "end": 351.4599914550781
+    },
+    {
+      "word": "is",
+      "start": 351.4599914550781,
+      "end": 351.760009765625
+    },
+    {
+      "word": "nothing",
+      "start": 351.760009765625,
+      "end": 352.2200012207031
+    },
+    {
+      "word": "supernatural",
+      "start": 352.2200012207031,
+      "end": 353.3999938964844
+    },
+    {
+      "word": "about",
+      "start": 353.3999938964844,
+      "end": 354.1400146484375
+    },
+    {
+      "word": "love",
+      "start": 354.1400146484375,
+      "end": 354.6400146484375
+    },
+    {
+      "word": "There",
+      "start": 355.6400146484375,
+      "end": 356.3999938964844
+    },
+    {
+      "word": "is",
+      "start": 356.3999938964844,
+      "end": 356.6400146484375
+    },
+    {
+      "word": "no",
+      "start": 356.6400146484375,
+      "end": 356.8999938964844
+    },
+    {
+      "word": "need",
+      "start": 356.8999938964844,
+      "end": 357.260009765625
+    },
+    {
+      "word": "to",
+      "start": 357.260009765625,
+      "end": 358.3599853515625
+    },
+    {
+      "word": "contradict",
+      "start": 358.3599853515625,
+      "end": 358.3599853515625
+    },
+    {
+      "word": "our",
+      "start": 358.3599853515625,
+      "end": 358.79998779296875
+    },
+    {
+      "word": "observation",
+      "start": 358.79998779296875,
+      "end": 359.3800048828125
+    },
+    {
+      "word": "of",
+      "start": 359.3800048828125,
+      "end": 359.8800048828125
+    },
+    {
+      "word": "a",
+      "start": 359.8800048828125,
+      "end": 360.1400146484375
+    },
+    {
+      "word": "deterministic",
+      "start": 360.1400146484375,
+      "end": 360.79998779296875
+    },
+    {
+      "word": "reality",
+      "start": 360.79998779296875,
+      "end": 361.44000244140625
+    },
+    {
+      "word": "with",
+      "start": 361.44000244140625,
+      "end": 362.239990234375
+    },
+    {
+      "word": "a",
+      "start": 362.239990234375,
+      "end": 362.55999755859375
+    },
+    {
+      "word": "supernatural",
+      "start": 362.55999755859375,
+      "end": 363.2200012207031
+    },
+    {
+      "word": "free",
+      "start": 363.2200012207031,
+      "end": 363.760009765625
+    },
+    {
+      "word": "will",
+      "start": 363.760009765625,
+      "end": 363.9800109863281
+    },
+    {
+      "word": "in",
+      "start": 364.9800109863281,
+      "end": 365.260009765625
+    },
+    {
+      "word": "order",
+      "start": 365.260009765625,
+      "end": 365.4599914550781
+    },
+    {
+      "word": "to",
+      "start": 365.4599914550781,
+      "end": 365.7200012207031
+    },
+    {
+      "word": "see",
+      "start": 365.7200012207031,
+      "end": 366
+    },
+    {
+      "word": "the",
+      "start": 366,
+      "end": 366.32000732421875
+    },
+    {
+      "word": "obvious",
+      "start": 366.32000732421875,
+      "end": 367.1199951171875
+    },
+    {
+      "word": "complexity",
+      "start": 367.1199951171875,
+      "end": 367.9599914550781
+    },
+    {
+      "word": "present",
+      "start": 367.9599914550781,
+      "end": 368.5
+    },
+    {
+      "word": "in",
+      "start": 368.5,
+      "end": 368.79998779296875
+    },
+    {
+      "word": "a",
+      "start": 368.79998779296875,
+      "end": 369.1000061035156
+    },
+    {
+      "word": "piece",
+      "start": 369.1000061035156,
+      "end": 369.1400146484375
+    },
+    {
+      "word": "of",
+      "start": 369.1400146484375,
+      "end": 369.8800048828125
+    },
+    {
+      "word": "software",
+      "start": 369.8800048828125,
+      "end": 369.8800048828125
+    },
+    {
+      "word": "us",
+      "start": 371.1000061035156,
+      "end": 371.2200012207031
+    },
+    {
+      "word": "that",
+      "start": 372.3599853515625,
+      "end": 372.70001220703125
+    },
+    {
+      "word": "recursively",
+      "start": 372.70001220703125,
+      "end": 373.5
+    },
+    {
+      "word": "iterates",
+      "start": 373.5,
+      "end": 374.0799865722656
+    },
+    {
+      "word": "itself",
+      "start": 374.0799865722656,
+      "end": 374.7200012207031
+    },
+    {
+      "word": "on",
+      "start": 374.7200012207031,
+      "end": 375.1600036621094
+    },
+    {
+      "word": "a",
+      "start": 375.1600036621094,
+      "end": 375.3399963378906
+    },
+    {
+      "word": "lifetime",
+      "start": 375.3399963378906,
+      "end": 375.8399963378906
+    },
+    {
+      "word": "of",
+      "start": 375.8399963378906,
+      "end": 376.20001220703125
+    },
+    {
+      "word": "sensory",
+      "start": 376.20001220703125,
+      "end": 376.70001220703125
+    },
+    {
+      "word": "experience",
+      "start": 376.70001220703125,
+      "end": 377.5199890136719
+    },
+    {
+      "word": "in",
+      "start": 378.6199951171875,
+      "end": 378.9599914550781
+    },
+    {
+      "word": "order",
+      "start": 378.9599914550781,
+      "end": 379.05999755859375
+    },
+    {
+      "word": "for",
+      "start": 379.05999755859375,
+      "end": 379.3399963378906
+    },
+    {
+      "word": "that",
+      "start": 379.3399963378906,
+      "end": 379.55999755859375
+    },
+    {
+      "word": "piece",
+      "start": 379.55999755859375,
+      "end": 379.82000732421875
+    },
+    {
+      "word": "of",
+      "start": 379.82000732421875,
+      "end": 380.5
+    },
+    {
+      "word": "software",
+      "start": 380.5,
+      "end": 380.5
+    },
+    {
+      "word": "to",
+      "start": 380.5,
+      "end": 380.7799987792969
+    },
+    {
+      "word": "take",
+      "start": 380.7799987792969,
+      "end": 381.0400085449219
+    },
+    {
+      "word": "responsibility",
+      "start": 381.0400085449219,
+      "end": 381.9599914550781
+    },
+    {
+      "word": "and",
+      "start": 381.9599914550781,
+      "end": 382.82000732421875
+    },
+    {
+      "word": "suffer",
+      "start": 382.82000732421875,
+      "end": 383.2799987792969
+    },
+    {
+      "word": "consequences",
+      "start": 383.2799987792969,
+      "end": 384.0400085449219
+    },
+    {
+      "word": "for",
+      "start": 384.0400085449219,
+      "end": 384.5799865722656
+    },
+    {
+      "word": "its",
+      "start": 384.5799865722656,
+      "end": 384.8599853515625
+    },
+    {
+      "word": "choices",
+      "start": 384.8599853515625,
+      "end": 385.32000732421875
+    },
+    {
+      "word": "There",
+      "start": 386.6199951171875,
+      "end": 386.739990234375
+    },
+    {
+      "word": "is",
+      "start": 386.739990234375,
+      "end": 387
+    },
+    {
+      "word": "no",
+      "start": 387,
+      "end": 387.2799987792969
+    },
+    {
+      "word": "need",
+      "start": 387.2799987792969,
+      "end": 387.55999755859375
+    },
+    {
+      "word": "to",
+      "start": 387.55999755859375,
+      "end": 388.1000061035156
+    },
+    {
+      "word": "claim",
+      "start": 388.1000061035156,
+      "end": 388.1000061035156
+    },
+    {
+      "word": "God's",
+      "start": 388.1000061035156,
+      "end": 388.7200012207031
+    },
+    {
+      "word": "decree",
+      "start": 388.7200012207031,
+      "end": 388.9599914550781
+    },
+    {
+      "word": "for",
+      "start": 388.9599914550781,
+      "end": 389.4200134277344
+    },
+    {
+      "word": "us",
+      "start": 389.4200134277344,
+      "end": 389.6600036621094
+    },
+    {
+      "word": "to",
+      "start": 389.6600036621094,
+      "end": 389.8800048828125
+    },
+    {
+      "word": "make",
+      "start": 389.8800048828125,
+      "end": 390.239990234375
+    },
+    {
+      "word": "and",
+      "start": 391.239990234375,
+      "end": 391.4599914550781
+    },
+    {
+      "word": "continually",
+      "start": 391.4599914550781,
+      "end": 392.3599853515625
+    },
+    {
+      "word": "remake",
+      "start": 392.3599853515625,
+      "end": 393.0199890136719
+    },
+    {
+      "word": "our",
+      "start": 393.739990234375,
+      "end": 393.8999938964844
+    },
+    {
+      "word": "choice",
+      "start": 393.8999938964844,
+      "end": 394.3800048828125
+    },
+    {
+      "word": "of",
+      "start": 394.3800048828125,
+      "end": 394.79998779296875
+    },
+    {
+      "word": "orientation",
+      "start": 394.79998779296875,
+      "end": 395.2799987792969
+    },
+    {
+      "word": "for",
+      "start": 395.2799987792969,
+      "end": 395.9200134277344
+    },
+    {
+      "word": "what",
+      "start": 395.9200134277344,
+      "end": 396.29998779296875
+    },
+    {
+      "word": "good",
+      "start": 396.29998779296875,
+      "end": 396.5400085449219
+    },
+    {
+      "word": "and",
+      "start": 396.5400085449219,
+      "end": 397.20001220703125
+    },
+    {
+      "word": "bad",
+      "start": 397.20001220703125,
+      "end": 397.55999755859375
+    },
+    {
+      "word": "are",
+      "start": 397.55999755859375,
+      "end": 398.1400146484375
+    },
+    {
+      "word": "Just",
+      "start": 398.8399963378906,
+      "end": 399.2200012207031
+    },
+    {
+      "word": "like",
+      "start": 399.2200012207031,
+      "end": 399.6000061035156
+    },
+    {
+      "word": "up",
+      "start": 399.6000061035156,
+      "end": 399.9200134277344
+    },
+    {
+      "word": "and",
+      "start": 399.9200134277344,
+      "end": 400.55999755859375
+    },
+    {
+      "word": "down",
+      "start": 400.55999755859375,
+      "end": 401.0400085449219
+    },
+    {
+      "word": "good",
+      "start": 401.6199951171875,
+      "end": 401.8599853515625
+    },
+    {
+      "word": "and",
+      "start": 401.8599853515625,
+      "end": 402.3999938964844
+    },
+    {
+      "word": "bad",
+      "start": 402.3999938964844,
+      "end": 402.7200012207031
+    },
+    {
+      "word": "are",
+      "start": 402.7200012207031,
+      "end": 403
+    },
+    {
+      "word": "also",
+      "start": 403,
+      "end": 403.6600036621094
+    },
+    {
+      "word": "relative",
+      "start": 403.6600036621094,
+      "end": 404.0400085449219
+    },
+    {
+      "word": "terms",
+      "start": 404.0400085449219,
+      "end": 404.44000244140625
+    },
+    {
+      "word": "that",
+      "start": 404.44000244140625,
+      "end": 404.82000732421875
+    },
+    {
+      "word": "only",
+      "start": 404.82000732421875,
+      "end": 405.2200012207031
+    },
+    {
+      "word": "make",
+      "start": 405.2200012207031,
+      "end": 405.5199890136719
+    },
+    {
+      "word": "sense",
+      "start": 405.5199890136719,
+      "end": 405.9200134277344
+    },
+    {
+      "word": "with",
+      "start": 405.9200134277344,
+      "end": 406.29998779296875
+    },
+    {
+      "word": "a",
+      "start": 406.29998779296875,
+      "end": 406.7099914550781
+    },
+    {
+      "word": "description",
+      "start": 406.7099914550781,
+      "end": 407.2699890136719
+    },
+    {
+      "word": "an",
+      "start": 407.92999267578125,
+      "end": 408.1099853515625
+    },
+    {
+      "word": "aim",
+      "start": 408.1099853515625,
+      "end": 408.3699951171875
+    },
+    {
+      "word": "a",
+      "start": 409.7300109863281,
+      "end": 409.75
+    },
+    {
+      "word": "target",
+      "start": 409.75,
+      "end": 409.75
+    },
+    {
+      "word": "a",
+      "start": 410.2900085449219,
+      "end": 410.5899963378906
+    },
+    {
+      "word": "goal",
+      "start": 410.5899963378906,
+      "end": 410.9100036621094
+    },
+    {
+      "word": "that",
+      "start": 411.42999267578125,
+      "end": 412.30999755859375
+    },
+    {
+      "word": "we",
+      "start": 412.30999755859375,
+      "end": 412.7300109863281
+    },
+    {
+      "word": "choose",
+      "start": 412.7300109863281,
+      "end": 413.19000244140625
+    }
+  ],
+  "usage": {
+    "type": "duration",
+    "seconds": 415
+  }
+}

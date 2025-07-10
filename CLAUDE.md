@@ -34,6 +34,30 @@ This is a GitHub Pages website for the book "Mere Metaphor" that lives at mereme
 - `node build.js` - Generate audio-book.html with word-by-word highlighting
 - The output is written to the root directory as `audio-book.html`
 
+### Audio File Management
+The project uses separate source files combined into a single file for web delivery:
+
+**Source Files:**
+- `cover_and_preface.mp3` - Cover and preface audio
+- `about_the_author.mp3` - About the author chapter
+- `about_the_author.m4a` - Original m4a recording (kept for reference)
+
+**Web Delivery:**
+- `book_audio.mp3` - Combined audio file used by the website
+- `book_audio_transcription.json` - Transcription with word-level timestamps
+
+**Audio Processing Commands:**
+```bash
+# Convert m4a to mp3
+ffmpeg -i about_the_author.m4a -codec:a libmp3lame -b:a 128k about_the_author.mp3
+
+# Combine audio files
+ffmpeg -i cover_and_preface.mp3 -i about_the_author.mp3 -filter_complex "[0:0][1:0]concat=n=2:v=0:a=1" -c:a libmp3lame -b:a 128k book_audio.mp3
+
+# Transcribe combined audio
+node transcribe-audio.js
+```
+
 ## Architecture
 
 The build process is intentionally minimal:

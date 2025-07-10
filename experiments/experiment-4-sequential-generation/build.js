@@ -69,7 +69,7 @@ async function buildSite() {
 }
 
 async function loadTranscriptionData() {
-    const transcriptionPath = path.join(__dirname, '..', '..', 'transcription_with_timestamps.json');
+    const transcriptionPath = path.join(__dirname, '..', '..', 'book_audio_transcription.json');
     if (fs.existsSync(transcriptionPath)) {
         transcriptionData = JSON.parse(fs.readFileSync(transcriptionPath, 'utf8'));
         console.log(`Loaded ${transcriptionData.words.length} transcription words for audio features`);
@@ -723,8 +723,7 @@ async function extractText() {
             <span id="duration" class="audio-time">0:00</span>
         </div>
         <audio id="audioPlayer" preload="metadata">
-            <source src="cover_and_preface.mp3" type="audio/mpeg">
-            <source src="cover_and_preface.m4a" type="audio/mp4">
+            <source src="book_audio.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
     </div>
