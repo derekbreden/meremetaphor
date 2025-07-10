@@ -247,7 +247,7 @@ async function extractText() {
                 }
                 
                 const chapterId = chapter.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-                htmlContent += `<h2 class="chapter-header" id="${chapterId}">${escapeHtml(chapter.name)}</h2>\n`;
+                htmlContent += `<h2 class="chapter-header" id="${chapterId}">${formatAnyWordsWithAudio(chapter.name, chapter.name)}</h2>\n`;
                 
                 const imagePath = path.join(__dirname, '..', '..', 'images', chapter.image);
                 if (fs.existsSync(imagePath)) {
@@ -514,20 +514,17 @@ async function extractText() {
         
         
         /* Audio Highlighting Styles */
-        /*
         .audio-word {
-            transition: background-color 0.1s ease;
             cursor: pointer;
+            border-radius: 2px;
         }
         
         .audio-word:hover {
             background-color: #f0f0f0;
         }
-        */
 
         .audio-word.current {
             background-color: #ffe066;
-            border-radius: 2px;
         }
     </style>
     <script>
@@ -691,7 +688,7 @@ async function extractText() {
             const rect = element.getBoundingClientRect();
             const windowHeight = window.innerHeight;
             const topBuffer = 32; // 2em buffer from top (16px * 2)
-            const bottomBuffer = 10; // Offset from bottom for comfortable viewing
+            const bottomBuffer = 32; // Offset from bottom for comfortable viewing
             
             // Only scroll if element is actually outside viewport or too close to edges
             if (rect.top < topBuffer || rect.bottom > windowHeight - bottomBuffer) {
@@ -782,7 +779,7 @@ function processChapterPage(page, chapter, chapterPages, pageIndex) {
 
             // Otherwise, we have reached our length and so we add the html and continue with paragraphs by saying foundChapterTitle = false
             } else {
-                htmlContent += `<h3>${formatAnyWordsWithAudio(chapterSubtitleSoFar, chapter.name)}</h3>\n`;
+                htmlContent += `<h3>${chapterSubtitleSoFar}</h3>\n`;
                 foundChapterTitle = false;
             }
             lastY = item.y;
