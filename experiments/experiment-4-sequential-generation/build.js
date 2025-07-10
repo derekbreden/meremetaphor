@@ -804,9 +804,9 @@ function processChapterPage(page, chapter, chapterPages, pageIndex) {
             quoteAttribution = text;
             // Output the complete quote
             htmlContent += `<blockquote>\n`;
-            htmlContent += `<p>${escapeHtml(quoteContent.join(' '))}</p>\n`;
+            htmlContent += `<p>${formatAnyWordsWithAudio(quoteContent.join(' '), chapter.name)}</p>\n`;
             if (quoteAttribution) {
-                htmlContent += `<cite>${escapeHtml(quoteAttribution)}</cite>\n`;
+                htmlContent += `<cite>${formatAnyWordsWithAudio(quoteAttribution, chapter.name)}</cite>\n`;
             }
             htmlContent += `</blockquote>\n`;
             // Reset quote state
@@ -817,7 +817,7 @@ function processChapterPage(page, chapter, chapterPages, pageIndex) {
             // We've left the quote area, output what we have
             if (quoteContent.length > 0) {
                 htmlContent += `<blockquote>\n`;
-                htmlContent += `<p>${escapeHtml(quoteContent.join(' '))}</p>\n`;
+                htmlContent += `<p>${formatAnyWordsWithAudio(quoteContent.join(' '), chapter.name)}</p>\n`;
                 htmlContent += `</blockquote>\n`;
             }
             inQuote = false;
