@@ -1,0 +1,2250 @@
+{
+  "chapters": [
+    {
+      "id": "preface",
+      "title": "Preface",
+      "type": "preface",
+      "sections": [
+        {
+          "id": "preface-intro",
+          "type": "paragraph",
+          "sentences": [
+            {
+              "text": "If you believe in a supernatural entity or a creator of the universe, that's not what this book is about.",
+              "id": "preface-s1",
+              "words": [
+                {
+                  "text": "If",
+                  "originalText": "If",
+                  "transcriptionIndex": 12,
+                  "timing": {
+                    "start": 11.680000305175781,
+                    "end": 11.699999809265137
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "you",
+                  "originalText": "you",
+                  "transcriptionIndex": 13,
+                  "timing": {
+                    "start": 11.699999809265137,
+                    "end": 11.960000038146973
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "believe",
+                  "originalText": "believe",
+                  "transcriptionIndex": 14,
+                  "timing": {
+                    "start": 11.960000038146973,
+                    "end": 12.279999732971191
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "in",
+                  "originalText": "in",
+                  "transcriptionIndex": 15,
+                  "timing": {
+                    "start": 12.279999732971191,
+                    "end": 12.5600004196167
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "a",
+                  "originalText": "a",
+                  "transcriptionIndex": 16,
+                  "timing": {
+                    "start": 12.5600004196167,
+                    "end": 12.84000015258789
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "supernatural",
+                  "originalText": "supernatural",
+                  "transcriptionIndex": 17,
+                  "timing": {
+                    "start": 12.84000015258789,
+                    "end": 13.34000015258789
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "entity",
+                  "originalText": "entity",
+                  "transcriptionIndex": 18,
+                  "timing": {
+                    "start": 13.34000015258789,
+                    "end": 13.880000114440918
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "or",
+                  "originalText": "or",
+                  "transcriptionIndex": 19,
+                  "timing": {
+                    "start": 13.880000114440918,
+                    "end": 14.34000015258789
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "a",
+                  "originalText": "a",
+                  "transcriptionIndex": 20,
+                  "timing": {
+                    "start": 14.34000015258789,
+                    "end": 14.680000305175781
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "creator",
+                  "originalText": "creator",
+                  "transcriptionIndex": 21,
+                  "timing": {
+                    "start": 14.680000305175781,
+                    "end": 14.920000076293945
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "of",
+                  "originalText": "of",
+                  "transcriptionIndex": 22,
+                  "timing": {
+                    "start": 14.920000076293945,
+                    "end": 15.15999984741211
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "the",
+                  "originalText": "the",
+                  "transcriptionIndex": 23,
+                  "timing": {
+                    "start": 15.15999984741211,
+                    "end": 15.739999771118164
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "universe",
+                  "originalText": "universe",
+                  "transcriptionIndex": 24,
+                  "timing": {
+                    "start": 15.739999771118164,
+                    "end": 15.739999771118164
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "thats",
+                  "originalText": "thats",
+                  "transcriptionIndex": 25,
+                  "timing": {
+                    "start": 15.960000038146973,
+                    "end": 16.600000381469727
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "not",
+                  "originalText": "not",
+                  "transcriptionIndex": 26,
+                  "timing": {
+                    "start": 16.600000381469727,
+                    "end": 16.799999237060547
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "what",
+                  "originalText": "what",
+                  "transcriptionIndex": 27,
+                  "timing": {
+                    "start": 16.799999237060547,
+                    "end": 17
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "this",
+                  "originalText": "this",
+                  "transcriptionIndex": 28,
+                  "timing": {
+                    "start": 17,
+                    "end": 17.219999313354492
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "book",
+                  "originalText": "book",
+                  "transcriptionIndex": 29,
+                  "timing": {
+                    "start": 17.219999313354492,
+                    "end": 17.3799991607666
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "is",
+                  "originalText": "is",
+                  "transcriptionIndex": 30,
+                  "timing": {
+                    "start": 17.3799991607666,
+                    "end": 17.6200008392334
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "about",
+                  "originalText": "about",
+                  "transcriptionIndex": 31,
+                  "timing": {
+                    "start": 17.6200008392334,
+                    "end": 17.959999084472656
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                }
+              ],
+              "transcriptionStart": 12,
+              "transcriptionEnd": 31,
+              "confidence": null,
+              "metadata": {}
+            },
+            {
+              "text": "This book is about an entirely naturalistic (non- supernatural), physicalist, determinist, materialist view of religion and the meaning of the metaphors within it from that (natural) perspective.",
+              "id": "preface-s2",
+              "words": [
+                {
+                  "text": "This",
+                  "originalText": "This",
+                  "transcriptionIndex": 32,
+                  "timing": {
+                    "start": 18.540000915527344,
+                    "end": 19.100000381469727
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "book",
+                  "originalText": "book",
+                  "transcriptionIndex": 33,
+                  "timing": {
+                    "start": 19.100000381469727,
+                    "end": 19.34000015258789
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "is",
+                  "originalText": "is",
+                  "transcriptionIndex": 34,
+                  "timing": {
+                    "start": 19.34000015258789,
+                    "end": 19.520000457763672
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "about",
+                  "originalText": "about",
+                  "transcriptionIndex": 35,
+                  "timing": {
+                    "start": 19.520000457763672,
+                    "end": 19.959999084472656
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "an",
+                  "originalText": "an",
+                  "transcriptionIndex": 36,
+                  "timing": {
+                    "start": 19.959999084472656,
+                    "end": 20.280000686645508
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "entirely",
+                  "originalText": "entirely",
+                  "transcriptionIndex": 37,
+                  "timing": {
+                    "start": 20.280000686645508,
+                    "end": 20.920000076293945
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "naturalistic",
+                  "originalText": "naturalistic",
+                  "transcriptionIndex": 38,
+                  "timing": {
+                    "start": 20.920000076293945,
+                    "end": 21.860000610351562
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "non",
+                  "originalText": "non",
+                  "transcriptionIndex": 39,
+                  "timing": {
+                    "start": 22.200000762939453,
+                    "end": 22.520000457763672
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "supernatural",
+                  "originalText": "supernatural",
+                  "transcriptionIndex": 40,
+                  "timing": {
+                    "start": 22.520000457763672,
+                    "end": 23.219999313354492
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "physicalist",
+                  "originalText": "physicalist",
+                  "transcriptionIndex": 41,
+                  "timing": {
+                    "start": 24.200000762939453,
+                    "end": 24.8799991607666
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "determinist",
+                  "originalText": "determinist",
+                  "transcriptionIndex": 42,
+                  "timing": {
+                    "start": 25.100000381469727,
+                    "end": 25.719999313354492
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "materialist",
+                  "originalText": "materialist",
+                  "transcriptionIndex": 43,
+                  "timing": {
+                    "start": 26.479999542236328,
+                    "end": 26.84000015258789
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "view",
+                  "originalText": "view",
+                  "transcriptionIndex": 44,
+                  "timing": {
+                    "start": 26.84000015258789,
+                    "end": 27.079999923706055
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "of",
+                  "originalText": "of",
+                  "transcriptionIndex": 45,
+                  "timing": {
+                    "start": 27.079999923706055,
+                    "end": 27.68000030517578
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "religion",
+                  "originalText": "religion",
+                  "transcriptionIndex": 46,
+                  "timing": {
+                    "start": 27.68000030517578,
+                    "end": 27.68000030517578
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "and",
+                  "originalText": "and",
+                  "transcriptionIndex": 47,
+                  "timing": {
+                    "start": 27.68000030517578,
+                    "end": 28.479999542236328
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "the",
+                  "originalText": "the",
+                  "transcriptionIndex": 48,
+                  "timing": {
+                    "start": 28.479999542236328,
+                    "end": 28.719999313354492
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "meaning",
+                  "originalText": "meaning",
+                  "transcriptionIndex": 49,
+                  "timing": {
+                    "start": 28.719999313354492,
+                    "end": 28.940000534057617
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "of",
+                  "originalText": "of",
+                  "transcriptionIndex": 50,
+                  "timing": {
+                    "start": 28.940000534057617,
+                    "end": 29.200000762939453
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "the",
+                  "originalText": "the",
+                  "transcriptionIndex": 51,
+                  "timing": {
+                    "start": 29.200000762939453,
+                    "end": 29.81999969482422
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "metaphors",
+                  "originalText": "metaphors",
+                  "transcriptionIndex": 52,
+                  "timing": {
+                    "start": 29.81999969482422,
+                    "end": 29.84000015258789
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "within",
+                  "originalText": "within",
+                  "transcriptionIndex": 53,
+                  "timing": {
+                    "start": 29.84000015258789,
+                    "end": 30.139999389648438
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "it",
+                  "originalText": "it",
+                  "transcriptionIndex": 54,
+                  "timing": {
+                    "start": 30.139999389648438,
+                    "end": 30.420000076293945
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "from",
+                  "originalText": "from",
+                  "transcriptionIndex": 55,
+                  "timing": {
+                    "start": 30.420000076293945,
+                    "end": 30.579999923706055
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "that",
+                  "originalText": "that",
+                  "transcriptionIndex": 56,
+                  "timing": {
+                    "start": 30.579999923706055,
+                    "end": 30.920000076293945
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "natural",
+                  "originalText": "natural",
+                  "transcriptionIndex": 57,
+                  "timing": {
+                    "start": 30.920000076293945,
+                    "end": 31.579999923706055
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "perspective",
+                  "originalText": "perspective",
+                  "transcriptionIndex": 58,
+                  "timing": {
+                    "start": 31.579999923706055,
+                    "end": 32.040000915527344
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                }
+              ],
+              "transcriptionStart": 32,
+              "transcriptionEnd": 58,
+              "confidence": null,
+              "metadata": {}
+            }
+          ],
+          "audioFile": null,
+          "transcriptionFile": null,
+          "metadata": {}
+        },
+        {
+          "id": "preface-journey",
+          "type": "paragraph",
+          "sentences": [
+            {
+              "text": "I understand each reader has their own journey of faith.",
+              "id": "preface-s3",
+              "words": [
+                {
+                  "text": "I",
+                  "originalText": "I",
+                  "transcriptionIndex": 59,
+                  "timing": {
+                    "start": 32.880001068115234,
+                    "end": 33.599998474121094
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "understand",
+                  "originalText": "understand",
+                  "transcriptionIndex": 60,
+                  "timing": {
+                    "start": 33.599998474121094,
+                    "end": 34
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "each",
+                  "originalText": "each",
+                  "transcriptionIndex": 61,
+                  "timing": {
+                    "start": 34,
+                    "end": 34.380001068115234
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "reader",
+                  "originalText": "reader",
+                  "transcriptionIndex": 62,
+                  "timing": {
+                    "start": 34.380001068115234,
+                    "end": 34.63999938964844
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "has",
+                  "originalText": "has",
+                  "transcriptionIndex": 63,
+                  "timing": {
+                    "start": 34.63999938964844,
+                    "end": 34.939998626708984
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "their",
+                  "originalText": "their",
+                  "transcriptionIndex": 64,
+                  "timing": {
+                    "start": 34.939998626708984,
+                    "end": 35.13999938964844
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "own",
+                  "originalText": "own",
+                  "transcriptionIndex": 65,
+                  "timing": {
+                    "start": 35.13999938964844,
+                    "end": 35.599998474121094
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "journey",
+                  "originalText": "journey",
+                  "transcriptionIndex": 66,
+                  "timing": {
+                    "start": 35.599998474121094,
+                    "end": 35.65999984741211
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "of",
+                  "originalText": "of",
+                  "transcriptionIndex": 67,
+                  "timing": {
+                    "start": 35.65999984741211,
+                    "end": 36.2400016784668
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "faith",
+                  "originalText": "faith",
+                  "transcriptionIndex": 68,
+                  "timing": {
+                    "start": 36.2400016784668,
+                    "end": 36.2400016784668
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                }
+              ],
+              "transcriptionStart": 59,
+              "transcriptionEnd": 68,
+              "confidence": null,
+              "metadata": {}
+            },
+            {
+              "text": "I've seen a spectrum of experience in my own family, from atheism, to conservative Christianity, to progressive Christianity, and many things in between.",
+              "id": "preface-s4",
+              "words": [
+                {
+                  "text": "Ive",
+                  "originalText": "Ive",
+                  "transcriptionIndex": 69,
+                  "timing": {
+                    "start": 36.880001068115234,
+                    "end": 37.31999969482422
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "seen",
+                  "originalText": "seen",
+                  "transcriptionIndex": 70,
+                  "timing": {
+                    "start": 37.31999969482422,
+                    "end": 37.34000015258789
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "a",
+                  "originalText": "a",
+                  "transcriptionIndex": 71,
+                  "timing": {
+                    "start": 37.34000015258789,
+                    "end": 37.900001525878906
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "spectrum",
+                  "originalText": "spectrum",
+                  "transcriptionIndex": 72,
+                  "timing": {
+                    "start": 37.900001525878906,
+                    "end": 37.900001525878906
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "of",
+                  "originalText": "of",
+                  "transcriptionIndex": 73,
+                  "timing": {
+                    "start": 37.900001525878906,
+                    "end": 38.279998779296875
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "experience",
+                  "originalText": "experience",
+                  "transcriptionIndex": 74,
+                  "timing": {
+                    "start": 38.279998779296875,
+                    "end": 38.70000076293945
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "in",
+                  "originalText": "in",
+                  "transcriptionIndex": 75,
+                  "timing": {
+                    "start": 38.70000076293945,
+                    "end": 38.959999084472656
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "my",
+                  "originalText": "my",
+                  "transcriptionIndex": 76,
+                  "timing": {
+                    "start": 38.959999084472656,
+                    "end": 39.15999984741211
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "own",
+                  "originalText": "own",
+                  "transcriptionIndex": 77,
+                  "timing": {
+                    "start": 39.15999984741211,
+                    "end": 39.41999816894531
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "family",
+                  "originalText": "family",
+                  "transcriptionIndex": 78,
+                  "timing": {
+                    "start": 39.41999816894531,
+                    "end": 39.7599983215332
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "from",
+                  "originalText": "from",
+                  "transcriptionIndex": 79,
+                  "timing": {
+                    "start": 39.7599983215332,
+                    "end": 40.20000076293945
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "atheism",
+                  "originalText": "atheism",
+                  "transcriptionIndex": 80,
+                  "timing": {
+                    "start": 40.20000076293945,
+                    "end": 40.779998779296875
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "to",
+                  "originalText": "to",
+                  "transcriptionIndex": 81,
+                  "timing": {
+                    "start": 41.47999954223633,
+                    "end": 42.29999923706055
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "conservative",
+                  "originalText": "conservative",
+                  "transcriptionIndex": 82,
+                  "timing": {
+                    "start": 42.29999923706055,
+                    "end": 42.29999923706055
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "Christianity",
+                  "originalText": "Christianity",
+                  "transcriptionIndex": 83,
+                  "timing": {
+                    "start": 42.29999923706055,
+                    "end": 43
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "to",
+                  "originalText": "to",
+                  "transcriptionIndex": 84,
+                  "timing": {
+                    "start": 43.7599983215332,
+                    "end": 44.47999954223633
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "progressive",
+                  "originalText": "progressive",
+                  "transcriptionIndex": 85,
+                  "timing": {
+                    "start": 44.47999954223633,
+                    "end": 44.47999954223633
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "Christianity",
+                  "originalText": "Christianity",
+                  "transcriptionIndex": 86,
+                  "timing": {
+                    "start": 44.47999954223633,
+                    "end": 45.220001220703125
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "and",
+                  "originalText": "and",
+                  "transcriptionIndex": 87,
+                  "timing": {
+                    "start": 45.220001220703125,
+                    "end": 46.18000030517578
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "many",
+                  "originalText": "many",
+                  "transcriptionIndex": 88,
+                  "timing": {
+                    "start": 46.18000030517578,
+                    "end": 46.439998626708984
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "things",
+                  "originalText": "things",
+                  "transcriptionIndex": 89,
+                  "timing": {
+                    "start": 46.439998626708984,
+                    "end": 46.779998779296875
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "in",
+                  "originalText": "in",
+                  "transcriptionIndex": 90,
+                  "timing": {
+                    "start": 46.779998779296875,
+                    "end": 47.34000015258789
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "between",
+                  "originalText": "between",
+                  "transcriptionIndex": 91,
+                  "timing": {
+                    "start": 47.34000015258789,
+                    "end": 47.34000015258789
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                }
+              ],
+              "transcriptionStart": 69,
+              "transcriptionEnd": 91,
+              "confidence": null,
+              "metadata": {}
+            },
+            {
+              "text": "My intent isn't to challenge your path, but simply to share and explain a particular one — my own.",
+              "id": "preface-s5",
+              "words": [
+                {
+                  "text": "My",
+                  "originalText": "My",
+                  "transcriptionIndex": 92,
+                  "timing": {
+                    "start": 48,
+                    "end": 48.52000045776367
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "intent",
+                  "originalText": "intent",
+                  "transcriptionIndex": 93,
+                  "timing": {
+                    "start": 48.52000045776367,
+                    "end": 48.86000061035156
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "isnt",
+                  "originalText": "isnt",
+                  "transcriptionIndex": 94,
+                  "timing": {
+                    "start": 48.86000061035156,
+                    "end": 49.15999984741211
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "to",
+                  "originalText": "to",
+                  "transcriptionIndex": 95,
+                  "timing": {
+                    "start": 49.15999984741211,
+                    "end": 49.7599983215332
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "challenge",
+                  "originalText": "challenge",
+                  "transcriptionIndex": 96,
+                  "timing": {
+                    "start": 49.7599983215332,
+                    "end": 49.7599983215332
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "your",
+                  "originalText": "your",
+                  "transcriptionIndex": 97,
+                  "timing": {
+                    "start": 49.7599983215332,
+                    "end": 50.060001373291016
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "path",
+                  "originalText": "path",
+                  "transcriptionIndex": 98,
+                  "timing": {
+                    "start": 50.060001373291016,
+                    "end": 50.36000061035156
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "but",
+                  "originalText": "but",
+                  "transcriptionIndex": 99,
+                  "timing": {
+                    "start": 50.619998931884766,
+                    "end": 51.08000183105469
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "simply",
+                  "originalText": "simply",
+                  "transcriptionIndex": 100,
+                  "timing": {
+                    "start": 51.08000183105469,
+                    "end": 51.36000061035156
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "to",
+                  "originalText": "to",
+                  "transcriptionIndex": 101,
+                  "timing": {
+                    "start": 51.36000061035156,
+                    "end": 51.70000076293945
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "share",
+                  "originalText": "share",
+                  "transcriptionIndex": 102,
+                  "timing": {
+                    "start": 51.70000076293945,
+                    "end": 52.02000045776367
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "and",
+                  "originalText": "and",
+                  "transcriptionIndex": 103,
+                  "timing": {
+                    "start": 52.02000045776367,
+                    "end": 52.47999954223633
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "explain",
+                  "originalText": "explain",
+                  "transcriptionIndex": 104,
+                  "timing": {
+                    "start": 52.47999954223633,
+                    "end": 52.81999969482422
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "a",
+                  "originalText": "a",
+                  "transcriptionIndex": 105,
+                  "timing": {
+                    "start": 52.81999969482422,
+                    "end": 53.20000076293945
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "particular",
+                  "originalText": "particular",
+                  "transcriptionIndex": 106,
+                  "timing": {
+                    "start": 53.20000076293945,
+                    "end": 53.540000915527344
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "one",
+                  "originalText": "one",
+                  "transcriptionIndex": 107,
+                  "timing": {
+                    "start": 53.540000915527344,
+                    "end": 53.900001525878906
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "my",
+                  "originalText": "my",
+                  "transcriptionIndex": 108,
+                  "timing": {
+                    "start": 54.31999969482422,
+                    "end": 54.68000030517578
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "own",
+                  "originalText": "own",
+                  "transcriptionIndex": 109,
+                  "timing": {
+                    "start": 54.68000030517578,
+                    "end": 54.900001525878906
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                }
+              ],
+              "transcriptionStart": 92,
+              "transcriptionEnd": 109,
+              "confidence": null,
+              "metadata": {}
+            }
+          ],
+          "audioFile": null,
+          "transcriptionFile": null,
+          "metadata": {}
+        },
+        {
+          "id": "preface-perspective",
+          "type": "paragraph",
+          "sentences": [
+            {
+              "text": "I realize not everyone reading this book will share my perspective, but hopefully what is presented here will not be a challenge, but simply information.",
+              "id": "preface-s6",
+              "words": [
+                {
+                  "text": "I",
+                  "originalText": "I",
+                  "transcriptionIndex": 110,
+                  "timing": {
+                    "start": 56.08000183105469,
+                    "end": 56.29999923706055
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "realize",
+                  "originalText": "realize",
+                  "transcriptionIndex": 111,
+                  "timing": {
+                    "start": 56.29999923706055,
+                    "end": 56.58000183105469
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "not",
+                  "originalText": "not",
+                  "transcriptionIndex": 112,
+                  "timing": {
+                    "start": 56.58000183105469,
+                    "end": 56.880001068115234
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "everyone",
+                  "originalText": "everyone",
+                  "transcriptionIndex": 113,
+                  "timing": {
+                    "start": 56.880001068115234,
+                    "end": 57.29999923706055
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "reading",
+                  "originalText": "reading",
+                  "transcriptionIndex": 114,
+                  "timing": {
+                    "start": 57.29999923706055,
+                    "end": 57.599998474121094
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "this",
+                  "originalText": "this",
+                  "transcriptionIndex": 115,
+                  "timing": {
+                    "start": 57.599998474121094,
+                    "end": 57.900001525878906
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "book",
+                  "originalText": "book",
+                  "transcriptionIndex": 116,
+                  "timing": {
+                    "start": 57.900001525878906,
+                    "end": 58.119998931884766
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "will",
+                  "originalText": "will",
+                  "transcriptionIndex": 117,
+                  "timing": {
+                    "start": 58.119998931884766,
+                    "end": 58.400001525878906
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "share",
+                  "originalText": "share",
+                  "transcriptionIndex": 118,
+                  "timing": {
+                    "start": 58.400001525878906,
+                    "end": 58.560001373291016
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "my",
+                  "originalText": "my",
+                  "transcriptionIndex": 119,
+                  "timing": {
+                    "start": 58.560001373291016,
+                    "end": 58.880001068115234
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "perspective",
+                  "originalText": "perspective",
+                  "transcriptionIndex": 120,
+                  "timing": {
+                    "start": 58.880001068115234,
+                    "end": 59.31999969482422
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "but",
+                  "originalText": "but",
+                  "transcriptionIndex": 121,
+                  "timing": {
+                    "start": 59.65999984741211,
+                    "end": 60.2400016784668
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "hopefully",
+                  "originalText": "hopefully",
+                  "transcriptionIndex": 122,
+                  "timing": {
+                    "start": 60.2400016784668,
+                    "end": 60.599998474121094
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "what",
+                  "originalText": "what",
+                  "transcriptionIndex": 123,
+                  "timing": {
+                    "start": 60.599998474121094,
+                    "end": 60.900001525878906
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "is",
+                  "originalText": "is",
+                  "transcriptionIndex": 124,
+                  "timing": {
+                    "start": 60.900001525878906,
+                    "end": 61.380001068115234
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "presented",
+                  "originalText": "presented",
+                  "transcriptionIndex": 125,
+                  "timing": {
+                    "start": 61.380001068115234,
+                    "end": 61.380001068115234
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "here",
+                  "originalText": "here",
+                  "transcriptionIndex": 126,
+                  "timing": {
+                    "start": 61.380001068115234,
+                    "end": 61.70000076293945
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "will",
+                  "originalText": "will",
+                  "transcriptionIndex": 127,
+                  "timing": {
+                    "start": 61.70000076293945,
+                    "end": 61.880001068115234
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "not",
+                  "originalText": "not",
+                  "transcriptionIndex": 128,
+                  "timing": {
+                    "start": 61.880001068115234,
+                    "end": 62.099998474121094
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "be",
+                  "originalText": "be",
+                  "transcriptionIndex": 129,
+                  "timing": {
+                    "start": 62.099998474121094,
+                    "end": 62.279998779296875
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "a",
+                  "originalText": "a",
+                  "transcriptionIndex": 130,
+                  "timing": {
+                    "start": 62.279998779296875,
+                    "end": 62.86000061035156
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "challenge",
+                  "originalText": "challenge",
+                  "transcriptionIndex": 131,
+                  "timing": {
+                    "start": 62.86000061035156,
+                    "end": 62.86000061035156
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "but",
+                  "originalText": "but",
+                  "transcriptionIndex": 132,
+                  "timing": {
+                    "start": 63.15999984741211,
+                    "end": 63.720001220703125
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "simply",
+                  "originalText": "simply",
+                  "transcriptionIndex": 133,
+                  "timing": {
+                    "start": 63.720001220703125,
+                    "end": 64.18000030517578
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "information",
+                  "originalText": "information",
+                  "transcriptionIndex": 134,
+                  "timing": {
+                    "start": 64.18000030517578,
+                    "end": 64.94000244140625
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                }
+              ],
+              "transcriptionStart": 110,
+              "transcriptionEnd": 134,
+              "confidence": null,
+              "metadata": {}
+            }
+          ],
+          "audioFile": null,
+          "transcriptionFile": null,
+          "metadata": {}
+        },
+        {
+          "id": "preface-audience",
+          "type": "paragraph",
+          "sentences": [
+            {
+              "text": "I see the audience here as Christians who struggle with believability, atheists who struggle with living as a minority in a Christian society, and most importantly — anyone who seeks to understand either of those two groups better.",
+              "id": "preface-s7",
+              "words": [
+                {
+                  "text": "I",
+                  "originalText": "I",
+                  "transcriptionIndex": 135,
+                  "timing": {
+                    "start": 65.58000183105469,
+                    "end": 66.30000305175781
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "see",
+                  "originalText": "see",
+                  "transcriptionIndex": 136,
+                  "timing": {
+                    "start": 66.30000305175781,
+                    "end": 66.45999908447266
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "the",
+                  "originalText": "the",
+                  "transcriptionIndex": 137,
+                  "timing": {
+                    "start": 66.45999908447266,
+                    "end": 66.81999969482422
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "audience",
+                  "originalText": "audience",
+                  "transcriptionIndex": 138,
+                  "timing": {
+                    "start": 66.81999969482422,
+                    "end": 67.04000091552734
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "here",
+                  "originalText": "here",
+                  "transcriptionIndex": 139,
+                  "timing": {
+                    "start": 67.04000091552734,
+                    "end": 67.4000015258789
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "as",
+                  "originalText": "as",
+                  "transcriptionIndex": 140,
+                  "timing": {
+                    "start": 67.4000015258789,
+                    "end": 67.72000122070312
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "Christians",
+                  "originalText": "Christians",
+                  "transcriptionIndex": 141,
+                  "timing": {
+                    "start": 67.72000122070312,
+                    "end": 68.05999755859375
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "who",
+                  "originalText": "who",
+                  "transcriptionIndex": 142,
+                  "timing": {
+                    "start": 68.05999755859375,
+                    "end": 68.5
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "struggle",
+                  "originalText": "struggle",
+                  "transcriptionIndex": 143,
+                  "timing": {
+                    "start": 68.5,
+                    "end": 68.72000122070312
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "with",
+                  "originalText": "with",
+                  "transcriptionIndex": 144,
+                  "timing": {
+                    "start": 68.72000122070312,
+                    "end": 69.0999984741211
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "believability",
+                  "originalText": "believability",
+                  "transcriptionIndex": 145,
+                  "timing": {
+                    "start": 69.0999984741211,
+                    "end": 69.9000015258789
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "atheists",
+                  "originalText": "atheists",
+                  "transcriptionIndex": 146,
+                  "timing": {
+                    "start": 71.27999877929688,
+                    "end": 71.27999877929688
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "who",
+                  "originalText": "who",
+                  "transcriptionIndex": 147,
+                  "timing": {
+                    "start": 71.27999877929688,
+                    "end": 71.87999725341797
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "struggle",
+                  "originalText": "struggle",
+                  "transcriptionIndex": 148,
+                  "timing": {
+                    "start": 71.87999725341797,
+                    "end": 71.87999725341797
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "with",
+                  "originalText": "with",
+                  "transcriptionIndex": 149,
+                  "timing": {
+                    "start": 71.87999725341797,
+                    "end": 72.22000122070312
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "living",
+                  "originalText": "living",
+                  "transcriptionIndex": 150,
+                  "timing": {
+                    "start": 72.22000122070312,
+                    "end": 72.37999725341797
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "as",
+                  "originalText": "as",
+                  "transcriptionIndex": 151,
+                  "timing": {
+                    "start": 72.37999725341797,
+                    "end": 72.73999786376953
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "a",
+                  "originalText": "a",
+                  "transcriptionIndex": 152,
+                  "timing": {
+                    "start": 72.73999786376953,
+                    "end": 72.9800033569336
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "minority",
+                  "originalText": "minority",
+                  "transcriptionIndex": 153,
+                  "timing": {
+                    "start": 72.9800033569336,
+                    "end": 73.37999725341797
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "in",
+                  "originalText": "in",
+                  "transcriptionIndex": 154,
+                  "timing": {
+                    "start": 73.37999725341797,
+                    "end": 73.81999969482422
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "a",
+                  "originalText": "a",
+                  "transcriptionIndex": 155,
+                  "timing": {
+                    "start": 73.81999969482422,
+                    "end": 74.37999725341797
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "Christian",
+                  "originalText": "Christian",
+                  "transcriptionIndex": 156,
+                  "timing": {
+                    "start": 74.37999725341797,
+                    "end": 74.37999725341797
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "society",
+                  "originalText": "society",
+                  "transcriptionIndex": 157,
+                  "timing": {
+                    "start": 74.37999725341797,
+                    "end": 74.95999908447266
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "and",
+                  "originalText": "and",
+                  "transcriptionIndex": 158,
+                  "timing": {
+                    "start": 74.95999908447266,
+                    "end": 75.9800033569336
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "most",
+                  "originalText": "most",
+                  "transcriptionIndex": 159,
+                  "timing": {
+                    "start": 75.9800033569336,
+                    "end": 76.23999786376953
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "importantly",
+                  "originalText": "importantly",
+                  "transcriptionIndex": 160,
+                  "timing": {
+                    "start": 76.23999786376953,
+                    "end": 76.81999969482422
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "anyone",
+                  "originalText": "anyone",
+                  "transcriptionIndex": 161,
+                  "timing": {
+                    "start": 77.45999908447266,
+                    "end": 77.81999969482422
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "who",
+                  "originalText": "who",
+                  "transcriptionIndex": 162,
+                  "timing": {
+                    "start": 77.81999969482422,
+                    "end": 78.4000015258789
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "seeks",
+                  "originalText": "seeks",
+                  "transcriptionIndex": 163,
+                  "timing": {
+                    "start": 78.4000015258789,
+                    "end": 78.4000015258789
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "to",
+                  "originalText": "to",
+                  "transcriptionIndex": 164,
+                  "timing": {
+                    "start": 78.4000015258789,
+                    "end": 79.22000122070312
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "understand",
+                  "originalText": "understand",
+                  "transcriptionIndex": 165,
+                  "timing": {
+                    "start": 79.22000122070312,
+                    "end": 79.22000122070312
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "either",
+                  "originalText": "either",
+                  "transcriptionIndex": 166,
+                  "timing": {
+                    "start": 79.22000122070312,
+                    "end": 79.5999984741211
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "of",
+                  "originalText": "of",
+                  "transcriptionIndex": 167,
+                  "timing": {
+                    "start": 79.5999984741211,
+                    "end": 80.04000091552734
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "those",
+                  "originalText": "those",
+                  "transcriptionIndex": 168,
+                  "timing": {
+                    "start": 80.04000091552734,
+                    "end": 80.04000091552734
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "two",
+                  "originalText": "two",
+                  "transcriptionIndex": 169,
+                  "timing": {
+                    "start": 80.04000091552734,
+                    "end": 80.62000274658203
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "groups",
+                  "originalText": "groups",
+                  "transcriptionIndex": 170,
+                  "timing": {
+                    "start": 80.62000274658203,
+                    "end": 80.62000274658203
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "better",
+                  "originalText": "better",
+                  "transcriptionIndex": 171,
+                  "timing": {
+                    "start": 80.62000274658203,
+                    "end": 80.9800033569336
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                }
+              ],
+              "transcriptionStart": 135,
+              "transcriptionEnd": 171,
+              "confidence": null,
+              "metadata": {}
+            }
+          ],
+          "audioFile": null,
+          "transcriptionFile": null,
+          "metadata": {}
+        },
+        {
+          "id": "preface-goal",
+          "type": "paragraph",
+          "sentences": [
+            {
+              "text": "I hope to present here an interpretation of Christianity (or at least some part of Christianity) that is compatible with an entirely natural universe.",
+              "id": "preface-s8",
+              "words": [
+                {
+                  "text": "I",
+                  "originalText": "I",
+                  "transcriptionIndex": 172,
+                  "timing": {
+                    "start": 81.55999755859375,
+                    "end": 82
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "hope",
+                  "originalText": "hope",
+                  "transcriptionIndex": 173,
+                  "timing": {
+                    "start": 82,
+                    "end": 82.23999786376953
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "to",
+                  "originalText": "to",
+                  "transcriptionIndex": 174,
+                  "timing": {
+                    "start": 82.23999786376953,
+                    "end": 82.77999877929688
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "present",
+                  "originalText": "present",
+                  "transcriptionIndex": 175,
+                  "timing": {
+                    "start": 82.77999877929688,
+                    "end": 82.77999877929688
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "here",
+                  "originalText": "here",
+                  "transcriptionIndex": 176,
+                  "timing": {
+                    "start": 82.77999877929688,
+                    "end": 83.05999755859375
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "an",
+                  "originalText": "an",
+                  "transcriptionIndex": 177,
+                  "timing": {
+                    "start": 83.05999755859375,
+                    "end": 83.4000015258789
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "interpretation",
+                  "originalText": "interpretation",
+                  "transcriptionIndex": 178,
+                  "timing": {
+                    "start": 83.4000015258789,
+                    "end": 84
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "of",
+                  "originalText": "of",
+                  "transcriptionIndex": 179,
+                  "timing": {
+                    "start": 84,
+                    "end": 85.19999694824219
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "Christianity",
+                  "originalText": "Christianity",
+                  "transcriptionIndex": 180,
+                  "timing": {
+                    "start": 85.19999694824219,
+                    "end": 85.19999694824219
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "or",
+                  "originalText": "or",
+                  "transcriptionIndex": 181,
+                  "timing": {
+                    "start": 85.31999969482422,
+                    "end": 85.91999816894531
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "at",
+                  "originalText": "at",
+                  "transcriptionIndex": 182,
+                  "timing": {
+                    "start": 85.91999816894531,
+                    "end": 86.08000183105469
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "least",
+                  "originalText": "least",
+                  "transcriptionIndex": 183,
+                  "timing": {
+                    "start": 86.08000183105469,
+                    "end": 86.26000213623047
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "some",
+                  "originalText": "some",
+                  "transcriptionIndex": 184,
+                  "timing": {
+                    "start": 86.26000213623047,
+                    "end": 86.73999786376953
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "part",
+                  "originalText": "part",
+                  "transcriptionIndex": 185,
+                  "timing": {
+                    "start": 86.73999786376953,
+                    "end": 87.08000183105469
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "of",
+                  "originalText": "of",
+                  "transcriptionIndex": 186,
+                  "timing": {
+                    "start": 87.08000183105469,
+                    "end": 87.55999755859375
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "Christianity",
+                  "originalText": "Christianity",
+                  "transcriptionIndex": 187,
+                  "timing": {
+                    "start": 87.55999755859375,
+                    "end": 87.95999908447266
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "that",
+                  "originalText": "that",
+                  "transcriptionIndex": 188,
+                  "timing": {
+                    "start": 88.81999969482422,
+                    "end": 88.87999725341797
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "is",
+                  "originalText": "is",
+                  "transcriptionIndex": 189,
+                  "timing": {
+                    "start": 88.87999725341797,
+                    "end": 89.08000183105469
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "compatible",
+                  "originalText": "compatible",
+                  "transcriptionIndex": 190,
+                  "timing": {
+                    "start": 89.08000183105469,
+                    "end": 89.55999755859375
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "with",
+                  "originalText": "with",
+                  "transcriptionIndex": 191,
+                  "timing": {
+                    "start": 89.55999755859375,
+                    "end": 89.9000015258789
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "an",
+                  "originalText": "an",
+                  "transcriptionIndex": 192,
+                  "timing": {
+                    "start": 89.9000015258789,
+                    "end": 90.62000274658203
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "entirely",
+                  "originalText": "entirely",
+                  "transcriptionIndex": 193,
+                  "timing": {
+                    "start": 90.62000274658203,
+                    "end": 90.62000274658203
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "natural",
+                  "originalText": "natural",
+                  "transcriptionIndex": 194,
+                  "timing": {
+                    "start": 90.62000274658203,
+                    "end": 91.30000305175781
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                },
+                {
+                  "text": "universe",
+                  "originalText": "universe",
+                  "transcriptionIndex": 195,
+                  "timing": {
+                    "start": 91.30000305175781,
+                    "end": 91.95999908447266
+                  },
+                  "confidence": 1,
+                  "metadata": {}
+                }
+              ],
+              "transcriptionStart": 172,
+              "transcriptionEnd": 195,
+              "confidence": null,
+              "metadata": {}
+            }
+          ],
+          "audioFile": null,
+          "transcriptionFile": null,
+          "metadata": {}
+        }
+      ],
+      "audioFile": "cover_and_preface.mp3",
+      "transcriptionFile": "transcription_with_timestamps.json",
+      "illustrationFile": null,
+      "metadata": {}
+    }
+  ],
+  "coverElements": [
+    {
+      "type": "title",
+      "text": "Mere Metaphor",
+      "transcriptionStart": 0,
+      "transcriptionEnd": 1,
+      "words": [
+        {
+          "text": "Mere",
+          "transcriptionIndex": 0
+        },
+        {
+          "text": "Metaphor",
+          "transcriptionIndex": 1
+        }
+      ]
+    },
+    {
+      "type": "subtitle",
+      "text": "Understanding Religious Language as a Materialist",
+      "transcriptionStart": 2,
+      "transcriptionEnd": 7,
+      "words": [
+        {
+          "text": "Understanding",
+          "transcriptionIndex": 2
+        },
+        {
+          "text": "Religious",
+          "transcriptionIndex": 3
+        },
+        {
+          "text": "Language",
+          "transcriptionIndex": 4
+        },
+        {
+          "text": "as",
+          "transcriptionIndex": 5
+        },
+        {
+          "text": "a",
+          "transcriptionIndex": 6
+        },
+        {
+          "text": "Materialist",
+          "transcriptionIndex": 7
+        }
+      ]
+    },
+    {
+      "type": "author",
+      "text": "by Derek Bredensteiner",
+      "transcriptionStart": 8,
+      "transcriptionEnd": 10,
+      "words": [
+        {
+          "text": "by",
+          "transcriptionIndex": 8
+        },
+        {
+          "text": "Derek",
+          "transcriptionIndex": 9
+        },
+        {
+          "text": "Bredensteiner",
+          "transcriptionIndex": 10
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Preface",
+      "transcriptionStart": 11,
+      "transcriptionEnd": 11,
+      "words": [
+        {
+          "text": "Preface",
+          "transcriptionIndex": 11
+        }
+      ]
+    }
+  ],
+  "metadata": {},
+  "version": "1.0.0",
+  "created": "2025-07-10T00:50:43.410Z",
+  "modified": "2025-07-10T00:50:43.413Z"
+}
