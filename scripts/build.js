@@ -688,7 +688,7 @@ async function extractText() {
             const rect = element.getBoundingClientRect();
             const windowHeight = window.innerHeight;
             const topBuffer = 32; // 2em buffer from top (16px * 2)
-            const bottomBuffer = 32; // Offset from bottom for comfortable viewing
+            const bottomBuffer = 80; // Offset from bottom for comfortable viewing
             
             // Only scroll if element is actually outside viewport or too close to edges
             if (rect.top < topBuffer || rect.bottom > windowHeight - bottomBuffer) {
