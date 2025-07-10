@@ -42,22 +42,24 @@ After path fixes and reorganization, we have **three different audio approaches*
 - ✅ Generates comprehensive JSON mappings ready for HTML use
 - ✅ All 3 strategies (conservative, balanced, aggressive) work perfectly
 
-### 3. Manual Enhancement Scripts (Commit d9eb68d)
-**Location**: `scripts/manual-fixes/` + `index.html` (restored)
-**Status**: ✅ Ready to apply complex automation results
+### 3. Manual Enhancement Scripts (Commit d9eb68d) - DIAGNOSTIC TOOLS ONLY
+**Location**: `scripts/manual-fixes/` 
+**Status**: ✅ Research tools to identify automation gaps
+**Purpose**: Understand what automation needs to learn, NOT production workflow
 
-**Components**:
-- `scripts/manual-fixes/generate-audio-html.js` - Apply 184 mappings to index.html (✅ paths fixed)
-- `scripts/manual-fixes/enhance-existing-html.js` - Enhance current HTML (✅ paths fixed)
-- `scripts/manual-fixes/complete-audio-mapping.js` - Manual completion tools (✅ paths fixed)
-- `scripts/manual-fixes/fix-audio-mappings.js` - Fix existing mappings (✅ paths fixed)
-- `scripts/manual-fixes/fix-missing-attributes.js` - Attribute fixes (✅ paths fixed)
+**Components** (All diagnostic tools to study automation gaps):
+- `scripts/manual-fixes/generate-audio-html.js` - Test applying 184 mappings (✅ paths fixed)
+- `scripts/manual-fixes/enhance-existing-html.js` - Study enhancement patterns (✅ paths fixed)
+- `scripts/manual-fixes/complete-audio-mapping.js` - Identify missing edge cases (✅ paths fixed)
+- `scripts/manual-fixes/fix-audio-mappings.js` - Study mapping failures (✅ paths fixed)
+- `scripts/manual-fixes/fix-missing-attributes.js` - Research attribute gaps (✅ paths fixed)
 
-**Results**:
-- ✅ Current index.html fully restored with all chapters, TOC, and images
-- ✅ Backup of partial audio version saved as index-audio-version.html  
-- ✅ Scripts ready to apply complex automation's 184 word mappings
-- ✅ Can enhance complete book content with audio features
+**Research Value**:
+- 🔬 Help identify why simple automation generates fewer word mappings
+- 🔬 Study integration patterns between complex automation and HTML generation
+- 🔬 Create reference implementations for automation to match
+- 🔬 Test hypotheses about automation failure modes
+- ❌ **NOT intended as production workflow** - full automation is the goal
 
 ## Technical Analysis
 
@@ -198,12 +200,19 @@ node scripts/automation/generate-from-structured-data.js  # Creates 3 HTML versi
 node scripts/manual-fixes/generate-audio-html.js  # Enhances index.html with 184 mappings
 ```
 
-## Immediate Next Steps
+## Primary Automation Goals
 
 1. **Investigate simple automation word mapping reduction** - understand why it generates fewer mappings now
-2. **Test hybrid approach** - apply complex automation's 184 mappings to complete index.html
-3. **Verify audio functionality** in generated HTML files
-4. **Create single command workflow** for complete audio website generation
+2. **Bridge complex automation's word finding with HTML generation** - integrate 184-word results with complete website
+3. **Create single command workflow** - `npm run build-audio` that works like `npm run build`
+4. **Eliminate manual intervention** - achieve full automation reliability
+
+## Research Questions (Use Manual Tools to Study)
+
+1. Why does simple automation generate fewer word mappings after path fixes?
+2. How can complex automation's JSON results integrate with HTML generation?
+3. What edge cases prevent 100% word mapping coverage?
+4. What patterns from manual fixes should inform automation improvements?
 
 ## Path Issues: ✅ RESOLVED
 - ✅ All scripts in `scripts/automation/` have correct `../../` paths  

@@ -34,9 +34,33 @@ The build process is intentionally minimal:
 - Direct PDF to HTML conversion
 - Clean, simple HTML output focused on readability
 
+## Audio Enhancement Project
+
+This repository is actively developing automated audio highlighting capabilities:
+
+### Goal
+Create a single command that generates HTML from PDF + audio recording with precise word-by-word highlighting synchronized to audio playback.
+
+### Current Status
+- ✅ Audio transcription (OpenAI Whisper, 196 words with timestamps)
+- ✅ Complex automation (finds 184/196 words, 94% coverage) 
+- ⚠️ Integration gap between word finding and HTML generation
+
+### Script Organization
+- `scripts/automation/` - Simple data-driven approach
+- `scripts/testing/` - Complex automation with validation
+- `scripts/manual-fixes/` - **Diagnostic tools only** - help identify automation gaps
+- `scripts/archive/` - Historical experiments
+
+### Development Philosophy for Audio
+- **Full automation is the goal** - manual scripts are research tools only
+- Manual enhancement identifies what automation needs to learn
+- Test automation quality by comparing to manual reference implementations
+- End goal: `npm run build-audio` that works as reliably as `npm run build`
+
 ## Future Improvements to Consider
 
-- Better chapter/section detection from PDF structure
-- Image extraction from PDF
+- Complete automation integration (audio + PDF → HTML)
+- Better chapter/section detection from PDF structure  
 - Typography and styling improvements
 - Automatic build on PDF update
