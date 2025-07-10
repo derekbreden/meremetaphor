@@ -461,7 +461,7 @@ async function extractText() {
             padding: 10px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             z-index: 1000;
-            width: 250px;
+            width: 280px;
         }
         
         .audio-player {
@@ -526,7 +526,7 @@ async function extractText() {
         .audio-time {
             font-size: 0.75em;
             color: #666;
-            min-width: 35px;
+            min-width: 30px;
         }
         
         
@@ -560,7 +560,7 @@ async function extractText() {
         let syncOffset = 0.3; // Fixed sync offset in seconds to compensate for highlighting delay
         
         // Speed control
-        const speeds = [1, 1.25, 1.5, 2];
+        const speeds = [1, 1.25, 1.5, 1.75];
         let currentSpeedIndex = 0;
         
         document.addEventListener('DOMContentLoaded', function() {
