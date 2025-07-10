@@ -8,17 +8,31 @@ This is a GitHub Pages website for the book "Mere Metaphor" that lives at mereme
 
 ## Project Structure
 
+### Core Files
 - `meremetaphor.pdf` - The source PDF of the book (exported from Apple Pages)
-- `index.html` - The main website page that displays the book content
-- `scripts/build.js` - Node.js script that parses the PDF and generates HTML
+- `index.html` - The main website page that displays the book content (non-audio version)
+- `audio-book.html` - Audio-enhanced version with word-by-word highlighting
+- `scripts/build.js` - Node.js script that parses the PDF and generates index.html
+- `cover_and_preface.mp3` - Audio recording for the audio-enhanced version
+- `transcription_with_timestamps.json` - OpenAI Whisper transcription with word-level timestamps
+
+### Supporting Files
 - `.nojekyll` - Disables Jekyll processing on GitHub Pages
+- `CNAME` - Custom domain configuration for GitHub Pages
 - `package.json` - Node.js project configuration
+- `/images/` - Extracted chapter illustrations from the PDF
 
 ## Development Commands
 
+### Main Build (Non-Audio Version)
 - `npm install` - Install dependencies (currently just pdf-parse)
 - `npm run build` - Parse the PDF and update index.html with the book content
 - `npm run dev` - Build the site and start a local server at http://localhost:8080
+
+### Audio-Enhanced Build (Experiment 4)
+- `cd experiments/experiment-4-sequential-generation`
+- `node build.js` - Generate audio-book.html with word-by-word highlighting
+- The output is written to the root directory as `audio-book.html`
 
 ## Architecture
 
@@ -42,16 +56,22 @@ This repository is actively developing automated audio highlighting capabilities
 Create a single command that generates HTML from PDF + audio recording with precise word-by-word highlighting synchronized to audio playback.
 
 ### Current Status
-- ✅ Audio transcription (OpenAI Whisper, 196 words with timestamps)
-- ✅ Complex automation (finds 184/196 words, 94% coverage) 
-- ⚠️ Integration gap between word finding and HTML generation
+- ✅ Audio transcription complete (OpenAI Whisper, 196 words with timestamps for cover + preface)
+- ✅ Word-by-word highlighting working smoothly with timestamp expansion fix
+- ✅ Audio player with seeking, smooth scrolling, and visual feedback
+- ✅ Sequential word mapping achieving 97%+ match rate
+- 🚧 Need to record audio for remaining chapters before promoting to main build
 
-### Experiment Organization
-- `experiments/experiment-1-simple-automation/` - Manual structured data approach (taught us sequential numbering works)
-- `experiments/experiment-2-complex-automation/` - Fuzzy matching algorithms (taught us mapping is redundant)  
-- `experiments/experiment-3-integration-attempts/` - HTML retrofitting attempts (taught us retrofitting fails)
-- `experiments/experiment-4-sequential-generation/` - **CURRENT APPROACH** - Generate audio-ready HTML from PDF directly
-- `scripts/archive/` - Historical iterations
+### Recent Improvements (January 2025)
+- **Fixed "same timestamp" issue** - Implemented intelligent timestamp expansion based on word length
+- **Enhanced audio player UX** - Removed transition animations, improved scrolling, better seeking behavior
+- **Cleaned repository** - Removed experiments 1-3 and other obsolete files
+
+### Current Approach (Experiment 4)
+- `experiments/experiment-4-sequential-generation/` - Generate audio-ready HTML from PDF directly
+- Key innovation: Sequential word placement during HTML generation rather than retrofitting
+- Handles timestamp issues through intelligent expansion algorithm
+- Produces `audio-book.html` with full audio synchronization
 
 ### Development Philosophy for Audio
 - **Generate audio-ready HTML from start** - don't retrofit existing HTML
@@ -66,9 +86,19 @@ Create a single command that generates HTML from PDF + audio recording with prec
 - **Test before committing** - Ensure scripts run and produce expected output
 - **Document in commits** - Reference which experiment and what problem it solves
 
-## Future Improvements to Consider
+## Next Steps
 
-- Complete automation integration (audio + PDF → HTML)
+### Immediate Tasks
+1. Record audio for remaining chapters
+2. Update transcription file with complete timestamps
+3. Test audio synchronization across all chapters
+4. Promote experiment 4 to main build process once all audio is ready
+
+### Future Improvements to Consider
+- Integrate audio and non-audio builds into single configurable script
+- Add chapter navigation in audio player
+- Implement playback speed controls
 - Better chapter/section detection from PDF structure  
 - Typography and styling improvements
 - Automatic build on PDF update
+- Support for multiple audio files (one per chapter)
