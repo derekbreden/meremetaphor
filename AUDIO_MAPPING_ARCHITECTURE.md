@@ -87,10 +87,13 @@ Map transcription words (with timing data) to PDF text content to enable word-by
 
 ### Phase 3: Audio Experience Implementation (COMPLETED)
 - ✅ Complete audio player with compact bottom-right positioning
-- ✅ Word-by-word highlighting with precise timing synchronization
+- ✅ Word-by-word highlighting with precise timing synchronization (97% match rate: 190/196 words)
 - ✅ Interactive click-to-seek functionality for all matched words
 - ✅ Clean visual design preventing content shifting and residual highlights
 - ✅ Separate `audio-book.html` output preserving original site
+- ✅ Fixed sync offset (0.35s) for consistent timing compensation
+- ✅ Smart scrolling with 2em buffer positioning words at screen top
+- ✅ Aggressive pre-scrolling (0.2s before next word) for smooth reading flow
 
 ## Key Principles
 
@@ -111,15 +114,17 @@ Map transcription words (with timing data) to PDF text content to enable word-by
 - `attemptWordMatch()` - implements 1-10 word lookahead matching
 - `recordGap()` - tracks alignment gaps with context
 - `outputGapAnalysis()` - generates detailed gap reports
-- `updateWordHighlighting()` - synchronizes highlighting with audio playback
+- `updateWordHighlighting()` - synchronizes highlighting with audio playback (with sync offset)
+- `scrollToWordIfNeeded()` - smart scrolling with viewport detection and buffer positioning
 - `seekToWord()` - enables click-to-seek functionality
 
 **Audio Processing Flow**:
 1. Cover content → Title, subtitle, author (transcription indices 0-10)
 2. TOC skipped entirely (not in transcription)  
 3. Preface content → Sequential word-by-word mapping (transcription indices 11+)
-4. Real-time highlighting synchronized to audio playback
+4. Real-time highlighting synchronized to audio playback with 0.35s offset
 5. Interactive seeking through click events on highlighted words
+6. Smart scrolling maintains highlighted words in comfortable reading position
 
 **Current Performance**: 97% match rate (190/196 words) with polished audio reading experience.
 
@@ -127,20 +132,22 @@ Map transcription words (with timing data) to PDF text content to enable word-by
 
 Complete audio-enabled book with:
 - **190 synchronized words** with precise timing and highlighting
-- **Compact audio player** positioned in bottom-right corner
+- **Compact audio player** positioned in bottom-right corner with essential controls
 - **Click-to-seek functionality** on all highlighted words
 - **Clean highlighting** - yellow background, no content shifting
+- **Smart scrolling** - positions words at screen top with 2em buffer, pre-scrolls smoothly
+- **Fixed sync compensation** - 0.35s offset calibrated for optimal timing
 - **All original content preserved** - identical layout and functionality
 - **Separate audio version** - maintains original site integrity
 
 ## Possible Next Steps
 
-1. **Audio Synchronization Adjustment**:
-   - Add overall lag sync variable to compensate for highlighting delay (~0.5-1 second)
-   - Allow real-time adjustment of timing offset for better word-audio alignment
-   - Test and calibrate optimal sync offset value
+1. **Zero-Duration Word Handling**:
+   - Fix highlighting for words with identical start/end timestamps (e.g., "entirely": start=90.62, end=90.62)
+   - Implement minimum duration threshold or extend zero-duration words by small amount
+   - Analyze transcription for frequency of zero-duration timing issues
 
-2. **Smart Scrolling Enhancement**:
-   - Implement conditional scrolling that only triggers when highlighted word is outside viewport
-   - Add smooth scroll behavior with configurable scroll offset and speed
-   - Prevent excessive scrolling while maintaining visibility of current word
+2. **Enhanced Timing Precision**:
+   - Investigate transcription quality improvements to reduce timing gaps
+   - Consider audio re-processing or manual timing corrections for critical words
+   - Implement fallback highlighting for words missing precise timing data
