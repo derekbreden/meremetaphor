@@ -51,8 +51,8 @@ The project uses separate source files combined into a single file for web deliv
 # Convert m4a to mp3 with noise reduction (gentle gate is standard)
 ffmpeg -i input.m4a -af "agate=threshold=0.05:ratio=1.5:attack=5:release=200" -codec:a libmp3lame -b:a 128k output.mp3
 
-# Alternative: Ultra-gentle gate (removes background noise, minimal breathing removal)
-ffmpeg -i input.m4a -af "agate=threshold=0.03:ratio=1.2:attack=8:release=300" -codec:a libmp3lame -b:a 128k output_ultra_clean.mp3
+# Alternative: Ultra-gentle gate (tested - removes background noise, preserves more breathing)
+# ffmpeg -i input.m4a -af "agate=threshold=0.03:ratio=1.2:attack=8:release=300" -codec:a libmp3lame -b:a 128k output_ultra_clean.mp3
 
 # Complete workflow for new chapters:
 # 1. Record chapter as .m4a
