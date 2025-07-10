@@ -425,20 +425,22 @@ async function extractText() {
         
         /* Audio Player Styles */
         .audio-controls {
-            position: sticky;
-            top: 0;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
             background: #fff;
-            padding: 1em 0;
-            border-bottom: 1px solid #ddd;
-            margin-bottom: 2em;
-            z-index: 100;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+            width: 250px;
         }
         
         .audio-player {
             display: flex;
             align-items: center;
-            gap: 1em;
-            max-width: 100%;
+            gap: 8px;
         }
         
         .play-pause-btn {
@@ -446,13 +448,14 @@ async function extractText() {
             color: white;
             border: none;
             border-radius: 50%;
-            width: 40px;
-            height: 40px;
+            width: 32px;
+            height: 32px;
             cursor: pointer;
-            font-size: 14px;
+            font-size: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-shrink: 0;
         }
         
         .play-pause-btn:hover {
@@ -461,9 +464,9 @@ async function extractText() {
         
         .audio-progress {
             flex: 1;
-            height: 6px;
+            height: 4px;
             background: #ddd;
-            border-radius: 3px;
+            border-radius: 2px;
             cursor: pointer;
             position: relative;
         }
@@ -471,15 +474,15 @@ async function extractText() {
         .audio-progress-bar {
             height: 100%;
             background: #333;
-            border-radius: 3px;
+            border-radius: 2px;
             width: 0%;
             transition: width 0.1s ease;
         }
         
         .audio-time {
-            font-size: 0.9em;
+            font-size: 0.75em;
             color: #666;
-            min-width: 45px;
+            min-width: 35px;
         }
         
         /* Audio Highlighting Styles */
@@ -494,11 +497,7 @@ async function extractText() {
         
         .audio-word.current {
             background-color: #ffe066;
-            font-weight: bold;
-        }
-        
-        .audio-word.played {
-            background-color: #e6f3ff;
+            border-radius: 2px;
         }
     </style>
     <script>
@@ -620,12 +619,8 @@ async function extractText() {
             for (let word of audioWords) {
                 if (currentTime >= word.start && currentTime <= word.end) {
                     word.element.classList.add('current');
-                    word.element.classList.add('played');
                     currentWord = word;
                     break;
-                } else if (currentTime > word.end) {
-                    word.element.classList.add('played');
-                    word.element.classList.remove('current');
                 }
             }
         }
@@ -634,10 +629,11 @@ async function extractText() {
             document.getElementById('playBtn').textContent = '▶';
             isPlaying = false;
             
-            // Clear all highlighting
-            audioWords.forEach(word => {
-                word.element.classList.remove('current', 'played');
-            });
+            // Clear current highlighting
+            if (currentWord) {
+                currentWord.element.classList.remove('current');
+                currentWord = null;
+            }
         }
         
         function formatTime(seconds) {
@@ -671,7 +667,7 @@ ${htmlContent}
 </body>
 </html>`;
             
-            fs.writeFileSync(path.join(__dirname, '..', '..', 'index.html'), html);
+            fs.writeFileSync(path.join(__dirname, '..', '..', 'audio-book.html'), html);
             
             console.log(`Processed ${data.pages.length} pages`);
             resolve();
