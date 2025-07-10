@@ -979,6 +979,9 @@ function normalizeWord(word) {
     if (new_word.includes("steiner")) {
         new_word = "bredensteiner"
     }
+    if (new_word === "rd") {  // "3rd" becomes "rd" after regex
+        new_word = "third"
+    }
 
     return new_word;
 }
