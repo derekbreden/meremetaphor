@@ -422,6 +422,84 @@ async function extractText() {
             font-style: normal;
             margin-top: 0.5em;
         }
+        
+        /* Audio Player Styles */
+        .audio-controls {
+            position: sticky;
+            top: 0;
+            background: #fff;
+            padding: 1em 0;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 2em;
+            z-index: 100;
+        }
+        
+        .audio-player {
+            display: flex;
+            align-items: center;
+            gap: 1em;
+            max-width: 100%;
+        }
+        
+        .play-pause-btn {
+            background: #333;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .play-pause-btn:hover {
+            background: #555;
+        }
+        
+        .audio-progress {
+            flex: 1;
+            height: 6px;
+            background: #ddd;
+            border-radius: 3px;
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .audio-progress-bar {
+            height: 100%;
+            background: #333;
+            border-radius: 3px;
+            width: 0%;
+            transition: width 0.1s ease;
+        }
+        
+        .audio-time {
+            font-size: 0.9em;
+            color: #666;
+            min-width: 45px;
+        }
+        
+        /* Audio Highlighting Styles */
+        .audio-word {
+            transition: background-color 0.1s ease;
+            cursor: pointer;
+        }
+        
+        .audio-word:hover {
+            background-color: #f0f0f0;
+        }
+        
+        .audio-word.current {
+            background-color: #ffe066;
+            font-weight: bold;
+        }
+        
+        .audio-word.played {
+            background-color: #e6f3ff;
+        }
     </style>
     <script>
         function scrollToChapter(chapterId) {
@@ -430,9 +508,163 @@ async function extractText() {
                 element.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         }
+        
+        // Audio Player and Highlighting
+        let audio = null;
+        let isPlaying = false;
+        let currentWord = null;
+        let audioWords = [];
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeAudioPlayer();
+            collectAudioWords();
+        });
+        
+        function initializeAudioPlayer() {
+            audio = document.getElementById('audioPlayer');
+            const playBtn = document.getElementById('playBtn');
+            const progressBar = document.getElementById('progressBar');
+            const progress = document.getElementById('progress');
+            const currentTime = document.getElementById('currentTime');
+            const duration = document.getElementById('duration');
+            
+            if (!audio) return;
+            
+            // Play/Pause button
+            playBtn.addEventListener('click', togglePlay);
+            
+            // Progress bar
+            progressBar.addEventListener('click', seek);
+            
+            // Audio events
+            audio.addEventListener('timeupdate', updateProgress);
+            audio.addEventListener('loadedmetadata', updateDuration);
+            audio.addEventListener('ended', onAudioEnded);
+            
+            // Update highlighting during playback
+            audio.addEventListener('timeupdate', updateWordHighlighting);
+        }
+        
+        function collectAudioWords() {
+            audioWords = Array.from(document.querySelectorAll('[data-word]')).map(span => ({
+                element: span,
+                start: parseFloat(span.dataset.start),
+                end: parseFloat(span.dataset.end),
+                index: parseInt(span.dataset.word)
+            })).sort((a, b) => a.index - b.index);
+            
+            // Add click handlers to words for seeking
+            audioWords.forEach(word => {
+                word.element.classList.add('audio-word');
+                word.element.addEventListener('click', () => seekToWord(word.start));
+            });
+        }
+        
+        function togglePlay() {
+            if (!audio) return;
+            
+            if (isPlaying) {
+                audio.pause();
+                document.getElementById('playBtn').textContent = '▶';
+                isPlaying = false;
+            } else {
+                audio.play();
+                document.getElementById('playBtn').textContent = '⏸';
+                isPlaying = true;
+            }
+        }
+        
+        function seek(e) {
+            if (!audio) return;
+            
+            const progressBar = e.currentTarget;
+            const rect = progressBar.getBoundingClientRect();
+            const percent = (e.clientX - rect.left) / rect.width;
+            audio.currentTime = percent * audio.duration;
+        }
+        
+        function seekToWord(startTime) {
+            if (!audio) return;
+            
+            audio.currentTime = startTime;
+            if (!isPlaying) {
+                togglePlay();
+            }
+        }
+        
+        function updateProgress() {
+            if (!audio) return;
+            
+            const percent = (audio.currentTime / audio.duration) * 100;
+            document.getElementById('progress').style.width = percent + '%';
+            document.getElementById('currentTime').textContent = formatTime(audio.currentTime);
+        }
+        
+        function updateDuration() {
+            if (!audio) return;
+            document.getElementById('duration').textContent = formatTime(audio.duration);
+        }
+        
+        function updateWordHighlighting() {
+            if (!audio || audioWords.length === 0) return;
+            
+            const currentTime = audio.currentTime;
+            
+            // Clear current highlighting
+            if (currentWord) {
+                currentWord.element.classList.remove('current');
+                currentWord = null;
+            }
+            
+            // Find current word
+            for (let word of audioWords) {
+                if (currentTime >= word.start && currentTime <= word.end) {
+                    word.element.classList.add('current');
+                    word.element.classList.add('played');
+                    currentWord = word;
+                    break;
+                } else if (currentTime > word.end) {
+                    word.element.classList.add('played');
+                    word.element.classList.remove('current');
+                }
+            }
+        }
+        
+        function onAudioEnded() {
+            document.getElementById('playBtn').textContent = '▶';
+            isPlaying = false;
+            
+            // Clear all highlighting
+            audioWords.forEach(word => {
+                word.element.classList.remove('current', 'played');
+            });
+        }
+        
+        function formatTime(seconds) {
+            const mins = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return mins + ':' + (secs < 10 ? '0' : '') + secs;
+        }
     </script>
 </head>
 <body>
+    <div class="audio-controls">
+        <div class="audio-player">
+            <button id="playBtn" class="play-pause-btn">▶</button>
+            <div id="progressBar" class="audio-progress">
+                <div id="progress" class="audio-progress-bar"></div>
+            </div>
+            <span id="currentTime" class="audio-time">0:00</span>
+            <span>/</span>
+            <span id="duration" class="audio-time">0:00</span>
+        </div>
+        <audio id="audioPlayer" preload="metadata">
+            <source src="cover_and_preface.mp3" type="audio/mpeg">
+            <source src="cover_and_preface.m4a" type="audio/mp4">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    
     <div id="book-content">
 ${htmlContent}
     </div>
