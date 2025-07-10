@@ -489,6 +489,23 @@ async function extractText() {
             background: #555;
         }
         
+        .speed-btn {
+            background: #333;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            width: 40px;
+            height: 24px;
+            cursor: pointer;
+            font-size: 11px;
+            margin-left: 8px;
+            flex-shrink: 0;
+        }
+        
+        .speed-btn:hover {
+            background: #555;
+        }
+        
         .audio-progress {
             flex: 1;
             height: 4px;
@@ -542,6 +559,10 @@ async function extractText() {
         let audioWords = [];
         let syncOffset = 0.3; // Fixed sync offset in seconds to compensate for highlighting delay
         
+        // Speed control
+        const speeds = [1, 1.25, 1.5, 2];
+        let currentSpeedIndex = 0;
+        
         document.addEventListener('DOMContentLoaded', function() {
             initializeAudioPlayer();
             collectAudioWords();
@@ -554,6 +575,7 @@ async function extractText() {
             const progress = document.getElementById('progress');
             const currentTime = document.getElementById('currentTime');
             const duration = document.getElementById('duration');
+            const speedBtn = document.getElementById('speedBtn');
             
             if (!audio) return;
             
@@ -562,6 +584,9 @@ async function extractText() {
             
             // Progress bar
             progressBar.addEventListener('click', seek);
+            
+            // Speed button
+            speedBtn.addEventListener('click', toggleSpeed);
             
             // Audio events
             audio.addEventListener('timeupdate', updateProgress);
@@ -599,6 +624,15 @@ async function extractText() {
                 document.getElementById('playBtn').textContent = '⏸';
                 isPlaying = true;
             }
+        }
+        
+        function toggleSpeed() {
+            if (!audio) return;
+            
+            currentSpeedIndex = (currentSpeedIndex + 1) % speeds.length;
+            const newSpeed = speeds[currentSpeedIndex];
+            audio.playbackRate = newSpeed;
+            document.getElementById('speedBtn').textContent = newSpeed + '×';
         }
         
         function seek(e) {
@@ -721,6 +755,7 @@ async function extractText() {
             <span id="currentTime" class="audio-time">0:00</span>
             <span>/</span>
             <span id="duration" class="audio-time">0:00</span>
+            <button id="speedBtn" class="speed-btn">1×</button>
         </div>
         <audio id="audioPlayer" preload="metadata">
             <source src="book_audio.mp3" type="audio/mpeg">
