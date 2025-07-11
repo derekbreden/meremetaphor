@@ -476,8 +476,8 @@ async function extractText() {
             color: white;
             border: none;
             border-radius: 50%;
-            width: 32px;
-            height: 32px;
+            width: 40px;
+            height: 40px;
             cursor: pointer;
             font-size: 12px;
             display: flex;
@@ -496,7 +496,7 @@ async function extractText() {
             border: none;
             border-radius: 4px;
             width: 40px;
-            height: 24px;
+            height: 40px;
             cursor: pointer;
             font-size: 11px;
             margin-left: 8px;
