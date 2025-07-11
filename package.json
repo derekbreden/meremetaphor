@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "build": "node scripts/build.js",
-    "dev": "node scripts/build.js && npx http-server -p 8080"
+    "dev": "node scripts/build.js"
   },
   "repository": {
     "type": "git",
