@@ -593,14 +593,6 @@ async function extractText() {
             
             // Speed button
             speedBtn.addEventListener('click', toggleSpeed);
-            speedBtn.addEventListener('touchstart', function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-            }, {passive: false});
-            speedBtn.addEventListener('touchend', function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-            }, {passive: false});
             
             // Audio events
             audio.addEventListener('timeupdate', updateProgress);
