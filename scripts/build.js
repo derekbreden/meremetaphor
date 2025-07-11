@@ -910,7 +910,7 @@ function formatParagraph(paragraphText, chapterName) {
         const words = paragraphText.split(' ');
         const firstWord = words[0];
         const restOfText = words.slice(1).join(' ');
-        return `<p><strong>${escapeHtml(firstWord)}</strong><br>${escapeHtml(restOfText)}</p>\n`;
+        return `<p><strong>${formatAnyWordsWithAudio(firstWord, chapterName)}</strong><br>${formatAnyWordsWithAudio(restOfText, chapterName)}</p>\n`;
     } else if (transcriptionData && shouldApplyAudioMapping(chapterName)) {
         // Apply audio spans to mapped chapters (skip TOC)
         return formatParagraphWithAudio(paragraphText, chapterName);
