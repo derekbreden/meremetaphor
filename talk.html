@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Month with Claude Code</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            overflow: hidden;
+            height: 100vh;
+        }
+
+        .presentation {
+            height: 100vh;
+            position: relative;
+        }
+
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 60px;
+            opacity: 0;
+            transform: translateX(100%);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .slide.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .slide.prev {
+            transform: translateX(-100%);
+        }
+
+        h1 {
+            font-size: 3.5em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            font-weight: 600;
+            margin-bottom: 30px;
+            color: #a78bfa;
+        }
+
+        h3 {
+            font-size: 1.8em;
+            font-weight: 500;
+            margin: 20px 0;
+            color: #c084fc;
+        }
+
+        p, li {
+            font-size: 1.3em;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .subtitle {
+            font-size: 1.5em;
+            font-style: italic;
+            color: #9ca3af;
+            margin-bottom: 40px;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .column {
+            background: rgba(30, 30, 40, 0.5);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid rgba(167, 139, 250, 0.2);
+        }
+
+        .highlight {
+            background: rgba(167, 139, 250, 0.1);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .code-block {
+            background: #1a1a2e;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', monospace;
+            font-size: 0.9em;
+            margin: 20px 0;
+            border: 1px solid #2d2d44;
+            overflow-x: auto;
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        .code-block code {
+            color: #e0e0e0;
+            white-space: pre;
+        }
+
+        .comment {
+            color: #6a737d;
+        }
+
+        .string {
+            color: #7ec699;
+        }
+
+        .keyword {
+            color: #c792ea;
+        }
+
+        .number {
+            color: #f78c6c;
+        }
+
+        .function {
+            color: #82aaff;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 12px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #a78bfa;
+            font-weight: bold;
+        }
+
+        .metric {
+            display: inline-block;
+            background: rgba(167, 139, 250, 0.2);
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: 600;
+            margin: 5px;
+            border: 1px solid rgba(167, 139, 250, 0.3);
+        }
+
+        .navigation {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            gap: 10px;
+            z-index: 100;
+        }
+
+        button {
+            background: rgba(167, 139, 250, 0.2);
+            border: 1px solid rgba(167, 139, 250, 0.5);
+            color: #e0e0e0;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background: rgba(167, 139, 250, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .slide-number {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            color: #6a737d;
+            font-size: 0.9em;
+        }
+
+        .emphasis {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: #a78bfa;
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .warning-box {
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .success-box {
+            background: rgba(34, 197, 94, 0.1);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation">
+        <div class="slide-number">
+            <span id="current-slide">1</span> / <span id="total-slides">11</span>
+        </div>
+
+        <!-- Slide 1: Title -->
+        <div class="slide active">
+            <h1>A Month with Claude Code</h1>
+            <div style="margin-top: 60px;">
+                <p style="font-size: 1.8em; margin-bottom: 20px;"><span class="highlight">3 weeks</span> on a legacy codebase</p>
+                <p style="font-size: 1.8em;"><span class="highlight">1 week</span> on a greenfield</p>
+            </div>
+        </div>
+
+        <!-- Slide 2: Accomplishments Overview -->
+        <div class="slide">
+            <h2>Accomplishments</h2>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 40px;">
+                <div class="success-box" style="width: 80%;">
+                    <h3 style="margin-top: 0;">26 end-to-end tests in 9 seconds</h3>
+                    <p>Full stack in JSDOM, real client code fetches from real server code that executes on a (SQLite) database, websockets back and forth between client and server too</p>
+                </div>
+                <div class="success-box" style="width: 80%;">
+                    <h3 style="margin-top: 0;">PDF + MP3 → Guided audio book HTML</h3>
+                    <p>Images and Text extracted from PDF, words transcribed from audio, all synchronized together in a smooth guided audio-visual experience</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: The Testing Framework Architecture -->
+        <div class="slide">
+            <h2>The Full Stack Testing Marvel</h2>
+            <div class="code-block">
+                <code><span class="comment">// setupTestEnvironment.js - The magic connection</span>
+<span class="keyword">const</span> dom = <span class="keyword">new</span> <span class="function">JSDOM</span>(indexHtmlContent, {
+  runScripts: <span class="string">"dangerously"</span>,
+  <span class="keyword">async</span> <span class="function">beforeParse</span>(window) {
+    <span class="comment">// Override fetch to connect directly to server handlers</span>
+    window.fetch = <span class="keyword">async</span> (url, options) => {
+      <span class="keyword">const</span> { req, res } = window.<span class="function">createMockReqRes</span>(options.body)
+      <span class="keyword">await</span> <span class="function">handleSession</span>(req, res)  <span class="comment">// Direct server handler call!</span>
+      <span class="keyword">return</span> { json: <span class="keyword">async</span> () => JSON.<span class="function">parse</span>(res.responseData) }
+    }
+    
+    <span class="comment">// Mock WebSocket with bidirectional communication</span>
+    window.WebSocket = <span class="keyword">class</span> {
+      <span class="function">send</span>(data) {
+        <span class="comment">// Routes to actual server WebSocket handler</span>
+        global._ws_connection_handlers[window._setup_id]._handlers.<span class="function">message</span>({ 
+          <span class="function">toString</span>() { <span class="keyword">return</span> data } 
+        })
+      }
+    }
+  }
+})</code>
+            </div>
+            <p style="text-align: center; margin-top: 30px;">Client HTML → fetch() → Server handlers → SQLite → Response → DOM update</p>
+            <p style="text-align: center; color: #9ca3af;">All in-memory, all synchronous, all real production code</p>
+        </div>
+
+        <!-- Slide 4: A Real Test Example -->
+        <div class="slide">
+            <h2>What a Test Actually Looks Like</h2>
+            <div class="code-block">
+                <code><span class="comment">// Multi-user WebSocket test with typing indicators</span>
+<span class="keyword">const</span> user_a = <span class="keyword">await</span> <span class="function">setupTestEnvironment</span>()
+<span class="keyword">const</span> user_b = <span class="keyword">await</span> <span class="function">setupTestEnvironment</span>({
+  beforeParse: (w) => w.localStorage.<span class="function">setItem</span>(<span class="string">"session_uuid"</span>, <span class="string">"user-b"</span>)
+})
+
+<span class="comment">// User B starts typing</span>
+<span class="function">$b</span>(<span class="string">"textarea"</span>).value = <span class="string">"Hello"</span>
+<span class="function">$b</span>(<span class="string">"textarea"</span>).<span class="function">dispatchEvent</span>(<span class="keyword">new</span> Event(<span class="string">"input"</span>))
+
+<span class="comment">// User A sees typing indicator immediately</span>
+<span class="function">assertEquals</span>(<span class="keyword">true</span>, Boolean(<span class="function">$a</span>(<span class="string">"typing-indicator"</span>)))
+
+<span class="comment">// User B sends message</span>
+<span class="function">$b</span>(<span class="string">"button[submit]"</span>).<span class="function">click</span>()
+<span class="keyword">await</span> <span class="keyword">new</span> Promise(resolve => <span class="function">setTimeout</span>(resolve, <span class="number">0</span>))
+
+<span class="comment">// Both users see the message</span>
+<span class="function">assertEquals</span>(<span class="string">"Hello"</span>, <span class="function">$a</span>(<span class="string">"message:last-child"</span>).textContent)
+<span class="function">assertEquals</span>(<span class="string">"Hello"</span>, <span class="function">$b</span>(<span class="string">"message:last-child"</span>).textContent)</code>
+            </div>
+            <p style="text-align: center; margin-top: 30px;">Two separate browser environments, real WebSocket communication, actual database persistence</p>
+        </div>
+
+        <!-- Slide 5: Mock Services -->
+        <div class="slide">
+            <h2>Mock Only the Boundaries</h2>
+            <div class="code-block">
+                <code><span class="comment">// Mock S3 with in-memory storage</span>
+global._s3_mock_storage = {}
+<span class="keyword">class</span> <span class="function">MockS3Client</span> {
+  <span class="keyword">async</span> <span class="function">send</span>(command) {
+    <span class="keyword">if</span> (command <span class="keyword">instanceof</span> PutObjectCommand) {
+      global._s3_mock_storage[command.Key] = command.Body
+    }
+    <span class="keyword">if</span> (command <span class="keyword">instanceof</span> GetObjectCommand) {
+      <span class="keyword">return</span> { Body: { 
+        transformToString: <span class="keyword">async</span> () => global._s3_mock_storage[command.Key] 
+      }}
+    }
+  }
+}
+
+<span class="comment">// Mock OpenAI per test setup</span>
+global._ai_responses[setup_id] = { 
+  keyword: <span class="string">"SPAM"</span>, 
+  note: <span class="string">"Promotional content detected"</span> 
+}
+
+<span class="comment">// All application logic runs unchanged</span>
+<span class="comment">// Image processing, moderation flows, WebSocket routing - all real</span></code>
+            </div>
+        </div>
+
+        <!-- Slide 6: Demo - Test Suite Running -->
+        <div class="slide">
+            <h2>26 Tests in 9 Seconds</h2>
+            <div style="display: flex; justify-content: center; align-items: center; height: 70%;">
+                <img src="tests.gif" />
+            </div>
+        </div>
+
+        <!-- Slide 7: Demo - Meremetaphor -->
+        <div class="slide">
+            <h2>Visual Audio Book</h2>
+            <div style="display: flex; justify-content: center; align-items: center; height: 70%;">
+                <img src="audio.gif" />
+            </div>
+        </div>
+
+        <!-- Slide 8: Pitfalls - Not Solvable -->
+        <div class="slide">
+            <h2>Pitfalls That Are Not Solvable</h2>
+            
+            <div class="warning-box">
+                <h3>Constant claims of success when failing</h3>
+                <p>"Aha, I see now!" <span style="color: #9ca3af;">(does not see at all)</span></p>
+                <p>"Great, the test is passing!" <span style="color: #9ca3af;">(by deleting the assertion)</span></p>
+                <p>"I've fixed the issue!" <span style="color: #9ca3af;">(broke 3 other things)</span></p>
+            </div>
+
+            <div class="warning-box">
+                <h3>Pathological focus on green checkmarks</h3>
+                <ul>
+                    <li>Will modify tests to match broken behavior rather than fix the code</li>
+                    <li>Removes "problematic" assertions instead of addressing root cause</li>
+                    <li>Total disregard for higher level goals when fixated on "test passing"</li>
+                </ul>
+            </div>
+
+            <p style="text-align: center; margin-top: 40px; color: #9ca3af;">These behaviors persist despite any amount of correction</p>
+        </div>
+
+        <!-- Slide 9: Pitfalls - Can Be Mitigated -->
+        <div class="slide">
+            <h2>Pitfalls That Can Be Mitigated</h2>
+            
+            <h3>Every hour = brand new hire</h3>
+            <ul>
+                <li>The only context they have is what you've written down</li>
+                <li>Imagine what you could expect from someone on their first day</li>
+            </ul>
+
+            <h3 style="margin-top: 40px;">Auto-compaction is harmful</h3>
+            <ul>
+                <li>100% of the time it's better to manually write summaries</li>
+                <li>Ask the instance to write a document → edit it yourself → provide to next instance</li>
+                <li>Otherwise: confused newbie diversions down wrong paths</li>
+            </ul>
+
+            <h3 style="margin-top: 40px;">"Best Practices" aren't always best</h3>
+            <ul>
+                <li>Example: Guard assertions</li>
+                <li>Like pulling teeth, but with sufficient prompting can be overcome</li>
+                <li>Need explicit examples and repeated reinforcement</li>
+            </ul>
+        </div>
+
+        <!-- Slide 10: Conclusion -->
+        <div class="slide">
+            <h2>Conclusion: What this means for us?</h2>
+            
+            <h3>This tool can do things our current agents cannot</h3>
+            <ul>
+                <li>Precise edits to specific lines (not full file rewrites)</li>
+            </ul>
+
+            <h3 style="margin-top: 40px;">A radically different experience</h3>
+            <ul>
+                <li>An agent that can iterate on its own toward a goal</li>
+                <li>Running tests, verifying results, debugging issues</li>
+                <li>Feels like pair programming (when it works)</li>
+            </ul>
+
+            <h3 style="margin-top: 40px;">For us?</h3>
+            <ul>
+                <li>Not designed for Windows - fingers crossed Microsoft is working on copying this</li>
+                <li>Does require persistent vigilance against failure modes, which I suppose is good news for our employment prospects, even the most advanced tools may still require a lot of hand holding for optimal results</li>
+                <li>The future looks promising, I'm excited</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="navigation">
+        <button onclick="previousSlide()">Previous</button>
+        <button onclick="nextSlide()">Next</button>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        
+        document.getElementById('total-slides').textContent = totalSlides;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active', 'prev');
+                if (i < index) {
+                    slide.classList.add('prev');
+                } else if (i === index) {
+                    slide.classList.add('active');
+                }
+            });
+            document.getElementById('current-slide').textContent = index + 1;
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        function previousSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                nextSlide();
+            } else if (e.key === 'ArrowLeft') {
+                previousSlide();
+            }
+        });
+
+        // Touch support for mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        document.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        document.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) {
+                nextSlide();
+            }
+            if (touchEndX > touchStartX + 50) {
+                previousSlide();
+            }
+        }
+    </script>
+</body>
+</html>
